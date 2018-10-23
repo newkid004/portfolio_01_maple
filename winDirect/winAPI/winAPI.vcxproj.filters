@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="API Framework">
+      <UniqueIdentifier>{5421cf98-3b63-4c2d-a357-395deae53705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\stdafx">
+      <UniqueIdentifier>{40e3cef6-bbc3-43dc-b929-a0df140c7b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\유틸">
+      <UniqueIdentifier>{e8c941d4-080c-4f5f-9d7c-0b8b8bde16fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\게임노드">
+      <UniqueIdentifier>{7ffd7e20-2267-4288-985c-2a65b3c8fc28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져">
+      <UniqueIdentifier>{5cba5452-2eb9-4627-ad08-6a625d96cb00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임">
+      <UniqueIdentifier>{bee8dd94-a6ee-4364-aeee-789da868c300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\타이머">
+      <UniqueIdentifier>{53577831-62c3-4a65-a811-3ddb89ca1e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\animation">
+      <UniqueIdentifier>{24d8bb8f-111f-41d9-9215-41b4d3011bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\씬">
+      <UniqueIdentifier>{32e87b53-21ed-4f0a-bc8d-8e3db9602ec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\INI">
+      <UniqueIdentifier>{dc8bc00a-9d1b-4630-80e0-8f4395ede1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\이미지">
+      <UniqueIdentifier>{a67e18e7-a368-4bb5-82fd-1cd9ac7d0a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\키">
+      <UniqueIdentifier>{46673d5d-1340-4053-91ae-1ebf7d8b4cb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\타임">
+      <UniqueIdentifier>{86116a07-ce8c-4510-b651-ebb44e71214d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\파일입출력">
+      <UniqueIdentifier>{0ce9b0fe-1d39-4776-a406-d8af8895c017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\로딩">
+      <UniqueIdentifier>{f05a8e61-7351-40aa-9465-7456543af4af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\사운드">
+      <UniqueIdentifier>{0ac68111-4a53-4616-9d7b-fe027b282928}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\이미지\GDI">
+      <UniqueIdentifier>{41cce586-91e0-4109-8535-80e9a6a1e21f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\이미지\GDI+">
+      <UniqueIdentifier>{3ade1e14-966d-41fd-826e-215e5fdc0b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\Json">
+      <UniqueIdentifier>{a67edd88-2622-4ea2-ab0a-755681351c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\카메라">
+      <UniqueIdentifier>{eb372f80-d93a-4a8a-9386-9bcaa5da849d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\mainGame">
+      <UniqueIdentifier>{79d69583-9fe5-41a6-a650-430f55c98495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Scene">
+      <UniqueIdentifier>{51a14fa9-b68a-40f4-8507-283c32e24198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX Framework">
+      <UniqueIdentifier>{869301da-e903-4d51-aabc-c6734c794e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX Framework\util">
+      <UniqueIdentifier>{9dc81c8c-571e-474e-a5cf-fad8d22b53db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="baseObject">
+      <UniqueIdentifier>{c2a378ba-29a4-4c8c-b9e4-d90b14370acf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="winMain.cpp">
+      <Filter>API Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>API Framework\stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="gameNode.cpp">
+      <Filter>API Framework\게임노드</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>API Framework\매니져\카메라</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>API Framework\타이머</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneManager.cpp">
+      <Filter>API Framework\매니져\씬</Filter>
+    </ClCompile>
+    <ClCompile Include="iniData.cpp">
+      <Filter>API Framework\매니져\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="animation.cpp">
+      <Filter>API Framework\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="keyManager.cpp">
+      <Filter>API Framework\매니져\키</Filter>
+    </ClCompile>
+    <ClCompile Include="timeManager.cpp">
+      <Filter>API Framework\매니져\타임</Filter>
+    </ClCompile>
+    <ClCompile Include="txtDataManager.cpp">
+      <Filter>API Framework\매니져\파일입출력</Filter>
+    </ClCompile>
+    <ClCompile Include="loading.cpp">
+      <Filter>API Framework\로딩</Filter>
+    </ClCompile>
+    <ClCompile Include="cameraManager.cpp">
+      <Filter>API Framework\매니져\카메라</Filter>
+    </ClCompile>
+    <ClCompile Include="soundManager.cpp">
+      <Filter>API Framework\매니져\사운드</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonSaveLoader.cpp">
+      <Filter>API Framework\매니져\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="animationGroup.cpp">
+      <Filter>API Framework\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="imageManager.cpp">
+      <Filter>API Framework\매니져\이미지\GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="mainGame.cpp">
+      <Filter>메인게임\mainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneTest.cpp">
+      <Filter>메인게임\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="image.cpp">
+      <Filter>API Framework\매니져\이미지\GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="baseObject.cpp">
+      <Filter>baseObject</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>API Framework\stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="commonMacroFunction.h">
+      <Filter>API Framework\유틸</Filter>
+    </ClInclude>
+    <ClInclude Include="randomFunction.h">
+      <Filter>API Framework\유틸</Filter>
+    </ClInclude>
+    <ClInclude Include="gameNode.h">
+      <Filter>API Framework\게임노드</Filter>
+    </ClInclude>
+    <ClInclude Include="triFunction.h">
+      <Filter>API Framework\유틸</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>API Framework\매니져\카메라</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>API Framework\유틸</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>API Framework\타이머</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneManager.h">
+      <Filter>API Framework\매니져\씬</Filter>
+    </ClInclude>
+    <ClInclude Include="iniData.h">
+      <Filter>API Framework\매니져\INI</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>API Framework\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="keyManager.h">
+      <Filter>API Framework\매니져\키</Filter>
+    </ClInclude>
+    <ClInclude Include="timeManager.h">
+      <Filter>API Framework\매니져\타임</Filter>
+    </ClInclude>
+    <ClInclude Include="txtDataManager.h">
+      <Filter>API Framework\매니져\파일입출력</Filter>
+    </ClInclude>
+    <ClInclude Include="loading.h">
+      <Filter>API Framework\로딩</Filter>
+    </ClInclude>
+    <ClInclude Include="cameraManager.h">
+      <Filter>API Framework\매니져\카메라</Filter>
+    </ClInclude>
+    <ClInclude Include="soundManager.h">
+      <Filter>API Framework\매니져\사운드</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonSaveLoader.h">
+      <Filter>API Framework\매니져\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="animationGroup.h">
+      <Filter>API Framework\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="imageManager.h">
+      <Filter>API Framework\매니져\이미지\GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="singletonBase.h">
+      <Filter>API Framework\매니져</Filter>
+    </ClInclude>
+    <ClInclude Include="mainGame.h">
+      <Filter>메인게임\mainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneTest.h">
+      <Filter>메인게임\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="image.h">
+      <Filter>API Framework\매니져\이미지\GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="baseObject.h">
+      <Filter>baseObject</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
