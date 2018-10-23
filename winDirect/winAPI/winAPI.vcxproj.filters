@@ -73,6 +73,9 @@
     <Filter Include="DX Framework\util">
       <UniqueIdentifier>{9dc81c8c-571e-474e-a5cf-fad8d22b53db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="baseObject">
+      <UniqueIdentifier>{c2a378ba-29a4-4c8c-b9e4-d90b14370acf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -134,6 +137,9 @@
     </ClCompile>
     <ClCompile Include="image.cpp">
       <Filter>API Framework\매니져\이미지\GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="baseObject.cpp">
+      <Filter>baseObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +214,9 @@
     </ClInclude>
     <ClInclude Include="image.h">
       <Filter>API Framework\매니져\이미지\GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="baseObject.h">
+      <Filter>baseObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
