@@ -1,0 +1,27 @@
+﻿  sceneTest.cpp
+  mainGame.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  winMain.cpp
+  sceneManager.cpp
+  loading.cpp
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.h(181): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(27): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(45): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(63): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(77): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(78): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(83): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(97): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(113): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(190): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(288): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(309): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(319): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(340): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+  gameNode.cpp
+  코드를 생성하고 있습니다...
+json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_reader.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_value.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_writer.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  winAPI.vcxproj -> C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\winDirect.exe
