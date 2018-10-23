@@ -1,5 +1,9 @@
 #pragma once
+#include "objectDef.h"
+#include "classesDef.h"
+#include "itemDef.h"
 
+class image;
 
 class baseObject
 {
@@ -20,7 +24,7 @@ public:
 	objDef::OBJECT getObjectKind()						{ return _objectKind; }
 
 	fPOINT getPosition()								{ return _position; }
-	POINT  getPosition_re_POINT()						{ return pos2point(_position); }
+	POINT  getPosition_re_POINT()						{ return MY_UTIL::pos2point(_position); }
 
 	fRECT& getCollisionRect()							{ return _collisionRect; }
 };
