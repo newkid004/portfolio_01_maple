@@ -13,6 +13,7 @@ public :
 	void update(void);
 	void render(void);
 
+	void renderEllipse(void);
 public:
 	sceneTest() {};
 	~sceneTest() {};

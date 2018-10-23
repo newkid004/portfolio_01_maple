@@ -128,7 +128,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 		return 0;
 	
 	// antialias 설정
-	_renderTarget->SetAntialiasMode(D2D1_ANTIALIAS_MODE_ALIASED);	// 사용
+	_renderTarget->SetAntialiasMode(D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);	// 사용
 
 	//화면에 윈도우창 보여주기
 	ShowWindow(_hWnd, nCmdShow);

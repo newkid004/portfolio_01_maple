@@ -19,10 +19,10 @@ animation::animation() :
 HRESULT animation::init(image * img)
 {
 	init(
-		img->getWidth(),
-		img->getHeight(),
-		img->getFrameWidth(),
-		img->getFrameHeight());
+		img->getSize().x,
+		img->getSize().y,
+		img->getFrameSize().x,
+		img->getFrameSize().y);
 
 	return S_OK;
 }
