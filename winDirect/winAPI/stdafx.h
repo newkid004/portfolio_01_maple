@@ -52,6 +52,12 @@ using namespace D2D1;
 //===================================
 // #include "triFunction.h"
 #include "utils.h"
+#include "baseObject.h"
+#include "objectDef.h"
+#include "itemDef.h"
+#include "classesDef.h"
+
+
 
 using namespace MY_UTIL;
 

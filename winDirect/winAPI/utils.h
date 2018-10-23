@@ -10,78 +10,85 @@
 #define FLOAT_EPSILON		0.001f
 
 // 캐스팅 연산자 : static_cast<type>(obj) -> 논리적으로 성립이 될 때 형변환 실행
-#define FLOAT_TO_INT(f1)	static_cast<int>(f1 + FLOAT_EPSILON)
+#define FLOAT_TO_INT(f1)	static_cast<int>(f1 + NUM_REAL_EPSILON)
 
-#define FLOAT_EQUAL(f1, f2) (fabs(f1 - f2) <= FLOAT_EPSILON)
+#define FLOAT_EQUAL(f1, f2) (fabs(f1 - f2) <= NUM_REAL_EPSILON)
+
+#define FLOAT_USE	
+
+#ifdef  FLOAT_USE
+#define NUM_REAL	float
+#else
+#define NUM_REAL	double
+#endif
 
 struct fPOINT
 {
-	float x;
-	float y;
+	NUM_REAL x;
+	NUM_REAL y;
 };
-struct dPOINT
+
+struct fRECT
 {
-	double x;
-	double y;
+	fPOINT LeftTop;
+	fPOINT RightBottom;
 };
+
 struct physicF
 {
 	fPOINT pos;
-	float radian;
-	float speed;
+	NUM_REAL radian;
+	NUM_REAL speed;
 };
-struct physicD
-{
-	dPOINT pos;
-	double radian;
-	double speed;
-};
+
+
 
 namespace MY_UTIL
 {
-	// ----- float ----- //
+	// ----- NUM_REAL ----- //
 	inline POINT pos2point(fPOINT & fpos) { return POINT{ (long)fpos.x, (long)fpos.y }; }
-	inline fPOINT point2fpos(POINT & pos) { return fPOINT{ (float)pos.x, (float)pos.y }; };
-	inline fPOINT point2fpos(POINT * pos) { return fPOINT{ (float)pos->x, (float)pos->y }; };
-	inline float getDeltaX(float & radian, float & distance) { return cos(radian) * distance; };
-	inline float getDeltaY(float & radian, float & distance) { return -sin(radian) * distance; };
+	inline fPOINT point2fpos(POINT & pos) { return fPOINT{ (NUM_REAL)pos.x, (NUM_REAL)pos.y }; };
+	inline fPOINT point2fpos(POINT * pos) { return fPOINT{ (NUM_REAL)pos->x, (NUM_REAL)pos->y }; };
+	
+	inline NUM_REAL getDeltaX(NUM_REAL & radian, NUM_REAL & distance) { return cos(radian) * distance; };
+	inline NUM_REAL getDeltaY(NUM_REAL & radian, NUM_REAL & distance) { return -sin(radian) * distance; };
 	inline fPOINT getDeltaPt(fPOINT & pos1, fPOINT & pos2) { return fPOINT{ pos2.x - pos1.x, pos2.y - pos1.y }; };
 
-	inline float getDistance(fPOINT & pos1, fPOINT & pos2)
+	inline NUM_REAL getDistance(fPOINT & pos1, fPOINT & pos2)
 	{
 		return sqrt(
 			getDeltaPt(pos1, pos2).x * getDeltaPt(pos1, pos2).x +
 			getDeltaPt(pos1, pos2).y * getDeltaPt(pos1, pos2).y);
 	};
 
-	inline float Deg2Rad(float & Degree) { return PI / 180.0f * Degree; };
-	inline float Rad2Deg(float & Radian) { return 180.0f / PI * Radian; };
-	inline float normalizeAngle(float & radian) 
+	inline NUM_REAL Deg2Rad(NUM_REAL & Degree) { return PI / 180.0f * Degree; };
+	inline NUM_REAL Rad2Deg(NUM_REAL & Radian) { return 180.0f / PI * Radian; };
+	inline NUM_REAL normalizeAngle(NUM_REAL & radian) 
 	{
-		if (radian < 0.0f)	return radian + ((float)((int)(-radian / PI2) + 1) * PI2);
-		else				return radian - ((float)((int)(radian / PI2)) * PI2);
+		if (radian < 0.0f)	return radian + ((NUM_REAL)((int)(-radian / PI2) + 1) * PI2);
+		else				return radian - ((NUM_REAL)((int)(radian / PI2)) * PI2);
 	};
-	// inline float getDegree(dPOINT pos1, dPOINT pos2) { return acos(getDeltaPt(pos1, pos2).x / getDistance(pos1, pos2)); };
-	inline float getRadian(fPOINT & pos1, fPOINT & pos2) 
+	// inline NUM_REAL getDegree(dPOINT pos1, dPOINT pos2) { return acos(getDeltaPt(pos1, pos2).x / getDistance(pos1, pos2)); };
+	inline NUM_REAL getRadian(fPOINT & pos1, fPOINT & pos2) 
 	{
 		fPOINT deltaPt = getDeltaPt(pos1, pos2);
-		float radian = atan2(-deltaPt.y, deltaPt.x);
+		NUM_REAL radian = atan2(-deltaPt.y, deltaPt.x);
 		if (radian < 0) radian = PI2 + radian;
 		return radian;
 	};
 
-	inline fPOINT getDeltaPos(fPOINT pos, float radian, float distance) { return fPOINT{ pos.x + cos(radian) * distance, pos.y + -sin(radian) * distance }; };
+	inline fPOINT getDeltaPos(fPOINT pos, NUM_REAL radian, NUM_REAL distance) { return fPOINT{ pos.x + cos(radian) * distance, pos.y + -sin(radian) * distance }; };
 	inline fPOINT getDeltaPos(physicF & p) { return fPOINT{ p.pos.x + cos(p.radian) * p.speed, p.pos.y + -sin(p.radian) * p.speed }; }
 
-	inline float getHommingRadian(float sourRadian, float destRadian, float hommingValue)	// hommingVale = 0.0 ~ 1
+	inline NUM_REAL getHommingRadian(NUM_REAL sourRadian, NUM_REAL destRadian, NUM_REAL hommingValue)	// hommingVale = 0.0 ~ 1
 	{
 		// degree형 각 계산
-		float sourAngle = normalizeAngle(sourRadian);
-		float destAngle = normalizeAngle(destRadian);
+		NUM_REAL sourAngle = normalizeAngle(sourRadian);
+		NUM_REAL destAngle = normalizeAngle(destRadian);
 
-		float changeAngle;
-		float angle1 = destAngle - (sourAngle + hommingValue);
-		float angle2 = destAngle - (sourAngle - hommingValue);
+		NUM_REAL changeAngle;
+		NUM_REAL angle1 = destAngle - (sourAngle + hommingValue);
+		NUM_REAL angle2 = destAngle - (sourAngle - hommingValue);
 		if (fabs(angle1) < fabs(angle2))
 		{
 			changeAngle = sourAngle + hommingValue;
@@ -96,95 +103,34 @@ namespace MY_UTIL
 		return changeAngle;
 	}
 
-	inline bool IsCrashEllipse(fPOINT & pos1, float & radius1, fPOINT & pos2, float & radius2) { return getDistance(pos1, pos2) < (radius1 + radius2); }
+	inline bool IsCrashEllipse(fPOINT & pos1, NUM_REAL & radius1, fPOINT & pos2, NUM_REAL & radius2) { return getDistance(pos1, pos2) < (radius1 + radius2); }
 
 	inline fPOINT addF(fPOINT & p1, fPOINT & p2) { return fPOINT{ p1.x + p2.x, p1.y + p2.y }; };
 	inline fPOINT decF(fPOINT & p1, fPOINT & p2) { return fPOINT{ p1.x - p2.x, p1.y - p2.y }; };
 	inline fPOINT mltF(fPOINT & p1, fPOINT & p2) { return fPOINT{ p1.x * p2.x, p1.y * p2.y }; };
 	inline fPOINT devF(fPOINT & p1, fPOINT & p2) { return fPOINT{ p1.x / p2.x, p1.y / p2.y }; };
 
-	inline float getAngle(fPOINT pos1, fPOINT pos2)
+	inline NUM_REAL getAngle(fPOINT pos1, fPOINT pos2)
 	{
-		float x = pos2.x - pos1.x;
-		float y = pos2.y - pos1.y;
-		float d = sqrt(x * x + y * y);
-		float angle = acos(x / d);
+		NUM_REAL x = pos2.x - pos1.x;
+		NUM_REAL y = pos2.y - pos1.y;
+		NUM_REAL d = sqrt(x * x + y * y);
+		NUM_REAL angle = acos(x / d);
 		if (y > 0) angle = PI2 - angle;	
 		return angle;
 	}
+	// -----fRECT----- //
+	inline fRECT rect2fRect(RECT& rect) { return fRECT{ fPOINT{ rect.left,rect.top },fPOINT{ rect.right,rect.bottom } }; }
+	inline fRECT rect2fRect(RECT* rect) { return fRECT{ fPOINT{ rect->left,rect->top },fPOINT{ rect->right,rect->bottom } }; }
 
-	// ----- double ----- //
-	inline POINT pos2point(dPOINT & fpos) { return POINT{ (long)fpos.x, (long)fpos.y }; }
-	inline dPOINT point2dpos(POINT & pos) { return dPOINT{ (double)pos.x, (double)pos.y }; };
-	inline double getDeltaX(double & radian, double & distance) { return cos(radian) * distance; };
-	inline double getDeltaY(double & radian, double & distance) { return -sin(radian) * distance; };
-	inline dPOINT getDeltaPt(dPOINT & pos1, dPOINT & pos2) { return dPOINT{ pos2.x - pos1.x, pos2.y - pos1.y }; };
 
-	inline double getDistance(dPOINT & pos1, dPOINT & pos2)
-	{
-		return sqrt(
-			getDeltaPt(pos1, pos2).x * getDeltaPt(pos1, pos2).x +
-			getDeltaPt(pos1, pos2).y * getDeltaPt(pos1, pos2).y);
-	};
-
-	inline double Deg2Rad(double & Degree) { return PI / 180.0 * Degree; };
-	inline double Rad2Deg(double & Radian) { return 180.0 / PI * Radian; };
-	inline double normalizeAngle(double & radian)
-	{
-		if (radian < 0.0)	return radian + ((double)((long)(-radian / PI2) + 1) * PI2);
-		else				return radian - ((double)((long)(radian / PI2)) * PI2);
-	};
-	// inline double getDegree(dPOINT pos1, dPOINT pos2) { return acos(getDeltaPt(pos1, pos2).x / getDistance(pos1, pos2)); };
-	inline double getRadian(dPOINT & pos1, dPOINT & pos2)
-	{
-		dPOINT deltaPt = getDeltaPt(pos1, pos2);
-		double radian = atan2(-deltaPt.y, deltaPt.x);
-		if (radian < 0) radian = PI2 + radian;
-		return radian;
-	};
-
-	inline dPOINT getDeltaPos(dPOINT pos, double & radian, double & distance) { return dPOINT{ pos.x + cos(radian) * distance, pos.y + -sin(radian) * distance }; };
-	inline dPOINT getDeltaPos(physicD & p) { return dPOINT{ p.pos.x + cos(p.radian) * p.speed, p.pos.y + -sin(p.radian) * p.speed }; }
-
-	inline double getHommingRadian(double sourRadian, double destRadian, double hommingValue)
-	{
-		// degree형 각 계산
-		double sourDegree = sourRadian < 0 ? PI2 + sourRadian : sourRadian;
-		double destDegree = destRadian < 0 ? PI2 + destRadian : destRadian;
-
-		double changeAngle;
-		double angle1 = destDegree - sourDegree;
-		double angle2 = sourDegree - destDegree;
-		angle1 = angle1 < 0 ? angle1 + PI2 : angle1;
-		angle2 = angle2 < 0 ? angle2 + PI2 : angle2;
-		changeAngle = angle1 < angle2 ? angle1 : angle2; // 더 작은 각의 방향으로
-
-		// degree -> radian
-		if (angle2 < angle1) changeAngle = -(PI - changeAngle);
-
-		return changeAngle * hommingValue;
-	}
-
-	inline dPOINT addD(dPOINT & p1, dPOINT & p2) { return dPOINT{ p1.x + p2.x, p1.y + p2.y }; };
-	inline dPOINT decD(dPOINT & p1, dPOINT & p2) { return dPOINT{ p1.x - p2.x, p1.y - p2.y }; };
-	inline dPOINT mltD(dPOINT & p1, dPOINT & p2) { return dPOINT{ p1.x * p2.x, p1.y * p2.y }; };
-	inline dPOINT devD(dPOINT & p1, dPOINT & p2) { return dPOINT{ p1.x / p2.x, p1.y / p2.y }; };
-
-	inline bool IsCrashEllipse(dPOINT & pos1, double & radius1, dPOINT & pos2, double & radius2) { return getDistance(pos1, pos2) < (radius1 + radius2); }
-
-	inline double getAngle(dPOINT pos1, dPOINT pos2)
-	{
-		double x = pos2.x - pos1.x;
-		double y = pos2.y - pos1.y;
-		double d = sqrt(x * x + y * y);
-		double angle = acos(x / d);
-		if (y > 0) angle = PI2 - angle;
-		return angle;
-	}
+	inline fRECT  pos2fRect(fPOINT startPoint, fPOINT endPoint) { return fRECT{ startPoint,endPoint }; }
+	inline fRECT  point2fRect(POINT startPoint, POINT endPoint) { return fRECT{ point2fpos(startPoint),point2fpos(endPoint) }; }
+	
 
 	// ----- bit ----- //
 	inline int bit_put(int b1, int b2) { return b1 | b2; };
-	inline int bit_reverse(int b) { return 0xFFFFFF - b; };
+	inline int bit_reverse(int b) { return 0x7FFFFFF - b; };
 	inline int bit_pick(int b1, int b2) { return b1 & bit_reverse(b2); };
 }
 
