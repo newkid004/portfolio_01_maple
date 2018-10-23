@@ -218,5 +218,14 @@
     <ClInclude Include="baseObject.h">
       <Filter>baseObject</Filter>
     </ClInclude>
+    <ClInclude Include="objectDef.h">
+      <Filter>baseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="itemDef.h">
+      <Filter>baseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="classesDef.h">
+      <Filter>baseObject</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
