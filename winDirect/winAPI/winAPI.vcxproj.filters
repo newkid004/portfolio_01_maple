@@ -70,8 +70,17 @@
     <Filter Include="DX Framework\util">
       <UniqueIdentifier>{9dc81c8c-571e-474e-a5cf-fad8d22b53db}</UniqueIdentifier>
     </Filter>
-    <Filter Include="baseObject">
+    <Filter Include="메인게임\Game Framework">
+      <UniqueIdentifier>{4e0fd5fc-cd4c-436b-b323-1ee07d4aa4ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\baseObject">
       <UniqueIdentifier>{c2a378ba-29a4-4c8c-b9e4-d90b14370acf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\NPC">
+      <UniqueIdentifier>{1991bdfa-711d-4915-a350-df9106fb0189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\NPC\NPCManager">
+      <UniqueIdentifier>{d6815cf5-9baf-4497-8c0c-12d361921ac6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -136,7 +145,13 @@
       <Filter>API Framework\매니져\이미지\GDI</Filter>
     </ClCompile>
     <ClCompile Include="baseObject.cpp">
-      <Filter>baseObject</Filter>
+      <Filter>메인게임\Game Framework\baseObject</Filter>
+    </ClCompile>
+    <ClCompile Include="npcBase.cpp">
+      <Filter>메인게임\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="npcManager.cpp">
+      <Filter>메인게임\NPC\NPCManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -213,16 +228,22 @@
       <Filter>API Framework\매니져\이미지\GDI</Filter>
     </ClInclude>
     <ClInclude Include="baseObject.h">
-      <Filter>baseObject</Filter>
+      <Filter>메인게임\Game Framework\baseObject</Filter>
     </ClInclude>
     <ClInclude Include="objectDef.h">
-      <Filter>baseObject</Filter>
+      <Filter>메인게임\Game Framework\baseObject</Filter>
     </ClInclude>
     <ClInclude Include="itemDef.h">
-      <Filter>baseObject</Filter>
+      <Filter>메인게임\Game Framework\baseObject</Filter>
     </ClInclude>
     <ClInclude Include="classesDef.h">
-      <Filter>baseObject</Filter>
+      <Filter>메인게임\Game Framework\baseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="npcBase.h">
+      <Filter>메인게임\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="npcManager.h">
+      <Filter>메인게임\NPC\NPCManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

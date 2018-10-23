@@ -83,3 +83,9 @@ void keyManager::setWheelDown(function<void(void)> * downFunction)
 	if (_callWheelDown) SAFE_DELETE(_callWheelDown);
 	_callWheelDown = downFunction;
 }
+
+void keyManager::setDBClick(function<void(void)>* dbClickFunction)
+{
+	if (_callDBClick)SAFE_DELETE(_callDBClick);
+	_callDBClick = dbClickFunction;
+}
