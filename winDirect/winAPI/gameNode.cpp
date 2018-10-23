@@ -21,6 +21,8 @@ HRESULT gameNode::init(bool managerInit)
 	// D2D1_SIZE_F real_size = _renderTarget->GetSize();
 	// _renderRate = { real_size.width / RectWidth(r), real_size.height / RectHeight(r) };
 
+	// COM 라이브러리 초기화
+	CoInitialize(NULL);
 #else
 	_hdc = GetDC(_hWnd);
 #endif

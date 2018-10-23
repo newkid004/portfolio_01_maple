@@ -52,9 +52,6 @@
     <Filter Include="API Framework\매니져\이미지\GDI">
       <UniqueIdentifier>{41cce586-91e0-4109-8535-80e9a6a1e21f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="API Framework\매니져\이미지\GDI+">
-      <UniqueIdentifier>{3ade1e14-966d-41fd-826e-215e5fdc0b29}</UniqueIdentifier>
-    </Filter>
     <Filter Include="API Framework\매니져\Json">
       <UniqueIdentifier>{a67edd88-2622-4ea2-ab0a-755681351c79}</UniqueIdentifier>
     </Filter>
