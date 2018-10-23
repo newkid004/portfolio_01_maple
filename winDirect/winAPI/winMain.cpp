@@ -115,7 +115,6 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 #endif		// #ifdef FULLSCREEN
 
 	// // ===== Direct ===== //
-
 	// ----- 팩토리 개체 생성 : 싱글 스레드
 	if (S_OK != D2D1CreateFactory(D2D1_FACTORY_TYPE_SINGLE_THREADED, &_factory))
 		return 0;
@@ -127,6 +126,9 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 		HwndRenderTargetProperties(_hWnd, SizeU(RectWidth(r), RectHeight(r))),	// 출력 대상 윈도우 핸들
 		&_renderTarget))														// 렌더 타겟 설정
 		return 0;
+	
+	// antialias 설정
+	_renderTarget->SetAntialiasMode(D2D1_ANTIALIAS_MODE_ALIASED);	// 사용
 
 	//화면에 윈도우창 보여주기
 	ShowWindow(_hWnd, nCmdShow);

@@ -8,19 +8,18 @@ HRESULT gameNode::init(void)
 {
 	this->init(true);
 
-	// 렌더 비율 초기화
-	RECT r;
-	GetClientRect(_hWnd, &r);
-
-	D2D1_SIZE_F real_size = _renderTarget->GetSize();
-	_renderRate = { real_size.width / RectWidth(r), real_size.height / RectHeight(r) };
-
 	return S_OK;
 }
 
 HRESULT gameNode::init(bool managerInit)
 {
 #ifdef PROCESS_D3D
+	// 렌더 비율 초기화
+	// RECT r;
+	// GetClientRect(_hWnd, &r);
+	// 
+	// D2D1_SIZE_F real_size = _renderTarget->GetSize();
+	// _renderRate = { real_size.width / RectWidth(r), real_size.height / RectHeight(r) };
 
 #else
 	_hdc = GetDC(_hWnd);

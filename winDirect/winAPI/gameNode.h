@@ -17,7 +17,8 @@ public:
 	virtual void update(void);
 	virtual void render(void);
 
-	ColorF & getBackColor(void) { return _backColor; };
+	static ColorF & getBackColor(void) { return _backColor; };
+	static D2D1_SIZE_F & getRate(void) { return _renderRate; };
 
 	//메인 프로시져
 	LRESULT MainProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam);
