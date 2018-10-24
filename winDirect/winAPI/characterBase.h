@@ -10,14 +10,14 @@
 class characterBase:public baseObject
 {
 protected:
-	patternBase * _currentPattern;
+	patternBase * _currentPattern;			//현재 패턴
 
-	list<buffBase*> _LbuffList;
-	list<buffBase*>::iterator _Libuff;
+	list<buffBase*> _LbuffList;				//버프 리스트
+	list<buffBase*>::iterator _Libuff;		
 
 protected:
-	fPOINT	_velocity;
-	state	_state;
+	fPOINT	_velocity;						//속도
+	state	_state;							//스텟
 public:
 
 	void setPattern(patternBase* pattern) { _currentPattern = pattern; }

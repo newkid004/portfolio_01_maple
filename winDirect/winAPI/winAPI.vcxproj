@@ -152,10 +152,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="activeSkill.cpp" />
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="animationGroup.cpp" />
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="buffBase.cpp" />
+    <ClCompile Include="buffManager.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="characterBase.cpp" />
@@ -169,10 +171,13 @@
     <ClCompile Include="mainGame.cpp" />
     <ClCompile Include="npcBase.cpp" />
     <ClCompile Include="npcManager.cpp" />
+    <ClCompile Include="passiveSkill.cpp" />
     <ClCompile Include="patternBase.cpp" />
+    <ClCompile Include="patternManager.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
     <ClCompile Include="skillBase.cpp" />
+    <ClCompile Include="skillManager.cpp" />
     <ClCompile Include="soundManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -184,10 +189,12 @@
     <ClCompile Include="winMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="activeSkill.h" />
     <ClInclude Include="animation.h" />
     <ClInclude Include="animationGroup.h" />
     <ClInclude Include="baseObject.h" />
     <ClInclude Include="buffBase.h" />
+    <ClInclude Include="buffManager.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraManager.h" />
     <ClInclude Include="characterBase.h" />
@@ -205,12 +212,15 @@
     <ClInclude Include="npcBase.h" />
     <ClInclude Include="npcManager.h" />
     <ClInclude Include="objectDef.h" />
+    <ClInclude Include="passiveSkill.h" />
     <ClInclude Include="patternBase.h" />
+    <ClInclude Include="patternManager.h" />
     <ClInclude Include="randomFunction.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="sceneTest.h" />
     <ClInclude Include="singletonBase.h" />
     <ClInclude Include="skillBase.h" />
+    <ClInclude Include="skillManager.h" />
     <ClInclude Include="soundManager.h" />
     <ClInclude Include="state.h" />
     <ClInclude Include="stdafx.h" />

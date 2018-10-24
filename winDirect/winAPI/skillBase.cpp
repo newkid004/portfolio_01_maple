@@ -1,12 +1,17 @@
 #include "stdafx.h"
 #include "skillBase.h"
 
-
-skillBase::skillBase()
+HRESULT skillBase::init()
 {
+	return S_OK;
 }
 
-
-skillBase::~skillBase()
+void skillBase::release()
 {
+
+}
+
+void skillBase::render()
+{
+
 }

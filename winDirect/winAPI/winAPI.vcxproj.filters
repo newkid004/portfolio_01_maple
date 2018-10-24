@@ -85,14 +85,32 @@
     <Filter Include="메인게임\Game Framework\characterBase">
       <UniqueIdentifier>{81f10eb2-0dd1-48fd-906a-f436f12166fe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메인게임\Game Framework\patternBase">
-      <UniqueIdentifier>{808fc1f2-87fa-40c7-9760-2da8ebd85840}</UniqueIdentifier>
+    <Filter Include="메인게임\Game Framework\Manager">
+      <UniqueIdentifier>{63f92f2b-11a0-47be-ba52-676bc31e4dac}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메인게임\Game Framework\buffBase">
+    <Filter Include="메인게임\Game Framework\Manager\buff">
+      <UniqueIdentifier>{25f8f6c2-3779-45ef-a96b-467397174f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\buff\base">
       <UniqueIdentifier>{3f77184d-4182-4346-8541-5ea67acf5d3f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메인게임\Game Framework\skillBase">
+    <Filter Include="메인게임\Game Framework\Manager\skill">
+      <UniqueIdentifier>{535b8a10-8f78-4958-bb60-311175ffc5c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\skill\base">
       <UniqueIdentifier>{314807f2-0511-4b23-90f6-e9c94698b1c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\pattern">
+      <UniqueIdentifier>{72f93ea8-7ff0-45eb-9e6c-6bb98e2858d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\pattern\base">
+      <UniqueIdentifier>{808fc1f2-87fa-40c7-9760-2da8ebd85840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\skill\passiveSkill">
+      <UniqueIdentifier>{ce46af12-4c33-4d42-8cc1-614802b5017b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\skill\activeSkill">
+      <UniqueIdentifier>{35be4324-5067-4b6a-99ad-fa7710ac95ca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -169,13 +187,28 @@
       <Filter>메인게임\Game Framework\characterBase</Filter>
     </ClCompile>
     <ClCompile Include="patternBase.cpp">
-      <Filter>메인게임\Game Framework\patternBase</Filter>
+      <Filter>메인게임\Game Framework\Manager\pattern\base</Filter>
     </ClCompile>
     <ClCompile Include="buffBase.cpp">
-      <Filter>메인게임\Game Framework\buffBase</Filter>
+      <Filter>메인게임\Game Framework\Manager\buff\base</Filter>
     </ClCompile>
     <ClCompile Include="skillBase.cpp">
-      <Filter>메인게임\Game Framework\skillBase</Filter>
+      <Filter>메인게임\Game Framework\Manager\skill\base</Filter>
+    </ClCompile>
+    <ClCompile Include="buffManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\buff</Filter>
+    </ClCompile>
+    <ClCompile Include="skillManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\skill</Filter>
+    </ClCompile>
+    <ClCompile Include="patternManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="activeSkill.cpp">
+      <Filter>메인게임\Game Framework\Manager\skill\activeSkill</Filter>
+    </ClCompile>
+    <ClCompile Include="passiveSkill.cpp">
+      <Filter>메인게임\Game Framework\Manager\skill\passiveSkill</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -273,16 +306,31 @@
       <Filter>메인게임\Game Framework\characterBase</Filter>
     </ClInclude>
     <ClInclude Include="patternBase.h">
-      <Filter>메인게임\Game Framework\patternBase</Filter>
+      <Filter>메인게임\Game Framework\Manager\pattern\base</Filter>
     </ClInclude>
     <ClInclude Include="buffBase.h">
-      <Filter>메인게임\Game Framework\buffBase</Filter>
+      <Filter>메인게임\Game Framework\Manager\buff\base</Filter>
     </ClInclude>
     <ClInclude Include="skillBase.h">
-      <Filter>메인게임\Game Framework\skillBase</Filter>
+      <Filter>메인게임\Game Framework\Manager\skill\base</Filter>
     </ClInclude>
     <ClInclude Include="state.h">
       <Filter>메인게임\Game Framework\characterBase</Filter>
+    </ClInclude>
+    <ClInclude Include="buffManager.h">
+      <Filter>메인게임\Game Framework\Manager\buff</Filter>
+    </ClInclude>
+    <ClInclude Include="skillManager.h">
+      <Filter>메인게임\Game Framework\Manager\skill</Filter>
+    </ClInclude>
+    <ClInclude Include="patternManager.h">
+      <Filter>메인게임\Game Framework\Manager\pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="activeSkill.h">
+      <Filter>메인게임\Game Framework\Manager\skill\activeSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="passiveSkill.h">
+      <Filter>메인게임\Game Framework\Manager\skill\passiveSkill</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

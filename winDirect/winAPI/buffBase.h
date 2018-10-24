@@ -4,7 +4,6 @@ class buffBase
 {
 protected:
 	string			_name;
-	string			_explain;
 
 	int				_lv;
 	
