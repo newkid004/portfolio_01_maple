@@ -12,6 +12,12 @@ HRESULT sceneTest::init(void)
 
 	IMAGEMANAGER->setRenderState(IRS_ALWAYS_RESET_TRANSFORM, false);
 
+	_ani = new animation;
+	_ani->init(IMAGEMANAGER->find("frame"));
+	_ani->setFPS(15);
+	_ani->setDefPlayFrame(false, true);
+	_ani->isPlay() = true;
+
 	return S_OK;
 }
 
@@ -26,18 +32,7 @@ void sceneTest::update(void)
 
 void sceneTest::render(void)
 {
-	static POINT frame = { 0 ,0 };
-	static float interval = 0.1f;
-	static float curFrame = 0.0f;
-
-	curFrame += TIMEMANAGER->getElapsedTime();
-	if (interval < curFrame)
-	{
-		frame.x = IMAGEMANAGER->find("frame")->getMaxFrame().x < ++frame.x ? 0 : frame.x;
-		curFrame -= interval;
-	}
-
-	IMAGEMANAGER->find("frame")->frameRender(frame.x, 0);
+	IMAGEMANAGER->find("frame")->aniRender(_ani->update());
 }
 
 void sceneTest::updateControl(void)
@@ -45,9 +40,6 @@ void sceneTest::updateControl(void)
 	static fPOINT pos;
 	static float rot;
 	static int flip;
-
-	static fPOINT clipPos = fPOINT(100.0f, 20.0f);
-	static fPOINT clipSize = fPOINT(100.0f, 100.0f);
 
 	if (KEYMANAGER->down('W'))	rot -= TIMEMANAGER->getElapsedTime() * 180;
 	if (KEYMANAGER->down('S'))	rot += TIMEMANAGER->getElapsedTime() * 180;

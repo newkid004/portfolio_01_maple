@@ -67,6 +67,12 @@ void animation::release(void)
 	}
 }
 
+animation * animation::update(float ratio)
+{
+	frameUpdate(TIMEMANAGER->getElapsedTime() * ratio);
+	return this;
+}
+
 // 기본 프레임 셋팅
 void animation::setDefPlayFrame(BOOL reverse, BOOL loop)
 {

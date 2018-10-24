@@ -125,8 +125,13 @@ void imageManager::resetTransform(void)
 	_imgPos = { 0 ,0 };
 	_imgFlip = 0; 
 	_imgRotate = 0.0f;
+}
 
-	_renderTarget->SetTransform(Matrix3x2F());
+void imageManager::resetTransform(e_RESET_TRANSFORM resetValue)
+{
+	if (resetValue & RTF_POSITION)	_imgPos = { 0 ,0 };
+	if (resetValue & RTF_ROTATION)	_imgRotate = 0.0f;
+	if (resetValue & RTF_FLIP)		_imgFlip = 0;
 }
 
 void imageManager::setTransform(D2D1_POINT_2F * pos)
@@ -145,8 +150,8 @@ void imageManager::setRenderState(e_IMG_RENDER_STATE state, int value)
 	switch (state)
 	{
 	case IRS_ALWAYS_RESET_TRANSFORM: {		// 항상 초기화 하는지
-		if (value)	_renderState |= IRS_ALWAYS_RESET_TRANSFORM;
-		else		_renderState = bit_pick(_renderState, IRS_ALWAYS_RESET_TRANSFORM);
+		if (value)	_renderState = bit_put(_renderState, state);
+		else		_renderState = bit_pick(_renderState, state);
 	} break;
 	}
 }
