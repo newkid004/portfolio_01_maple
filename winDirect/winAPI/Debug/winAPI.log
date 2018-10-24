@@ -1,25 +1,50 @@
-﻿  sceneTest.cpp
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(10): error C2039: 'add': 'imageManager'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\imagemanager.h(5): note: 'imageManager' 선언을 참조하십시오.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(11): error C2039: 'add': 'imageManager'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\imagemanager.h(5): note: 'imageManager' 선언을 참조하십시오.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(13): error C2039: 'setRenderState': 'imageManager'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\imagemanager.h(5): note: 'imageManager' 선언을 참조하십시오.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(13): error C2065: 'IRS_ALWAYS_RESET_TRANSFORM': 선언되지 않은 식별자입니다.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(36): error C2039: 'getMaxFrame': 'image'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\image.h(7): note: 'image' 선언을 참조하십시오.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(36): error C2228: '.x' 왼쪽에는 클래스/구조체/공용 구조체가 있어야 합니다.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(40): error C2039: 'frameRender': 'image'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\image.h(7): note: 'image' 선언을 참조하십시오.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(49): error C2440: '<function-style-cast>': 'initializer list'에서 'fPOINT'(으)로 변환할 수 없습니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(49): note: 소스 형식을 가져올 수 있는 생성자가 없거나 생성자 오버로드 확인이 모호합니다.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(50): error C2440: '<function-style-cast>': 'initializer list'에서 'fPOINT'(으)로 변환할 수 없습니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(50): note: 소스 형식을 가져올 수 있는 생성자가 없거나 생성자 오버로드 확인이 모호합니다.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(60): error C2065: 'IMAGE_FLIP_HORIZON': 선언되지 않은 식별자입니다.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(61): error C2065: 'IMAGE_FLIP_VERTICAL': 선언되지 않은 식별자입니다.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(63): error C2039: 'statePos': 'imageManager'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\imagemanager.h(5): note: 'imageManager' 선언을 참조하십시오.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(64): error C2039: 'stateRotate': 'imageManager'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\imagemanager.h(5): note: 'imageManager' 선언을 참조하십시오.
-d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(65): error C2039: 'stateFlip': 'imageManager'의 멤버가 아닙니다.
-  d:\프로그래밍\maple\mapleproject\windirect\winapi\imagemanager.h(5): note: 'imageManager' 선언을 참조하십시오.
+﻿  stdafx.cpp
+d:\프로그래밍\maple\mapleproject\windirect\winapi\commonmacrofunction.h(207): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  animation.cpp
+d:\프로그래밍\maple\mapleproject\windirect\winapi\animation.cpp(23): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\animation.cpp(22): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  animationGroup.cpp
+  baseObject.cpp
+  camera.cpp
+d:\프로그래밍\maple\mapleproject\windirect\winapi\camera.cpp(66): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\camera.cpp(67): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  cameraManager.cpp
+  eventBase.cpp
+  eventManager.cpp
+  gameNode.cpp
+  image.cpp
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(46): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(47): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(152): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(153): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(155): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  imageManager.cpp
+  iniData.cpp
+  JsonSaveLoader.cpp
+  keyManager.cpp
+  loading.cpp
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.h(181): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(77): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(78): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(190): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(288): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(341): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+  mainGame.cpp
+  sceneManager.cpp
+  sceneTest.cpp
+d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(80): warning C4101: 'a' :참조되지 않은 지역 변수입니다.
+  soundManager.cpp
+  timeManager.cpp
+  timer.cpp
+  코드를 생성하고 있습니다...
+d:\프로그래밍\maple\mapleproject\windirect\winapi\inidata.cpp(86): warning C4172: 지역 변수 또는 임시: data의 주소를 반환하고 있습니다.
+  컴파일하고 있습니다...
+  txtDataManager.cpp
+  winMain.cpp
+  코드를 생성하고 있습니다...
+d:\프로그래밍\maple\mapleproject\windirect\winapi\txtdatamanager.cpp(46): warning C4172: 지역 변수 또는 임시: str의 주소를 반환하고 있습니다.
+  LINK : D:\프로그래밍\Maple\MapleProject\winDirect\Debug\winDirect.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
+json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_reader.obj)' 또는 'D:\프로그래밍\Maple\MapleProject\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_value.obj)' 또는 'D:\프로그래밍\Maple\MapleProject\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_writer.obj)' 또는 'D:\프로그래밍\Maple\MapleProject\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  winAPI.vcxproj -> D:\프로그래밍\Maple\MapleProject\winDirect\Debug\winDirect.exe

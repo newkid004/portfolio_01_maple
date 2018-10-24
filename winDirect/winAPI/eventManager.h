@@ -8,7 +8,7 @@ private:
 	list<eventBase*> _lEvent;
 	
 public:
-	HRESULT init() {}
+	HRESULT init() { return S_OK; }
 	void release();
 	void update();
 	void render();
