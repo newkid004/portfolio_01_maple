@@ -39,12 +39,35 @@ struct fPOINT
 	fPOINT operator-(NUM_REAL input) { return fPOINT(this->x - input, this->y - input); }
 	fPOINT operator*(NUM_REAL input) { return fPOINT(this->x * input, this->y * input); }
 	fPOINT operator/(NUM_REAL input) { return fPOINT(this->x / input, this->y / input); }
+
+	void operator+=(fPOINT input) { this->x += input.x; this->y += input.y; };
+	void operator-=(fPOINT input) { this->x -= input.x; this->y -= input.y; };
+	void operator*=(fPOINT input) { this->x *= input.x; this->y *= input.y; };
+	void operator/=(fPOINT input) { this->x /= input.x; this->y /= input.y; };
 };
 
 struct fRECT
 {
-	fPOINT LeftTop;
-	fPOINT RightBottom;
+	fPOINT LT;
+	fPOINT RB;
+
+	fRECT() {}
+	fRECT(fPOINT LT, fPOINT RB) { this->LT = LT; this->RB = RB; };
+	fRECT(NUM_REAL left, NUM_REAL top, NUM_REAL right, NUM_REAL bottom) 
+	{ 
+		this->LT = fPOINT(left, top);
+		this->RB = fPOINT(right, bottom); 
+	}
+
+	fRECT operator+(fPOINT input) { return fRECT(fPOINT(LT + input), fPOINT(RB + input)); }
+	fRECT operator-(fPOINT input) { return fRECT(fPOINT(LT - input), fPOINT(RB - input)); }
+	fRECT operator*(fPOINT input) { return fRECT(fPOINT(LT * input), fPOINT(RB * input)); }
+	fRECT operator/(fPOINT input) { return fRECT(fPOINT(LT / input), fPOINT(RB / input)); }
+
+	fRECT operator+(NUM_REAL input) { return fRECT(fPOINT(LT + input), fPOINT(RB + input)); }
+	fRECT operator-(NUM_REAL input) { return fRECT(fPOINT(LT - input), fPOINT(RB - input)); }
+	fRECT operator*(NUM_REAL input) { return fRECT(fPOINT(LT * input), fPOINT(RB * input)); }
+	fRECT operator/(NUM_REAL input) { return fRECT(fPOINT(LT / input), fPOINT(RB / input)); }
 };
 
 struct physicF
@@ -135,7 +158,6 @@ namespace MY_UTIL
 	// -----fRECT----- //
 	inline fRECT rect2fRect(RECT& rect) { return fRECT{ fPOINT{ (NUM_REAL)rect.left,(NUM_REAL)rect.top },fPOINT{ (NUM_REAL)rect.right,(NUM_REAL)rect.bottom } }; }
 	inline fRECT rect2fRect(RECT* rect) { return fRECT{ fPOINT{ (NUM_REAL)rect->left,(NUM_REAL)rect->top },fPOINT{ (NUM_REAL)rect->right,(NUM_REAL)rect->bottom } }; }
-
 
 	inline fRECT  pos2fRect(fPOINT startPoint, fPOINT endPoint) { return fRECT{ startPoint,endPoint }; }
 	inline fRECT  point2fRect(POINT startPoint, POINT endPoint) { return fRECT{ point2fpos(startPoint),point2fpos(endPoint) }; }
