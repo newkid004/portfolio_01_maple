@@ -162,10 +162,10 @@ namespace MY_UTIL
 	inline fRECT  pos2fRect(fPOINT startPoint, fPOINT endPoint) { return fRECT{ startPoint,endPoint }; }
 	inline fRECT  point2fRect(POINT startPoint, POINT endPoint) { return fRECT{ point2fpos(startPoint),point2fpos(endPoint) }; }
 	
-
 	// ----- bit ----- //
 	inline int bit_put(int b1, int b2) { return b1 | b2; };
 	inline int bit_reverse(int b) { return 0x7FFFFFF - b; };
 	inline int bit_pick(int b1, int b2) { return b1 & bit_reverse(b2); };
+	inline int bit_flip(int b1, int b2) { return b1 ^ b2; };
 }
 
