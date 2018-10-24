@@ -21,7 +21,7 @@ public:
 	virtual void render(){}
 
 public:
-	eventBase * makeEvent(baseObject* sour, baseObject* dest, unsigned long param = 0ul, float timeAlive = 0.0f);
+	static eventBase * makeEvent(baseObject* sour, baseObject* dest, unsigned long param = 0ul, float timeAlive = 0.0f);
 
 public: // getter, setter
 	float getTimeAlive() { return _timeAlive; }
