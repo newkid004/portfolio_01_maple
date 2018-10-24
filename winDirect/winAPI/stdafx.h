@@ -71,6 +71,7 @@ using namespace MY_UTIL;
 #include "JsonSaveLoader.h"
 
 // 매니저 : 임의 추가
+#include "renderManager.h"
 
 //========================
 // # 싱글톤을 이곳에 추가 #
@@ -84,7 +85,7 @@ using namespace MY_UTIL;
 #define SCENEMANAGER	sceneManager::getSingleton()
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
-
+#define RENDERMANAGER	renderManager::getSingleton()
 
 //============================
 // # 매크로 # (윈도우창 초기화)

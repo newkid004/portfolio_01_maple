@@ -165,6 +165,7 @@
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loading.cpp" />
     <ClCompile Include="mainGame.cpp" />
+    <ClCompile Include="renderManager.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
     <ClCompile Include="soundManager.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="mainGame.h" />
     <ClInclude Include="objectDef.h" />
     <ClInclude Include="randomFunction.h" />
+    <ClInclude Include="renderManager.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="sceneTest.h" />
     <ClInclude Include="singletonBase.h" />

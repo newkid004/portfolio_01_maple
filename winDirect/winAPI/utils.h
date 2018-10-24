@@ -28,7 +28,8 @@ struct fPOINT
 	NUM_REAL y;
 
 	fPOINT()						{ this->x = 0; this->y = 0; }
-	fPOINT(NUM_REAL x, NUM_REAL y)	{ this->x = x; this->y = y; };
+	fPOINT(NUM_REAL xy)				{ this->x = xy; this->y = xy; };
+	fPOINT(NUM_REAL x, NUM_REAL y) { this->x = x; this->y = y; };
 
 	fPOINT operator+(fPOINT input) { return fPOINT(this->x + input.x, this->y + input.y); }
 	fPOINT operator-(fPOINT input) { return fPOINT(this->x - input.x, this->y - input.y); }
@@ -44,6 +45,11 @@ struct fPOINT
 	void operator-=(fPOINT input) { this->x -= input.x; this->y -= input.y; };
 	void operator*=(fPOINT input) { this->x *= input.x; this->y *= input.y; };
 	void operator/=(fPOINT input) { this->x /= input.x; this->y /= input.y; };
+
+	void operator+=(NUM_REAL input) { this->x += input; this->y += input; }
+	void operator-=(NUM_REAL input) { this->x -= input; this->y -= input; }
+	void operator*=(NUM_REAL input) { this->x *= input; this->y *= input; }
+	void operator/=(NUM_REAL input) { this->x /= input; this->y /= input; }
 };
 
 struct fRECT

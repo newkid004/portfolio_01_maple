@@ -73,6 +73,12 @@
     <Filter Include="baseObject">
       <UniqueIdentifier>{c2a378ba-29a4-4c8c-b9e4-d90b14370acf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Manager">
+      <UniqueIdentifier>{c9263580-f3da-4e31-bbdb-f59c4fae61e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Manager\render">
+      <UniqueIdentifier>{f8506e9b-8008-444f-951b-a048d868601b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -137,6 +143,9 @@
     </ClCompile>
     <ClCompile Include="baseObject.cpp">
       <Filter>baseObject</Filter>
+    </ClCompile>
+    <ClCompile Include="renderManager.cpp">
+      <Filter>메인게임\Manager\render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +232,9 @@
     </ClInclude>
     <ClInclude Include="classesDef.h">
       <Filter>baseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="renderManager.h">
+      <Filter>메인게임\Manager\render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

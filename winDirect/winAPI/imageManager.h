@@ -82,6 +82,7 @@ public :
 
 	void setRenderState(e_IMG_RENDER_STATE state, int value);
 	const int getRenderState(void) { return _renderState; };
+	const int getRenderState(e_IMG_RENDER_STATE state) { return _renderState & state; }
 
 private:
 	void	_flip2fpos(int flip, D2D1_SIZE_F & output);
