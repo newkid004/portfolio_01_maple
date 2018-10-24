@@ -13,7 +13,7 @@ protected:
 	objDef::OBJECT	_objectKind;
 
 	fPOINT			_position;
-	fRECT			_collision;
+	fRECT			_collisionRect;
 public:
 	baseObject() {};
 	~baseObject() {};
@@ -26,8 +26,6 @@ public:
 	fPOINT getPosition()								{ return _position; }
 	POINT  getPosition_re_POINT()						{ return MY_UTIL::pos2point(_position); }
 
-	fRECT& getCollision()							{ return _collision; }
-	fRECT getCollisionRect() { return pos2fRect(fPOINT{ _position.x + _collision.LeftTop.x,_position.y + _collision.LeftTop.y },
-								fPOINT{ _position.x + _collision.RightBottom.x,_position.y + _collision.RightBottom.y }); }
+	fRECT& getCollisionRect()							{ return _collisionRect; }
 };
 

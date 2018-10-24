@@ -3,17 +3,21 @@
 // 클래스 전방선언
 class animation;
 
+enum e_IMAGE_FLIP
+{
+	IMAGE_FLIP_NONE		= 0b00,
+	IMAGE_FLIP_VERTICAL	= 0b10,
+	IMAGE_FLIP_HORIZON	= 0b01
+};
+
 class image
 {
 public:
-
 	typedef struct tagImage
 	{
 		ID2D1Bitmap*	bitmap;			// 비트맵
 		
 		fPOINT			size;			// 크기
-		float			rotate;			// 회전
-		float			alpha;			// 알파
 										
 		int				maxFrameX;		// 최대 프레임 x갯수
 		int				maxFrameY;		// 최대 프레임 y갯수
@@ -24,8 +28,6 @@ public:
 			bitmap		= NULL;
 			
 			size		= { 0.0f, 0.0f };
-			rotate		= 0.0f;
-			alpha		= 0.0f;
 
 			maxFrameX	= 0;
 			maxFrameY	= 0;
@@ -39,7 +41,8 @@ private:
 
 private :
 	HRESULT _putImage(void);
-	void _putImageInfo(void);
+	void	_putImageInfo(void);
+	void	_flip2fpos(int flip, D2D1_SIZE_F & output);
 
 public:
 	// 프레임 초기화
@@ -50,9 +53,7 @@ public:
 	void release(void);
 
 	//렌더 (내가 지정한 좌표에 이미지 출력한다)
-	void render(void);
-	//void render(HDC hdc, float ratio);
-	//void render(HDC hdc, int destX, int destY);
+	void render(int flip = IMAGE_FLIP_NONE, float rotate = 0.0f, float alpha = 1.0f);
 
 	//// 이미지 클리핑
 	//void render(HDC hdc, int destX, int destY, int sourX, int sourY, int sourW, int sourH);

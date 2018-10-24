@@ -22,7 +22,7 @@
     <ProjectGuid>{7C0A3AA2-9BB1-47A6-81A6-D29200A61266}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>winAPI</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <ProjectName>winDirect</ProjectName>
     <SccProjectName>SAK</SccProjectName>
     <SccAuxPath>SAK</SccAuxPath>
@@ -34,7 +34,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -155,10 +155,8 @@
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="animationGroup.cpp" />
     <ClCompile Include="baseObject.cpp" />
-    <ClCompile Include="buffBase.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
-    <ClCompile Include="characterBase.cpp" />
     <ClCompile Include="gameNode.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
@@ -167,12 +165,8 @@
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loading.cpp" />
     <ClCompile Include="mainGame.cpp" />
-    <ClCompile Include="npcBase.cpp" />
-    <ClCompile Include="npcManager.cpp" />
-    <ClCompile Include="patternBase.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
-    <ClCompile Include="skillBase.cpp" />
     <ClCompile Include="soundManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -187,10 +181,8 @@
     <ClInclude Include="animation.h" />
     <ClInclude Include="animationGroup.h" />
     <ClInclude Include="baseObject.h" />
-    <ClInclude Include="buffBase.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraManager.h" />
-    <ClInclude Include="characterBase.h" />
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="gameNode.h" />
@@ -202,17 +194,12 @@
     <ClInclude Include="keyManager.h" />
     <ClInclude Include="loading.h" />
     <ClInclude Include="mainGame.h" />
-    <ClInclude Include="npcBase.h" />
-    <ClInclude Include="npcManager.h" />
     <ClInclude Include="objectDef.h" />
-    <ClInclude Include="patternBase.h" />
     <ClInclude Include="randomFunction.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="sceneTest.h" />
     <ClInclude Include="singletonBase.h" />
-    <ClInclude Include="skillBase.h" />
     <ClInclude Include="soundManager.h" />
-    <ClInclude Include="state.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="timeManager.h" />
     <ClInclude Include="timer.h" />

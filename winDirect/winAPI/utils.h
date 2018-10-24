@@ -10,9 +10,9 @@
 #define FLOAT_EPSILON		0.001f
 
 // 캐스팅 연산자 : static_cast<type>(obj) -> 논리적으로 성립이 될 때 형변환 실행
-#define FLOAT_TO_INT(f1)	static_cast<int>(f1 + NUM_REAL_EPSILON)
+#define FLOAT_TO_INT(f1)	static_cast<int>(f1 + FLOAT_EPSILON)
 
-#define FLOAT_EQUAL(f1, f2) (fabs(f1 - f2) <= NUM_REAL_EPSILON)
+#define FLOAT_EQUAL(f1, f2) (fabs(f1 - f2) <= FLOAT_EPSILON)
 
 #define FLOAT_USE	
 
@@ -26,6 +26,19 @@ struct fPOINT
 {
 	NUM_REAL x;
 	NUM_REAL y;
+
+	fPOINT()						{ this->x = 0; this->y = 0; }
+	fPOINT(NUM_REAL x, NUM_REAL y)	{ this->x = x; this->y = y; };
+
+	fPOINT operator+(fPOINT input) { return fPOINT(this->x + input.x, this->y + input.y); }
+	fPOINT operator-(fPOINT input) { return fPOINT(this->x - input.x, this->y - input.y); }
+	fPOINT operator*(fPOINT input) { return fPOINT(this->x * input.x, this->y * input.y); }
+	fPOINT operator/(fPOINT input) { return fPOINT(this->x / input.x, this->y / input.y); }
+
+	fPOINT operator+(NUM_REAL input) { return fPOINT(this->x + input, this->y + input); }
+	fPOINT operator-(NUM_REAL input) { return fPOINT(this->x - input, this->y - input); }
+	fPOINT operator*(NUM_REAL input) { return fPOINT(this->x * input, this->y * input); }
+	fPOINT operator/(NUM_REAL input) { return fPOINT(this->x / input, this->y / input); }
 };
 
 struct fRECT
