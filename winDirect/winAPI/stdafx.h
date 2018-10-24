@@ -52,10 +52,6 @@ using namespace D2D1;
 //===================================
 // #include "triFunction.h"
 #include "utils.h"
-#include "baseObject.h"
-#include "objectDef.h"
-#include "itemDef.h"
-#include "classesDef.h"
 
 
 
@@ -72,6 +68,7 @@ using namespace MY_UTIL;
 #include "sceneManager.h"
 #include "soundManager.h"
 #include "cameraManager.h"
+#include "eventManager.h"
 
 #include "jsoncpp\include\json\json.h"
 #include "JsonSaveLoader.h"
@@ -90,6 +87,7 @@ using namespace MY_UTIL;
 #define SCENEMANAGER	sceneManager::getSingleton()
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
+#define EVENTMANAGER	eventManager::getSingleton()
 
 
 //============================

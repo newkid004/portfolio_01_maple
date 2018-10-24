@@ -73,6 +73,12 @@
     <Filter Include="baseObject">
       <UniqueIdentifier>{c2a378ba-29a4-4c8c-b9e4-d90b14370acf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API Framework\매니져\이벤트">
+      <UniqueIdentifier>{12b15054-f848-42d8-a3e9-8672bbe87441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\이벤트\base">
+      <UniqueIdentifier>{d8de195b-58a6-4ff2-8cbb-57e565814316}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -137,6 +143,12 @@
     </ClCompile>
     <ClCompile Include="baseObject.cpp">
       <Filter>baseObject</Filter>
+    </ClCompile>
+    <ClCompile Include="eventManager.cpp">
+      <Filter>API Framework\매니져\이벤트</Filter>
+    </ClCompile>
+    <ClCompile Include="eventBase.cpp">
+      <Filter>API Framework\매니져\이벤트\base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +235,12 @@
     </ClInclude>
     <ClInclude Include="classesDef.h">
       <Filter>baseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="eventManager.h">
+      <Filter>API Framework\매니져\이벤트</Filter>
+    </ClInclude>
+    <ClInclude Include="eventBase.h">
+      <Filter>API Framework\매니져\이벤트\base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
