@@ -15,7 +15,7 @@ private:
 	eventBase()	: _dest(0), _sour(0), _param(0), _timeAlive(0){}
 
 public:
-	virtual HRESULT init(){}
+	virtual HRESULT init() { return S_OK; }
 	virtual void release(){}
 	virtual void update(){}
 	virtual void render(){}

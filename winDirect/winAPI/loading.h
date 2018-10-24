@@ -168,7 +168,7 @@ public:
 	void loadTileMap(string keyName);
 
 	// 이펙트 초기화
-	void loadEffect(string keyName, string imgName, POINT & start, POINT & end, POINT offset = { 0 }, int FPS = 12, bool isLoop = false, fPOINT speed = { 0 }, float timeLive = 0, float timeAniStart = 0, BYTE alpha = 255, float alphaAdd = 0, float timeAfterAlpha = 0);
+	void loadEffect(string keyName, string imgName, POINT & start, POINT & end, POINT offset = { 0 }, int FPS = 12, bool isLoop = false, fPOINT speed = { 0, 0 }, float timeLive = 0, float timeAniStart = 0, BYTE alpha = 255, float alphaAdd = 0, float timeAfterAlpha = 0);
 
 public :
 	//로딩 완료? (로딩완료후 화면전환)

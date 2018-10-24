@@ -3,7 +3,7 @@
 #include "baseObject.h"
 
 
-eventBase * eventBase::makeEvent(baseObject * sour, baseObject * dest, unsigned long param, float timeAlive = 0)
+eventBase * eventBase::makeEvent(baseObject * sour, baseObject * dest, unsigned long param, float timeAlive)
 {
 	eventBase* ev = new eventBase;
 	ev->_sour = sour;
