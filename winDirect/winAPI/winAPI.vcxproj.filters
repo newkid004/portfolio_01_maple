@@ -82,6 +82,18 @@
     <Filter Include="메인게임\NPC\NPCManager">
       <UniqueIdentifier>{d6815cf5-9baf-4497-8c0c-12d361921ac6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\characterBase">
+      <UniqueIdentifier>{81f10eb2-0dd1-48fd-906a-f436f12166fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\patternBase">
+      <UniqueIdentifier>{808fc1f2-87fa-40c7-9760-2da8ebd85840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\buffBase">
+      <UniqueIdentifier>{3f77184d-4182-4346-8541-5ea67acf5d3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\skillBase">
+      <UniqueIdentifier>{314807f2-0511-4b23-90f6-e9c94698b1c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -152,6 +164,18 @@
     </ClCompile>
     <ClCompile Include="npcManager.cpp">
       <Filter>메인게임\NPC\NPCManager</Filter>
+    </ClCompile>
+    <ClCompile Include="characterBase.cpp">
+      <Filter>메인게임\Game Framework\characterBase</Filter>
+    </ClCompile>
+    <ClCompile Include="patternBase.cpp">
+      <Filter>메인게임\Game Framework\patternBase</Filter>
+    </ClCompile>
+    <ClCompile Include="buffBase.cpp">
+      <Filter>메인게임\Game Framework\buffBase</Filter>
+    </ClCompile>
+    <ClCompile Include="skillBase.cpp">
+      <Filter>메인게임\Game Framework\skillBase</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +268,21 @@
     </ClInclude>
     <ClInclude Include="npcManager.h">
       <Filter>메인게임\NPC\NPCManager</Filter>
+    </ClInclude>
+    <ClInclude Include="characterBase.h">
+      <Filter>메인게임\Game Framework\characterBase</Filter>
+    </ClInclude>
+    <ClInclude Include="patternBase.h">
+      <Filter>메인게임\Game Framework\patternBase</Filter>
+    </ClInclude>
+    <ClInclude Include="buffBase.h">
+      <Filter>메인게임\Game Framework\buffBase</Filter>
+    </ClInclude>
+    <ClInclude Include="skillBase.h">
+      <Filter>메인게임\Game Framework\skillBase</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>메인게임\Game Framework\characterBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

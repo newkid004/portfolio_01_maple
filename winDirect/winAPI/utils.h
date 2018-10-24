@@ -120,8 +120,8 @@ namespace MY_UTIL
 		return angle;
 	}
 	// -----fRECT----- //
-	inline fRECT rect2fRect(RECT& rect) { return fRECT{ fPOINT{ (float)rect.left,(float)rect.top },fPOINT{ (float)rect.right,(float)rect.bottom } }; }
-	inline fRECT rect2fRect(RECT* rect) { return fRECT{ fPOINT{ (float)rect->left,(float)rect->top },fPOINT{ (float)rect->right,(float)rect->bottom } }; }
+	inline fRECT rect2fRect(RECT& rect) { return fRECT{ fPOINT{ (NUM_REAL)rect.left,(NUM_REAL)rect.top },fPOINT{ (NUM_REAL)rect.right,(NUM_REAL)rect.bottom } }; }
+	inline fRECT rect2fRect(RECT* rect) { return fRECT{ fPOINT{ (NUM_REAL)rect->left,(NUM_REAL)rect->top },fPOINT{ (NUM_REAL)rect->right,(NUM_REAL)rect->bottom } }; }
 
 
 	inline fRECT  pos2fRect(fPOINT startPoint, fPOINT endPoint) { return fRECT{ startPoint,endPoint }; }
