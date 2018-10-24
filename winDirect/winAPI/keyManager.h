@@ -12,7 +12,7 @@ private:
 
 	function<void(void)> * _callWheelUp;
 	function<void(void)> * _callWheelDown;
-
+	function<void(void)> * _callDBClick;
 public:
 	//키매니져 초기화
 	HRESULT init(void);
@@ -37,6 +37,9 @@ public:
 	void setInputKey(int key) { _inputKey = key; };
 	int getInputKey(void) { return _inputKey; };
 
+	// 마우스 더블클릭
+	void setDBClick(function<void(void)>* dbClickFunction);
+	void dbClick(void) {if (_callDBClick)(*_callDBClick)();}
 	keyManager() {}
 	~keyManager() {}
 };

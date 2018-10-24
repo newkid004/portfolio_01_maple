@@ -51,7 +51,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 	wndClass.lpfnWndProc = (WNDPROC)WndProc;					   //윈도우 프로시져
 	wndClass.lpszClassName = WINNAME;							   //클래스 이름
 	wndClass.lpszMenuName = NULL;								   //메뉴이름
-	wndClass.style = CS_HREDRAW | CS_VREDRAW;					   //윈도우 스타일
+	wndClass.style = CS_HREDRAW | CS_VREDRAW|CS_DBLCLKS;		   //윈도우 스타일
 
 	//윈도우 클래스 등록
 	RegisterClass(&wndClass);
