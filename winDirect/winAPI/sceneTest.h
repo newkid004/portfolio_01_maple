@@ -13,6 +13,9 @@ public :
 	void update(void);
 	void render(void);
 
+public :
+	void updateControl(void);
+
 	void renderEllipse(void);
 public:
 	sceneTest() {};

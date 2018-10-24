@@ -3,3 +3,6 @@
 ################################################################################
 
 *.opendb
+*.obj
+/winDirect/winAPI/Debug/image.obj
+/winDirect/winAPI/Debug/image.obj
