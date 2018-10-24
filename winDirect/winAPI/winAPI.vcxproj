@@ -22,7 +22,7 @@
     <ProjectGuid>{7C0A3AA2-9BB1-47A6-81A6-D29200A61266}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>winAPI</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <ProjectName>winDirect</ProjectName>
     <SccProjectName>SAK</SccProjectName>
     <SccAuxPath>SAK</SccAuxPath>
@@ -34,7 +34,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -46,13 +46,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -76,8 +76,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\newki\OneDrive\문서\Visual Studio 2015\SGA\pp\4_mapTool+2D\portfolio_ror\ror_game\ror\winAPI\jsoncpp\include\json;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Users\newki\OneDrive\문서\Visual Studio 2015\SGA\pp\4_mapTool+2D\portfolio_ror\ror_game\ror\winAPI\jsoncpp\lib_json;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\newki\OneDrive\문서\Visual Studio 2015\SGA\pp\4_mapTool+2D\portfolio_ror\ror_game\ror\winAPI\jsoncpp\include\json;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\newki\OneDrive\문서\Visual Studio 2015\SGA\pp\4_mapTool+2D\portfolio_ror\ror_game\ror\winAPI\jsoncpp\lib_json;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -101,7 +101,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>json_vc71_libmtd.lib;d3d9.lib;d3dx9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>json_vc71_libmtd.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -154,8 +154,11 @@
   <ItemGroup>
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="animationGroup.cpp" />
+    <ClCompile Include="baseObject.cpp" />
+    <ClCompile Include="buffBase.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
+    <ClCompile Include="characterBase.cpp" />
     <ClCompile Include="gameNode.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
@@ -164,8 +167,12 @@
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loading.cpp" />
     <ClCompile Include="mainGame.cpp" />
+    <ClCompile Include="npcBase.cpp" />
+    <ClCompile Include="npcManager.cpp" />
+    <ClCompile Include="patternBase.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
+    <ClCompile Include="skillBase.cpp" />
     <ClCompile Include="soundManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -179,22 +186,33 @@
   <ItemGroup>
     <ClInclude Include="animation.h" />
     <ClInclude Include="animationGroup.h" />
+    <ClInclude Include="baseObject.h" />
+    <ClInclude Include="buffBase.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraManager.h" />
+    <ClInclude Include="characterBase.h" />
+    <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="gameNode.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />
     <ClInclude Include="iniData.h" />
+    <ClInclude Include="itemDef.h" />
     <ClInclude Include="JsonSaveLoader.h" />
     <ClInclude Include="keyManager.h" />
     <ClInclude Include="loading.h" />
     <ClInclude Include="mainGame.h" />
+    <ClInclude Include="npcBase.h" />
+    <ClInclude Include="npcManager.h" />
+    <ClInclude Include="objectDef.h" />
+    <ClInclude Include="patternBase.h" />
     <ClInclude Include="randomFunction.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="sceneTest.h" />
     <ClInclude Include="singletonBase.h" />
+    <ClInclude Include="skillBase.h" />
     <ClInclude Include="soundManager.h" />
+    <ClInclude Include="state.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="timeManager.h" />
     <ClInclude Include="timer.h" />

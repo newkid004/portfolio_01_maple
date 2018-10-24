@@ -3,8 +3,8 @@
 //표준 시스템 포함 파일 또는 프로젝트 관련 포함 파일이
 //들어 있는 포함 파일
 #pragma once
-#pragma comment(lib, "gdiplus")
 #pragma comment(lib, "D2D1.lib")
+#pragma comment(lib, "windowscodecs.lib")
 
 #include <SDKDDKver.h>
 
@@ -15,6 +15,7 @@
 
 //Windows 헤더 파일
 #include <Windows.h>
+#include <wincodec.h>
 
 //C 런타임 헤더 파일
 #include <stdlib.h>
@@ -26,7 +27,6 @@
 #include <math.h>
 #include <mmsystem.h>
 #include <ole2.h>
-#include <Gdiplus.h>
 #include <assert.h>
 
 //C++ 런타임 헤더 파일
@@ -52,6 +52,9 @@ using namespace D2D1;
 //===================================
 // #include "triFunction.h"
 #include "utils.h"
+
+
+
 
 using namespace MY_UTIL;
 
