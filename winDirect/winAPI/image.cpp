@@ -47,6 +47,12 @@ void image::_putImageInfo(void)
 	_imageInfo->frameSize.y = _imageInfo->size.y;
 }
 
+void image::_flip2fpos(int flip, D2D1_SIZE_F & output)
+{
+	output.width	= 0 < (flip & e_IMAGE_FLIP::IMAGE_FLIP_VERTICAL) ? -1.0f : 1.0f;
+	output.height	= 0 < (flip & e_IMAGE_FLIP::IMAGE_FLIP_HORIZON) ? -1.0f : 1.0f;
+}
+
 HRESULT image::init(const wchar_t * fileName)
 {
 	//재초기화 방지용, 이미지 정보에 값이 들어 있다면 릴리즈를 먼저 해줄것
@@ -121,14 +127,20 @@ void image::release(void)
 
 
 //렌더 (0, 0지점에 렌더)
-void image::render(void)
+void image::render(int flip, float rotate, float alpha)
 {
+	D2D1_POINT_2F rotateCenter = { _imageInfo->size.x / 2, _imageInfo->size.y / 2 };
+	D2D1_SIZE_F flipPos; _flip2fpos(flip, flipPos);
+	
+	_renderTarget->SetTransform(Matrix3x2F::Rotation(rotate, rotateCenter));
+	_renderTarget->SetTransform(Matrix3x2F::Scale(flipPos, rotateCenter));
+
 	_renderTarget->DrawBitmap(_imageInfo->bitmap,
 		RectF(
-			0.0f,
-			0.0f,
+			0, 0,
 			_imageInfo->size.x,
-			_imageInfo->size.y));
+			_imageInfo->size.y),
+		alpha);
 }
 
 //void image::render(HDC hdc, float ratio)
