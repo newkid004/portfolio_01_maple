@@ -3,8 +3,6 @@
 
 HRESULT sceneTest::init(void)
 {
-	// _renderTarget->CreateSolidColorBrush(C_COLOR_GREEN, &_brush);
-
 	getBackColor() = C_COLOR_GRAY;
 
 	IMAGEMANAGER->add("test", L"image/12.png");
@@ -55,18 +53,4 @@ void sceneTest::updateControl(void)
 	IMAGEMANAGER->statePos(pos);
 	IMAGEMANAGER->stateRotate(rot);
 	IMAGEMANAGER->stateFlip(flip);
-}
-
-void sceneTest::renderEllipse(void)
-{
-	D2D1_ELLIPSE region;
-
-	region.point.x = 500.0f;
-	region.point.y = 500.0f;
-	region.radiusX = 70.0f;
-	region.radiusY = 80.0f;
-
-	_renderTarget->SetTransform(Matrix3x2F::Rotation(50.0f, Point2F(500.0f, 500.0f)));
-
-	_renderTarget->FillEllipse(region, _brush);
 }

@@ -6,7 +6,6 @@
 class sceneTest : public gameNode
 {
 private :
-	ID2D1SolidColorBrush * _brush;
 	animation* _ani;
 
 public :
@@ -18,7 +17,6 @@ public :
 public :
 	void updateControl(void);
 
-	void renderEllipse(void);
 public:
 	sceneTest() {};
 	~sceneTest() {};
