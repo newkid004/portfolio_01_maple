@@ -5,8 +5,6 @@
 #include "state.h"
 
 
-
-
 class characterBase :public baseObject
 {
 protected:
@@ -17,7 +15,7 @@ protected:
 
 protected:
 	fPOINT		_velocity;						//속도			<- 중력 + 마찰속도 + 현재 속도 (최종속도)
-	RAYSTRUCT	_rayStruct;						//광선 구조체(충돌검사 광선)
+	rayStruct	_rayStruct;						//광선 구조체(충돌검사 광선)
 
 	bool		_isCollision;					//충돌검사 여부 변수
 protected:
