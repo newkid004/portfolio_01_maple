@@ -47,6 +47,13 @@ enum e_RENDER_ORDER
 	RO_COUNT
 };
 
+enum e_RENDER_MANAGER_STATE
+{
+	RMS_CLIP_INTO_CAMERA = 0x0001,
+
+	RMS_NONE = 0
+};
+
 class renderManager : public singletonBase<renderManager>
 {
 private :
@@ -74,14 +81,14 @@ private :
 		tagRender(image* inImage) : 
 			tagRender()
 		{
-			img = inImage;
-			size = img->getSize();
+			this->img = inImage;
+			this->size = img->getSize();
 		};
 
 		tagRender(image* inImage, fPOINT inPos) : 
 			tagRender(inImage) 
 		{ 
-			pos = inPos; 
+			this->pos = inPos; 
 		};
 
 		tagRender(image* img, fPOINT pos, fPOINT sour, fPOINT dest, float alpha = 1.0f, float rotate = 0.0f, int flip = 0)
@@ -97,12 +104,9 @@ private :
 		};
 	};
 
-	struct tagRenderUI
-	{
-
-	};
-
 private:
+	int					_renderState;
+
 	camera*				_currentCamera;
 
 	vector<tagRender>	_vRenderList[RO_COUNT];
@@ -126,7 +130,12 @@ public :
 	void addUi(uiBase* inputUI);
 
 	void setCamera(camera* c) { _currentCamera = c; };
-	void clipRender(tagRender & r);
+
+	void setRenderState(e_RENDER_MANAGER_STATE s, int value);
+	int getRenderState(e_RENDER_MANAGER_STATE s);
+
+private :
+	bool clipRender(tagRender & r);
 
 public:
 	renderManager() {};
