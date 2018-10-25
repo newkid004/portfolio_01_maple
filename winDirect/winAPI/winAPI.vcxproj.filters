@@ -112,6 +112,12 @@
     <Filter Include="메인게임\Game Framework\Manager\skill\activeSkill">
       <UniqueIdentifier>{35be4324-5067-4b6a-99ad-fa7710ac95ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\enemyBase">
+      <UniqueIdentifier>{b4338e02-f31a-4e30-8ace-20c8fe36e5ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\animation">
+      <UniqueIdentifier>{6db02a40-0502-4033-9a33-e7ad6822df16}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -209,6 +215,12 @@
     </ClCompile>
     <ClCompile Include="passiveSkill.cpp">
       <Filter>메인게임\Game Framework\Manager\skill\passiveSkill</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyBase.cpp">
+      <Filter>메인게임\Game Framework\enemyBase</Filter>
+    </ClCompile>
+    <ClCompile Include="animationGroupManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +343,12 @@
     </ClInclude>
     <ClInclude Include="passiveSkill.h">
       <Filter>메인게임\Game Framework\Manager\skill\passiveSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyBase.h">
+      <Filter>메인게임\Game Framework\enemyBase</Filter>
+    </ClInclude>
+    <ClInclude Include="animationGroupManager.h">
+      <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

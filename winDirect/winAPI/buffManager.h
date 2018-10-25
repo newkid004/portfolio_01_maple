@@ -6,7 +6,7 @@
 class buffManager:public singletonBase<buffManager>
 {
 private:
-	typedef map<string, buffBase*>	mBuff;
+	typedef map<string, buffBase*>			 mBuff;
 	typedef map<string, buffBase*>::iterator miBuff;
 private:
 	mBuff		_mBuff;

@@ -13,6 +13,7 @@ void buffManager::release()
 		_miBuff = _mBuff.begin();
 		for (; _miBuff != _mBuff.end();)
 		{
+			_miBuff->second->release();
 			_miBuff = _mBuff.erase(_miBuff);
 		}
 	}
@@ -43,6 +44,7 @@ void buffManager::delBuff(string buffName)
 	});
 	if (_miBuff != _mBuff.end())
 	{
+		_miBuff->second->release();
 		_miBuff = _mBuff.erase(_miBuff);
 	}
 }

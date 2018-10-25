@@ -9,11 +9,11 @@ enum MOVEMENT
 	M_WAKE				= 0x0001,
 	M_DOWN				= 0x0002,
 	M_JUMP				= 0x0004,
-	M_DEAD				= 0x0008,
-	M_ATTACK			= 0x0010,
-	M_INV				= 0x0011,
-	M_FLY				= 0x0012,
-
+	M_ATTACK			= 0x0008,
+	M_INV				= 0x0010,
+	M_FLY				= 0x0011,
+	M_DEAD			    = 0x0012,
+	M_SPWAN				= 0x0014,
 };
 
 struct stateBasic

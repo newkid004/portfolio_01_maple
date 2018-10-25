@@ -69,6 +69,42 @@ inline T skillManager::findSkill(string skillName, T)
 			}
 			else return NULL;
 	}
+	else if (T == buffSkill * )
+	{
+		_miActSkill = find_if(_mActSkill.begin(), _mActSkill.end(), [skillName](pair<string, activeSkill*> M)->bool {
+			if (M.first == skillName) return true;
+			else return false;
+		});
+		if (_miActSkill != _mActSkill.end())
+		{
+			return static_cast<buffSkill*>(_miActSkill->second);
+		}
+		else return NULL;
+	}
+	else if (T == attackSkill * )
+	{
+		_miActSkill = find_if(_mActSkill.begin(), _mActSkill.end(), [skillName](pair<string, activeSkill*> M)->bool {
+			if (M.first == skillName) return true;
+			else return false;
+		});
+		if (_miActSkill != _mActSkill.end())
+		{
+			return static_cast<attackSkill*>(_miActSkill->second);
+		}
+		else return NULL;
+	}
+	else if (T == moveSkill * )
+	{
+		_miActSkill = find_if(_mActSkill.begin(), _mActSkill.end(), [skillName](pair<string, activeSkill*> M)->bool {
+			if (M.first == skillName) return true;
+			else return false;
+		});
+		if (_miActSkill != _mActSkill.end())
+		{
+			return static_cast<moveSkill*>(_miActSkill->second);
+		}
+		else return NULL;
+	}
 	else if (T == passiveSkill*)
 	{
 		_miPasSkill = find_if(_mPasSkill.begin(), _mPasSkill.end(), [skillName](pair<string, passiveSkill*> M)->bool {

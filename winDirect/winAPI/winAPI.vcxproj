@@ -155,12 +155,14 @@
     <ClCompile Include="activeSkill.cpp" />
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="animationGroup.cpp" />
+    <ClCompile Include="animationGroupManager.cpp" />
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="buffBase.cpp" />
     <ClCompile Include="buffManager.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="characterBase.cpp" />
+    <ClCompile Include="enemyBase.cpp" />
     <ClCompile Include="gameNode.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
@@ -192,6 +194,7 @@
     <ClInclude Include="activeSkill.h" />
     <ClInclude Include="animation.h" />
     <ClInclude Include="animationGroup.h" />
+    <ClInclude Include="animationGroupManager.h" />
     <ClInclude Include="baseObject.h" />
     <ClInclude Include="buffBase.h" />
     <ClInclude Include="buffManager.h" />
@@ -200,6 +203,7 @@
     <ClInclude Include="characterBase.h" />
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
+    <ClInclude Include="enemyBase.h" />
     <ClInclude Include="gameNode.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />

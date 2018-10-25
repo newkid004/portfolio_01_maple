@@ -1,5 +1,12 @@
 ﻿  activeSkill.cpp
+  buffBase.cpp
+  buffManager.cpp
+  characterBase.cpp
+  enemyBase.cpp
+  mainGame.cpp
   passiveSkill.cpp
+  patternBase.cpp
+  patternManager.cpp
   skillBase.cpp
   skillManager.cpp
   코드를 생성하고 있습니다...
