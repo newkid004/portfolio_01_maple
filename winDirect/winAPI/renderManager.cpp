@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "renderManager.h"
+#include "windowBase.h"
 
 HRESULT renderManager::init(void)
 {
@@ -10,8 +11,6 @@ void renderManager::release(void)
 {
 	for (int i = 0; i < RO_COUNT; ++i)
 		releaseList(i);
-	
-	releaseUiList();
 }
 
 void renderManager::update(void)
@@ -28,8 +27,6 @@ void renderManager::render(void)
 		renderList(i);
 		releaseList(i);
 	}
-	renderUiList();
-	releaseUiList();
 
 	if (renderStateTemp)
 		IMAGEMANAGER->setRenderState(IRS_ALWAYS_RESET_TRANSFORM, true);
@@ -38,11 +35,6 @@ void renderManager::render(void)
 void renderManager::releaseList(int order)
 {
 	_vRenderList[order].clear();
-}
-
-void renderManager::releaseUiList(void)
-{
-	_vRenderUi.clear();
 }
 
 void renderManager::renderList(int order)
@@ -62,14 +54,6 @@ void renderManager::renderList(int order)
 	}
 }
 
-void renderManager::renderUiList(void)
-{
-	for (uiBase* i : _vRenderUi)
-	{
-		// i->render();
-	}
-}
-
 void renderManager::add(e_RENDER_ORDER order, image * img, fPOINT pos, fPOINT clip, fPOINT size, float alpha, float rotate, int flip)
 {
 	tagRender addable = tagRender(img, pos, clip, size, alpha, rotate, flip);
@@ -82,11 +66,6 @@ void renderManager::add(e_RENDER_ORDER order, image * img, fPOINT pos, fPOINT cl
 
 	// default
 	_vRenderList[order].push_back(addable);
-}
-
-void renderManager::addUi(uiBase * inputUI)
-{
-	_vRenderUi.push_back(inputUI);
 }
 
 void renderManager::setRenderState(e_RENDER_MANAGER_STATE s, int value)

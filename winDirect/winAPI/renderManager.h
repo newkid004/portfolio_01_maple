@@ -1,8 +1,6 @@
 #pragma once
 #include "singletonBase.h"
 
-class uiBase;
-
 enum e_RENDER_ORDER
 {
 	// µÞ¹è°æ
@@ -106,11 +104,8 @@ private :
 
 private:
 	int					_renderState;
-
 	camera*				_currentCamera;
-
 	vector<tagRender>	_vRenderList[RO_COUNT];
-	vector<uiBase*>		_vRenderUi;
 
 public :
 	HRESULT init(void);
@@ -120,19 +115,15 @@ public :
 
 public :
 	void releaseList(int order);
-	void releaseUiList(void);
-
 	void renderList(int order);
-	void renderUiList(void);
 
 public :
 	void add(e_RENDER_ORDER order, image * img, fPOINT pos, fPOINT clip, fPOINT size, float alpha = 1.0f, float rotate = 0.0f, int flip = 0);
-	void addUi(uiBase* inputUI);
 
 	void setCamera(camera* c) { _currentCamera = c; };
 
 	void setRenderState(e_RENDER_MANAGER_STATE s, int value);
-	int getRenderState(e_RENDER_MANAGER_STATE s);
+	int  getRenderState(e_RENDER_MANAGER_STATE s);
 
 private :
 	bool clipRender(tagRender & r);

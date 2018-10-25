@@ -64,6 +64,9 @@ HRESULT gameNode::init(bool managerInit)
 		// 렌더 매니저 초기화
 		RENDERMANAGER->init();
 
+		// 윈도우 매니저 초기화
+		WINMANAGER->init();
+
 		return S_OK;
 	}
 	return S_OK;
@@ -117,6 +120,10 @@ void gameNode::release(void)
 		// 렌더 매니저 해제
 		RENDERMANAGER->release();
 		RENDERMANAGER->releaseSingleton();
+
+		// 윈도우 매니저 해제
+		WINMANAGER->release();
+		WINMANAGER->releaseSingleton();
 	}
 
 #ifdef PROCESS_D3D

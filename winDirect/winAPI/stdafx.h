@@ -72,6 +72,7 @@ using namespace MY_UTIL;
 
 // 매니저 : 임의 추가
 #include "renderManager.h"
+#include "winManager.h"
 
 //========================
 // # 싱글톤을 이곳에 추가 #
@@ -86,6 +87,7 @@ using namespace MY_UTIL;
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
 #define RENDERMANAGER	renderManager::getSingleton()
+#define WINMANAGER		winManager::getSingleton()
 
 //============================
 // # 매크로 # (윈도우창 초기화)

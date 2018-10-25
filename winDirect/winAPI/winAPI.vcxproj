@@ -176,7 +176,9 @@
     <ClCompile Include="timeManager.cpp" />
     <ClCompile Include="timer.cpp" />
     <ClCompile Include="txtDataManager.cpp" />
+    <ClCompile Include="windowBase.cpp" />
     <ClCompile Include="winMain.cpp" />
+    <ClCompile Include="winManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animation.h" />
@@ -208,6 +210,8 @@
     <ClInclude Include="triFunction.h" />
     <ClInclude Include="txtDataManager.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="windowBase.h" />
+    <ClInclude Include="winManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
