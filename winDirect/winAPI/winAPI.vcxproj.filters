@@ -118,6 +118,15 @@
     <Filter Include="메인게임\Game Framework\Manager\animation">
       <UniqueIdentifier>{6db02a40-0502-4033-9a33-e7ad6822df16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\render">
+      <UniqueIdentifier>{4da0e541-57bb-498c-b5eb-2d7ab9726e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\window">
+      <UniqueIdentifier>{c49c4b58-3553-4bc0-9826-77fd070537c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\window\_base">
+      <UniqueIdentifier>{6845af8c-0ff3-49c3-8be6-b64defcb4d3c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -223,13 +232,13 @@
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClCompile>
     <ClCompile Include="renderManager.cpp">
-      <Filter>메인게임\Manager\render</Filter>
-    </ClCompile>
-    <ClCompile Include="windowBase.cpp">
-      <Filter>메인게임\Manager\window\_base</Filter>
+      <Filter>메인게임\Game Framework\Manager\render</Filter>
     </ClCompile>
     <ClCompile Include="winManager.cpp">
-      <Filter>메인게임\Manager\window</Filter>
+      <Filter>메인게임\Game Framework\Manager\window</Filter>
+    </ClCompile>
+    <ClCompile Include="windowBase.cpp">
+      <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -360,13 +369,13 @@
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClInclude>
     <ClInclude Include="renderManager.h">
-      <Filter>메인게임\Manager\render</Filter>
-    </ClInclude>
-    <ClInclude Include="windowBase.h">
-      <Filter>메인게임\Manager\window\_base</Filter>
+      <Filter>메인게임\Game Framework\Manager\render</Filter>
     </ClInclude>
     <ClInclude Include="winManager.h">
-      <Filter>메인게임\Manager\window</Filter>
+      <Filter>메인게임\Game Framework\Manager\window</Filter>
+    </ClInclude>
+    <ClInclude Include="windowBase.h">
+      <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
