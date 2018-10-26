@@ -38,6 +38,9 @@ enum e_RENDER_ORDER
 	// 데미지
 	RO_DAMAGE,
 
+	// 아이템
+	RO_ITEM,
+
 	// 스킬 : 제일 앞
 	RO_SKILL_FRONTEST,
 

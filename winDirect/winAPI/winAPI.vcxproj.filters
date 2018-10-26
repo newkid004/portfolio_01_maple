@@ -139,11 +139,11 @@
     <Filter Include="메인게임\Game Framework\Manager\field\_base">
       <UniqueIdentifier>{7e78e380-657f-46e8-a948-ca4bbd2bf11b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메인게임\Game Framework\interactBase">
-      <UniqueIdentifier>{dcb791b3-25d8-4f36-b18f-d026c1901587}</UniqueIdentifier>
+    <Filter Include="메인게임\Game Framework\item">
+      <UniqueIdentifier>{ed91bf44-6322-4183-aba2-c8638c8cf7e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메인게임\Game Framework\questBase">
-      <UniqueIdentifier>{4ac4226a-5019-4daf-9727-c30b7f8fa7a4}</UniqueIdentifier>
+    <Filter Include="메인게임\Game Framework\item\_base">
+      <UniqueIdentifier>{490aaf0f-9788-4917-869a-97c4f231c466}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -267,8 +267,8 @@
     <ClCompile Include="fieldManager.cpp">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClCompile>
-    <ClCompile Include="interactBase.cpp">
-      <Filter>메인게임\Game Framework\interactBase</Filter>
+    <ClCompile Include="itemBase.cpp">
+      <Filter>메인게임\Game Framework\item\_base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
