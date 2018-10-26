@@ -1,11 +1,12 @@
 #pragma once
 #include "gameNode.h"
 
+#include "animation.h"
 
 class sceneTest : public gameNode
 {
 private :
-	ID2D1SolidColorBrush * _brush;
+	animation* _ani;
 
 public :
 	HRESULT init(void);
@@ -13,7 +14,9 @@ public :
 	void update(void);
 	void render(void);
 
-	void renderEllipse(void);
+public :
+	void updateControl(void);
+
 public:
 	sceneTest() {};
 	~sceneTest() {};

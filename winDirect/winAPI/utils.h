@@ -10,9 +10,9 @@
 #define FLOAT_EPSILON		0.001f
 
 // 캐스팅 연산자 : static_cast<type>(obj) -> 논리적으로 성립이 될 때 형변환 실행
-#define FLOAT_TO_INT(f1)	static_cast<int>(f1 + NUM_REAL_EPSILON)
+#define FLOAT_TO_INT(f1)	static_cast<int>(f1 + FLOAT_EPSILON)
 
-#define FLOAT_EQUAL(f1, f2) (fabs(f1 - f2) <= NUM_REAL_EPSILON)
+#define FLOAT_EQUAL(f1, f2) (fabs(f1 - f2) <= FLOAT_EPSILON)
 
 #define FLOAT_USE	
 
@@ -22,16 +22,62 @@
 #define NUM_REAL	double
 #endif
 
+//ray 한방향에 쏘는 갯수
+#define RAY_NUM				3
+
+
 struct fPOINT
 {
 	NUM_REAL x;
 	NUM_REAL y;
+
+	fPOINT()						{ this->x = 0; this->y = 0; }
+	fPOINT(NUM_REAL xy)				{ this->x = xy; this->y = xy; };
+	fPOINT(NUM_REAL x, NUM_REAL y) { this->x = x; this->y = y; };
+
+	fPOINT operator+(fPOINT input) { return fPOINT(this->x + input.x, this->y + input.y); }
+	fPOINT operator-(fPOINT input) { return fPOINT(this->x - input.x, this->y - input.y); }
+	fPOINT operator*(fPOINT input) { return fPOINT(this->x * input.x, this->y * input.y); }
+	fPOINT operator/(fPOINT input) { return fPOINT(this->x / input.x, this->y / input.y); }
+
+	fPOINT operator+(NUM_REAL input) { return fPOINT(this->x + input, this->y + input); }
+	fPOINT operator-(NUM_REAL input) { return fPOINT(this->x - input, this->y - input); }
+	fPOINT operator*(NUM_REAL input) { return fPOINT(this->x * input, this->y * input); }
+	fPOINT operator/(NUM_REAL input) { return fPOINT(this->x / input, this->y / input); }
+
+	void operator+=(fPOINT input) { this->x += input.x; this->y += input.y; };
+	void operator-=(fPOINT input) { this->x -= input.x; this->y -= input.y; };
+	void operator*=(fPOINT input) { this->x *= input.x; this->y *= input.y; };
+	void operator/=(fPOINT input) { this->x /= input.x; this->y /= input.y; };
+
+	void operator+=(NUM_REAL input) { this->x += input; this->y += input; }
+	void operator-=(NUM_REAL input) { this->x -= input; this->y -= input; }
+	void operator*=(NUM_REAL input) { this->x *= input; this->y *= input; }
+	void operator/=(NUM_REAL input) { this->x /= input; this->y /= input; }
 };
 
 struct fRECT
 {
-	fPOINT LeftTop;
-	fPOINT RightBottom;
+	fPOINT LT;
+	fPOINT RB;
+
+	fRECT() {}
+	fRECT(fPOINT LT, fPOINT RB) { this->LT = LT; this->RB = RB; };
+	fRECT(NUM_REAL left, NUM_REAL top, NUM_REAL right, NUM_REAL bottom) 
+	{ 
+		this->LT = fPOINT(left, top);
+		this->RB = fPOINT(right, bottom); 
+	}
+
+	fRECT operator+(fPOINT input) { return fRECT(fPOINT(LT + input), fPOINT(RB + input)); }
+	fRECT operator-(fPOINT input) { return fRECT(fPOINT(LT - input), fPOINT(RB - input)); }
+	fRECT operator*(fPOINT input) { return fRECT(fPOINT(LT * input), fPOINT(RB * input)); }
+	fRECT operator/(fPOINT input) { return fRECT(fPOINT(LT / input), fPOINT(RB / input)); }
+
+	fRECT operator+(NUM_REAL input) { return fRECT(fPOINT(LT + input), fPOINT(RB + input)); }
+	fRECT operator-(NUM_REAL input) { return fRECT(fPOINT(LT - input), fPOINT(RB - input)); }
+	fRECT operator*(NUM_REAL input) { return fRECT(fPOINT(LT * input), fPOINT(RB * input)); }
+	fRECT operator/(NUM_REAL input) { return fRECT(fPOINT(LT / input), fPOINT(RB / input)); }
 };
 
 struct physicF
@@ -40,7 +86,6 @@ struct physicF
 	NUM_REAL radian;
 	NUM_REAL speed;
 };
-
 
 
 namespace MY_UTIL
@@ -123,14 +168,13 @@ namespace MY_UTIL
 	inline fRECT rect2fRect(RECT& rect) { return fRECT{ fPOINT{ (NUM_REAL)rect.left,(NUM_REAL)rect.top },fPOINT{ (NUM_REAL)rect.right,(NUM_REAL)rect.bottom } }; }
 	inline fRECT rect2fRect(RECT* rect) { return fRECT{ fPOINT{ (NUM_REAL)rect->left,(NUM_REAL)rect->top },fPOINT{ (NUM_REAL)rect->right,(NUM_REAL)rect->bottom } }; }
 
-
 	inline fRECT  pos2fRect(fPOINT startPoint, fPOINT endPoint) { return fRECT{ startPoint,endPoint }; }
 	inline fRECT  point2fRect(POINT startPoint, POINT endPoint) { return fRECT{ point2fpos(startPoint),point2fpos(endPoint) }; }
 	
-
 	// ----- bit ----- //
 	inline int bit_put(int b1, int b2) { return b1 | b2; };
 	inline int bit_reverse(int b) { return 0x7FFFFFF - b; };
 	inline int bit_pick(int b1, int b2) { return b1 & bit_reverse(b2); };
+	inline int bit_flip(int b1, int b2) { return b1 ^ b2; };
 }
 

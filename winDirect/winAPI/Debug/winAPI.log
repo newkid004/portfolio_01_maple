@@ -1,49 +1,18 @@
-﻿  stdafx.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\commonmacrofunction.h(207): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  animation.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\animation.cpp(23): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\animation.cpp(22): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  animationGroup.cpp
-  baseObject.cpp
-  buffBase.cpp
-  camera.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\camera.cpp(66): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\camera.cpp(67): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  cameraManager.cpp
-  characterBase.cpp
-  gameNode.cpp
-  image.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\image.cpp(46): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\image.cpp(47): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  imageManager.cpp
-  iniData.cpp
-  JsonSaveLoader.cpp
-  keyManager.cpp
-  loading.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.h(181): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(77): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(78): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(190): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(288): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(341): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
-  mainGame.cpp
-  npcBase.cpp
-  npcManager.cpp
-  patternBase.cpp
-  sceneManager.cpp
-  sceneTest.cpp
+﻿  fieldBase.cpp
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\fieldbase.cpp(37): error C2664: 'void std::list<baseObject *,std::allocator<_Ty>>::push_front(const _Ty &)': 인수 1을(를) 'itemBase *'에서 'baseObject *&&'(으)로 변환할 수 없습니다.
+          with
+          [
+              _Ty=baseObject *
+          ]
+  c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\fieldbase.cpp(37): note: 원인: 'itemBase *'에서 'baseObject *'(으)로 변환할 수 없습니다.
+  c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\fieldbase.cpp(37): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+  c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\fieldbase.h(39): note: 컴파일 중인 함수 템플릿 인스턴스화 'void fieldBase::addObject<itemBase*>(OBJ,std::list<std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<baseObject *>>> *,itemBase *>,std::allocator<_Ty>> &)'에 대한 참조를 확인하십시오.
+          with
+          [
+              OBJ=itemBase *,
+              _Ty=std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<baseObject *>>> *,itemBase *>
+          ]
   코드를 생성하고 있습니다...
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\inidata.cpp(86): warning C4172: 지역 변수 또는 임시: data의 주소를 반환하고 있습니다.
   컴파일하고 있습니다...
-  skillBase.cpp
-  soundManager.cpp
-  timeManager.cpp
-  timer.cpp
-  txtDataManager.cpp
-  winMain.cpp
+  fieldManager.cpp
   코드를 생성하고 있습니다...
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\txtdatamanager.cpp(46): warning C4172: 지역 변수 또는 임시: str의 주소를 반환하고 있습니다.
-json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_reader.obj)' 또는 'C:\Users\kcl53\Desktop\cooding\Game_Module\MapleStory\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_value.obj)' 또는 'C:\Users\kcl53\Desktop\cooding\Game_Module\MapleStory\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_writer.obj)' 또는 'C:\Users\kcl53\Desktop\cooding\Game_Module\MapleStory\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-  winAPI.vcxproj -> C:\Users\kcl53\Desktop\cooding\Game_Module\MapleStory\winDirect\Debug\winDirect.exe
