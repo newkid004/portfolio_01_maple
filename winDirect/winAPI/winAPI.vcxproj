@@ -171,6 +171,7 @@
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
     <ClCompile Include="iniData.cpp" />
+    <ClCompile Include="itemBase.cpp" />
     <ClCompile Include="JsonSaveLoader.cpp" />
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loading.cpp" />
@@ -220,6 +221,7 @@
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />
     <ClInclude Include="iniData.h" />
+    <ClInclude Include="itemBase.h" />
     <ClInclude Include="itemDef.h" />
     <ClInclude Include="JsonSaveLoader.h" />
     <ClInclude Include="keyManager.h" />
