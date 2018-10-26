@@ -8,6 +8,7 @@ class image
 public:
 	typedef struct tagImage
 	{
+		IWICBitmap*		wBitmap;
 		ID2D1Bitmap*	bitmap;			// 비트맵
 		fPOINT			size;			// 크기
 		POINT			maxFrame;		// 최대 프레임 수
@@ -52,7 +53,7 @@ public:
 
 public :
 	// 비트맵 픽셀
-	D3DCOLORVALUE getBitmapPixel(POINT pos);
+	ColorF getBitmapPixel(POINT pos);
 
 	// 행렬 지정
 	// static void initRenderState(void);
