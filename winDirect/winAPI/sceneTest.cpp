@@ -12,9 +12,8 @@ HRESULT sceneTest::init(void)
 
 	_ani = new animation;
 	_ani->init(IMAGEMANAGER->find("frame"));
-	_ani->setFPS(15);
-	_ani->setDefPlayFrame(false, true);
-	_ani->isPlay() = true;
+	_ani->setFPS(15.0f);
+	_ani->setDefPlayFrame(false, false);
 
 	return S_OK;
 }
@@ -49,6 +48,8 @@ void sceneTest::updateControl(void)
 
 	if (KEYMANAGER->press('A')) flip ^= IMAGE_FLIP_HORIZON;
 	if (KEYMANAGER->press('D')) flip ^= IMAGE_FLIP_VERTICAL;
+
+	if (KEYMANAGER->press(VK_SPACE)) _ani->start();
 
 	IMAGEMANAGER->statePos(pos);
 	IMAGEMANAGER->stateRotate(rot);

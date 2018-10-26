@@ -207,11 +207,6 @@ void animation::setPlayFrame(POINT start, POINT end, BOOL reverse, BOOL loop)
 	}
 }
 
-// 초 당 프레임 갱신 횟수
-void animation::setFPS(int framePerSec)
-{
-	_frameUpdateSec = 1 / (float)framePerSec;
-}
 // 프레임 업데이트
 void animation::frameUpdate(float elpasedTime)
 {

@@ -43,7 +43,7 @@ public:
 	void setFrameIndex(POINT pos) { setFrameIndex(pos.x, pos.y); };
 	
 	// 초당 프레임 갱신 횟수
-	void setFPS(int framePerSec);
+	void setFPS(float framePerSec) { _frameUpdateSec = 1.0f / framePerSec; };
 	void setElapsedSec(float eTime) { _elapsedSec = eTime; };
 	void frameUpdate(float elpasedTime);
 
