@@ -26,7 +26,10 @@ void cSound::play(float volume, float pitch)
 	FMOD_RESULT r;
 	r = _system->playSound(FMOD_CHANNEL_FREE, _sound, false, &_channel);
 	if (0 <= volume)
+	{
+		if (_volConnet != NULL) volume *= *_volConnet;
 		_channel->setVolume(volume);
+	}
 	if (pitch != 0.0f)
 		_channel->setFrequency(44100 * pitch);
 
@@ -127,6 +130,9 @@ HRESULT soundManager::init(void)
 	_cgMaster->addGroup(_cgBGM);
 	_cgMaster->addGroup(_cgSE);
 
+	_cgBGM->getVolume(_volBGM);
+	_cgSE->getVolume(_volSE);
+
 	return S_OK;
 }
 
@@ -178,19 +184,21 @@ cSound* soundManager::addSound(const char* soundName, const char * fileName, boo
 			// FMOD_LOOP_NORMAL : 루프 ON
 			snd->_system->createStream(fileName, FMOD_LOOP_NORMAL, 0, &snd->_sound);
 			snd->_cGroup = _cgBGM;
+			snd->_volConnet = _volBGM;
 		}
 		else
 		{
 			// 여러 음원 동시사용 가능(효과음)
 			snd->_system->createSound(fileName, FMOD_LOOP_NORMAL, 0, &snd->_sound);
 			snd->_cGroup = _cgSE;
+			snd->_volConnet = _volSE;
 		}
 	}
 	else
 	{
 		// 한 번 플레이
 		snd->_system->createSound(fileName, FMOD_DEFAULT, 0, &snd->_sound);
-		snd->_cGroup = _cgSE;
+		snd->_volConnet = _volSE;
 	}
 	snd->_channel->setVolume(1.0f);
 
