@@ -261,10 +261,10 @@
     <ClCompile Include="fieldManager.cpp">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClCompile>
-    <ClCompile Include="charaterSelectScene.cpp">
+    <ClCompile Include="loadingScene.cpp">
       <Filter>메인게임\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="loadingScene.cpp">
+    <ClCompile Include="charaterSelectScene.cpp">
       <Filter>메인게임\Scene</Filter>
     </ClCompile>
   </ItemGroup>
