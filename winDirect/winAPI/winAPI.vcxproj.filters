@@ -222,6 +222,15 @@
     <ClCompile Include="animationGroupManager.cpp">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClCompile>
+    <ClCompile Include="renderManager.cpp">
+      <Filter>메인게임\Manager\render</Filter>
+    </ClCompile>
+    <ClCompile Include="windowBase.cpp">
+      <Filter>메인게임\Manager\window\_base</Filter>
+    </ClCompile>
+    <ClCompile Include="winManager.cpp">
+      <Filter>메인게임\Manager\window</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -349,6 +358,15 @@
     </ClInclude>
     <ClInclude Include="animationGroupManager.h">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="renderManager.h">
+      <Filter>메인게임\Manager\render</Filter>
+    </ClInclude>
+    <ClInclude Include="windowBase.h">
+      <Filter>메인게임\Manager\window\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="winManager.h">
+      <Filter>메인게임\Manager\window</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

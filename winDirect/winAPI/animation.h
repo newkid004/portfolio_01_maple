@@ -31,6 +31,7 @@ public:
 	HRESULT init(image* img);
 	HRESULT init(int totalW, int totalH, int frameW, int frameH);
 	void release(void);
+	animation * update(float ratio = 1.0f);
 
 	void setDefPlayFrame(BOOL reverse = NULL, BOOL loop = NULL);
 	void setPlayFrame(int * playArr = NULL, int arrLen = 0, BOOL loop = NULL);

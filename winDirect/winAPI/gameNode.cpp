@@ -59,7 +59,13 @@ HRESULT gameNode::init(bool managerInit)
 		SCENEMANAGER->init();
 
 		// 사운드매니저 초기화
-		// SOUNDMANAGER->init();
+		SOUNDMANAGER->init();
+
+		// 렌더 매니저 초기화
+		RENDERMANAGER->init();
+
+		// 윈도우 매니저 초기화
+		WINMANAGER->init();
 
 		return S_OK;
 	}
@@ -108,8 +114,16 @@ void gameNode::release(void)
 		SCENEMANAGER->releaseSingleton();
 
 		// 사운드 매니저 해제
-		// SOUNDMANAGER->release();
-		// SOUNDMANAGER->releaseSingleton();
+		SOUNDMANAGER->release();
+		SOUNDMANAGER->releaseSingleton();
+
+		// 렌더 매니저 해제
+		RENDERMANAGER->release();
+		RENDERMANAGER->releaseSingleton();
+
+		// 윈도우 매니저 해제
+		WINMANAGER->release();
+		WINMANAGER->releaseSingleton();
 	}
 
 #ifdef PROCESS_D3D
