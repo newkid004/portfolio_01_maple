@@ -138,6 +138,12 @@
     <ClCompile Include="baseObject.cpp">
       <Filter>baseObject</Filter>
     </ClCompile>
+    <ClCompile Include="charaterSelectScene.cpp">
+      <Filter>메인게임\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="loadingScene.cpp">
+      <Filter>메인게임\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -223,6 +229,12 @@
     </ClInclude>
     <ClInclude Include="classesDef.h">
       <Filter>baseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingScene.h">
+      <Filter>메인게임\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="charaterSelectScene.h">
+      <Filter>메인게임\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

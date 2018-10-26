@@ -157,6 +157,7 @@
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
+    <ClCompile Include="charaterSelectScene.cpp" />
     <ClCompile Include="gameNode.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="JsonSaveLoader.cpp" />
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loading.cpp" />
+    <ClCompile Include="loadingScene.cpp" />
     <ClCompile Include="mainGame.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
@@ -183,6 +185,7 @@
     <ClInclude Include="baseObject.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraManager.h" />
+    <ClInclude Include="charaterSelectScene.h" />
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="gameNode.h" />
@@ -193,6 +196,7 @@
     <ClInclude Include="JsonSaveLoader.h" />
     <ClInclude Include="keyManager.h" />
     <ClInclude Include="loading.h" />
+    <ClInclude Include="loadingScene.h" />
     <ClInclude Include="mainGame.h" />
     <ClInclude Include="objectDef.h" />
     <ClInclude Include="randomFunction.h" />

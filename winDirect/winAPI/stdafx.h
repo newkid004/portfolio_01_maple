@@ -94,7 +94,7 @@ using namespace MY_UTIL;
 //============================
 #define WINNAME		(LPTSTR)(TEXT("winDirect"))
 
-// #define FULLSCREEN
+//#define FULLSCREEN
 #define PROCESS_D3D
 
 #ifdef FULLSCREEN
