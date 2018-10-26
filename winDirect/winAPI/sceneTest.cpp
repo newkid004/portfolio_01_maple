@@ -5,9 +5,8 @@ HRESULT sceneTest::init(void)
 {
 	getBackColor() = C_COLOR_GRAY;
 
-	IMAGEMANAGER->add("test", L"image/12.png");
+	IMAGEMANAGER->add("test", L"image/testImg.png");
 	IMAGEMANAGER->add("frame", L"image/frame.png", 12, 1);
-
 	IMAGEMANAGER->setRenderState(IRS_ALWAYS_RESET_TRANSFORM, false);
 
 	_ani = new animation;
@@ -25,6 +24,11 @@ void sceneTest::release(void)
 void sceneTest::update(void)
 {
 	updateControl();
+	static int i = 1;
+	auto color = IMAGEMANAGER->find("test")->getBitmapPixel(POINT{i,i});
+	cout << (int)color.a<<"  " <<(int)color.r <<"  " <<(int)color.g << "  " <<(int)color.b << "  "<< endl;
+	i++;
+	if (i > 99)i = 0;
 }
 
 void sceneTest::render(void)

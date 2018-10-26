@@ -31,7 +31,11 @@ HRESULT image::_putImage(void)
 
 	// D2D용 비트맵 생성
 	if (S_OK != (hr = _renderTarget->CreateBitmapFromWicBitmap(converter, NULL, &_imageInfo->bitmap))) return hr;
-
+	// pixel용 비트맵 생성
+	if (S_OK != (hr = IMAGEMANAGER->getFactory()->CreateBitmap(_imageInfo->bitmap->GetSize().width, _imageInfo->bitmap->GetSize().height,
+		GUID_WICPixelFormat32bppRGBA1010102, WICBitmapNoCache, &_imageInfo->wBitmap)))return hr;
+		
+	WICRect rc;
 	converter->Release();
 	fDecoder->Release();
 	decoder->Release();
@@ -164,16 +168,19 @@ void image::aniRender(animation * ani, float alpha)
 			alpha);
 }
 
-//D3DCOLORVALUE image::getBitmapPixel(POINT pos)
-//{
-//	IWICBitmapLock * bLock;
-//	BYTE buffer[4];
-//	WICRect rc;
-//	rc.X = pos.x; rc.Width = 1;
-//	rc.Y = pos.y; rc.Height = 1;
-//
-//	HRESULT hr = IWICBitmap::Lock(&rc, WICBitmapLockRead, &bLock);
-//	bLock->GetDataPointer()
-//
-//	return D3DCOLORVALUE();
-//}
+ColorF image::getBitmapPixel(POINT pos)
+{
+	IWICBitmapLock * bLock;
+	BYTE* buffer;
+	UINT size =16;
+	WICRect rc;
+	rc.X = pos.x; rc.Width = 1;
+	rc.Y = pos.y; rc.Height = 1;
+	
+	HRESULT hr = _imageInfo->wBitmap->Lock(&rc, WICBitmapLockRead, &bLock);
+	bLock->GetDataPointer(&size,&buffer);
+	
+	ColorF color = ColorF(buffer[2], buffer[1], buffer[0], buffer[3]);
+	bLock->Release();
+	return color;
+}
