@@ -24,7 +24,6 @@ public :
 	Channel* _channel;
 
 	ChannelGroup* _cGroup = NULL;
-	float* _volConnet = NULL;
 
 public :
 	HRESULT init(System* system);
@@ -69,9 +68,6 @@ private:
 
 	ChannelGroup* _cgBGM;
 	ChannelGroup* _cgSE;
-
-	float* _volBGM;
-	float* _volSE;
 
 public:
 	HRESULT init(void);
