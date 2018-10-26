@@ -133,6 +133,12 @@
     <Filter Include="메인게임\Game Framework\Manager\_sington\gameSystem">
       <UniqueIdentifier>{d82b3dce-ec1f-4fac-a02b-b77c58e7cb84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\field">
+      <UniqueIdentifier>{2fc60543-7556-4d07-bf2e-3ea8dc591fc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\field\_base">
+      <UniqueIdentifier>{7e78e380-657f-46e8-a948-ca4bbd2bf11b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -248,6 +254,12 @@
     </ClCompile>
     <ClCompile Include="gameSystem.cpp">
       <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="fieldBase.cpp">
+      <Filter>메인게임\Game Framework\Manager\field\_base</Filter>
+    </ClCompile>
+    <ClCompile Include="fieldManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -388,6 +400,12 @@
     </ClInclude>
     <ClInclude Include="gameSystem.h">
       <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fieldBase.h">
+      <Filter>메인게임\Game Framework\Manager\field\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="fieldManager.h">
+      <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
