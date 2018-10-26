@@ -127,6 +127,12 @@
     <Filter Include="메인게임\Game Framework\Manager\window\_base">
       <UniqueIdentifier>{6845af8c-0ff3-49c3-8be6-b64defcb4d3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\_sington">
+      <UniqueIdentifier>{ae1fa0af-176f-49bc-a592-e2a70a11b864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\_sington\gameSystem">
+      <UniqueIdentifier>{d82b3dce-ec1f-4fac-a02b-b77c58e7cb84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -239,6 +245,9 @@
     </ClCompile>
     <ClCompile Include="windowBase.cpp">
       <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
+    </ClCompile>
+    <ClCompile Include="gameSystem.cpp">
+      <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -376,6 +385,9 @@
     </ClInclude>
     <ClInclude Include="windowBase.h">
       <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="gameSystem.h">
+      <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
