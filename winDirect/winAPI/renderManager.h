@@ -71,7 +71,7 @@ private :
 			pos(0.0f), 
 			clip(0.0f), 
 			size(0.0f), 
-			alpha(1), 
+			alpha(1.0f), 
 			rotate(0.0f),
 			flip(0)
 		{};
