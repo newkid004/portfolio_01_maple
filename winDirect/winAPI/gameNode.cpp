@@ -67,6 +67,12 @@ HRESULT gameNode::init(bool managerInit)
 		// 윈도우 매니저 초기화
 		WINMANAGER->init();
 
+		// 필드 매니저 초기화
+		FIELDMANAGER->init();
+
+		// 게임 시스템 싱글톤 초기화
+		GAMESYSTEM->init();
+
 		return S_OK;
 	}
 	return S_OK;
@@ -124,6 +130,14 @@ void gameNode::release(void)
 		// 윈도우 매니저 해제
 		WINMANAGER->release();
 		WINMANAGER->releaseSingleton();
+
+		// 필드 매니저 해제
+		FIELDMANAGER->release();
+		FIELDMANAGER->releaseSingleton();
+
+		// 게임 시스템 해제
+		GAMESYSTEM->release();
+		GAMESYSTEM->releaseSingleton();
 	}
 
 #ifdef PROCESS_D3D
