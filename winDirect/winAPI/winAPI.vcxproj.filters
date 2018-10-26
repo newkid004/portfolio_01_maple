@@ -118,6 +118,27 @@
     <Filter Include="메인게임\Game Framework\Manager\animation">
       <UniqueIdentifier>{6db02a40-0502-4033-9a33-e7ad6822df16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\render">
+      <UniqueIdentifier>{4da0e541-57bb-498c-b5eb-2d7ab9726e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\window">
+      <UniqueIdentifier>{c49c4b58-3553-4bc0-9826-77fd070537c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\window\_base">
+      <UniqueIdentifier>{6845af8c-0ff3-49c3-8be6-b64defcb4d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\_sington">
+      <UniqueIdentifier>{ae1fa0af-176f-49bc-a592-e2a70a11b864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\_sington\gameSystem">
+      <UniqueIdentifier>{d82b3dce-ec1f-4fac-a02b-b77c58e7cb84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\field">
+      <UniqueIdentifier>{2fc60543-7556-4d07-bf2e-3ea8dc591fc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\field\_base">
+      <UniqueIdentifier>{7e78e380-657f-46e8-a948-ca4bbd2bf11b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -221,6 +242,24 @@
     </ClCompile>
     <ClCompile Include="animationGroupManager.cpp">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="renderManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\render</Filter>
+    </ClCompile>
+    <ClCompile Include="winManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\window</Filter>
+    </ClCompile>
+    <ClCompile Include="windowBase.cpp">
+      <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
+    </ClCompile>
+    <ClCompile Include="gameSystem.cpp">
+      <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="fieldBase.cpp">
+      <Filter>메인게임\Game Framework\Manager\field\_base</Filter>
+    </ClCompile>
+    <ClCompile Include="fieldManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -349,6 +388,24 @@
     </ClInclude>
     <ClInclude Include="animationGroupManager.h">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="renderManager.h">
+      <Filter>메인게임\Game Framework\Manager\render</Filter>
+    </ClInclude>
+    <ClInclude Include="winManager.h">
+      <Filter>메인게임\Game Framework\Manager\window</Filter>
+    </ClInclude>
+    <ClInclude Include="windowBase.h">
+      <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="gameSystem.h">
+      <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fieldBase.h">
+      <Filter>메인게임\Game Framework\Manager\field\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="fieldManager.h">
+      <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

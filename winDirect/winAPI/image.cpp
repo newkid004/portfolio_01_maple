@@ -161,10 +161,11 @@ void image::frameRender(int frameX, int frameY, float alpha)
 
 void image::aniRender(animation * ani, float alpha)
 {
-	this->render(
-		(float)ani->getFramePos().x, (float)ani->getFramePos().y,
-		(float)ani->getFrameWidth(), (float)ani->getFrameHeight(),
-		alpha);
+	if (ani->isPlay())
+		this->render(
+			(float)ani->getFramePos().x, (float)ani->getFramePos().y,
+			(float)ani->getFrameWidth(), (float)ani->getFrameHeight(),
+			alpha);
 }
 
 ColorF image::getBitmapPixel(POINT pos)

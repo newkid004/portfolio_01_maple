@@ -22,7 +22,7 @@
     <ProjectGuid>{7C0A3AA2-9BB1-47A6-81A6-D29200A61266}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>winAPI</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <ProjectName>winDirect</ProjectName>
     <SccProjectName>SAK</SccProjectName>
     <SccAuxPath>SAK</SccAuxPath>
@@ -34,7 +34,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -163,7 +163,10 @@
     <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="characterBase.cpp" />
     <ClCompile Include="enemyBase.cpp" />
+    <ClCompile Include="fieldBase.cpp" />
+    <ClCompile Include="fieldManager.cpp" />
     <ClCompile Include="gameNode.cpp" />
+    <ClCompile Include="gameSystem.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
     <ClCompile Include="iniData.cpp" />
@@ -176,6 +179,7 @@
     <ClCompile Include="passiveSkill.cpp" />
     <ClCompile Include="patternBase.cpp" />
     <ClCompile Include="patternManager.cpp" />
+    <ClCompile Include="renderManager.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
     <ClCompile Include="skillBase.cpp" />
@@ -188,7 +192,9 @@
     <ClCompile Include="timeManager.cpp" />
     <ClCompile Include="timer.cpp" />
     <ClCompile Include="txtDataManager.cpp" />
+    <ClCompile Include="windowBase.cpp" />
     <ClCompile Include="winMain.cpp" />
+    <ClCompile Include="winManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activeSkill.h" />
@@ -204,7 +210,10 @@
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="enemyBase.h" />
+    <ClInclude Include="fieldBase.h" />
+    <ClInclude Include="fieldManager.h" />
     <ClInclude Include="gameNode.h" />
+    <ClInclude Include="gameSystem.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />
     <ClInclude Include="iniData.h" />
@@ -220,6 +229,7 @@
     <ClInclude Include="patternBase.h" />
     <ClInclude Include="patternManager.h" />
     <ClInclude Include="randomFunction.h" />
+    <ClInclude Include="renderManager.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="sceneTest.h" />
     <ClInclude Include="singletonBase.h" />
@@ -233,6 +243,8 @@
     <ClInclude Include="triFunction.h" />
     <ClInclude Include="txtDataManager.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="windowBase.h" />
+    <ClInclude Include="winManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
