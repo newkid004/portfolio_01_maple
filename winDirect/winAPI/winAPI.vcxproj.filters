@@ -139,6 +139,12 @@
     <Filter Include="메인게임\Game Framework\Manager\field\_base">
       <UniqueIdentifier>{7e78e380-657f-46e8-a948-ca4bbd2bf11b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\interactBase">
+      <UniqueIdentifier>{dcb791b3-25d8-4f36-b18f-d026c1901587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\questBase">
+      <UniqueIdentifier>{4ac4226a-5019-4daf-9727-c30b7f8fa7a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -260,6 +266,9 @@
     </ClCompile>
     <ClCompile Include="fieldManager.cpp">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
+    </ClCompile>
+    <ClCompile Include="interactBase.cpp">
+      <Filter>메인게임\Game Framework\interactBase</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -407,5 +416,13 @@
     <ClInclude Include="fieldManager.h">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClInclude>
+    <ClInclude Include="interactBase.h">
+      <Filter>메인게임\Game Framework\interactBase</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="quest.Json">
+      <Filter>API Framework\매니져\Json</Filter>
+    </None>
   </ItemGroup>
 </Project>
