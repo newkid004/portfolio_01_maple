@@ -5,10 +5,10 @@ class windowBase
 private :
 	typedef list<windowBase*>::iterator UI_LIST_ITER;
 
-private:
+private :
 	UI_LIST_ITER* _managedIter;
 	string _winName;
-
+	fPOINT _pos;
 public :
 	HRESULT init(void);
 	void release(void);
@@ -20,9 +20,9 @@ public :
 	string & getName(void) { return _winName; };
 
 	void show(void) { WINMANAGER->show(this); };
-	void close(void) { WINMANAGER->close(this); };
+	list<windowBase*>::iterator* close(void) {return WINMANAGER->close(this); };
 
-public:
+public :
 	windowBase() {};
 	~windowBase() {};
 };

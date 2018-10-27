@@ -13,6 +13,7 @@ void windowBase::release(void)
 
 windowBase::UI_LIST_ITER * windowBase::update(void)
 {
+
 	return NULL;
 }
 

@@ -139,6 +139,12 @@
     <Filter Include="메인게임\Game Framework\Manager\field\_base">
       <UniqueIdentifier>{7e78e380-657f-46e8-a948-ca4bbd2bf11b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\item">
+      <UniqueIdentifier>{ed91bf44-6322-4183-aba2-c8638c8cf7e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\item\_base">
+      <UniqueIdentifier>{490aaf0f-9788-4917-869a-97c4f231c466}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -260,6 +266,15 @@
     </ClCompile>
     <ClCompile Include="fieldManager.cpp">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
+    </ClCompile>
+    <ClCompile Include="itemBase.cpp">
+      <Filter>메인게임\Game Framework\item\_base</Filter>
+    </ClCompile>
+    <ClCompile Include="loadingScene.cpp">
+      <Filter>메인게임\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="charaterSelectScene.cpp">
+      <Filter>메인게임\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -406,6 +421,15 @@
     </ClInclude>
     <ClInclude Include="fieldManager.h">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingScene.h">
+      <Filter>메인게임\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="charaterSelectScene.h">
+      <Filter>메인게임\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="itemBase.h">
+      <Filter>메인게임\Game Framework\item\_base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

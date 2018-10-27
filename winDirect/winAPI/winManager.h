@@ -20,7 +20,7 @@ public :
 	void render(void);
 
 public :
-	void add(string winName, windowBase* winAdd);
+	windowBase * add(string winName, windowBase* winAdd);
 	windowBase* find(string winName);
 
 	void show(string winName);
