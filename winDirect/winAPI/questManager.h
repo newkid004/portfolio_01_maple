@@ -1,7 +1,5 @@
 #pragma once
 #include "questBase.h"
-#include "JsonSaveLoader.h"
-#include "questManager.h"
 
 class questManager:public singletonBase<questManager>
 {

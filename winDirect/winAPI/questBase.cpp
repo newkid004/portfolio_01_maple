@@ -2,12 +2,12 @@
 #include "questBase.h"
 
 
-HRESULT questBase::init(string name, string explain, QUEST_TYPE type)
+HRESULT questBase::init(string name, string explain, NUM_REAL exp, QUEST_TYPE type)
 {
 	_name = name;
 	_explain = explain;
 	_type = type;
-
+	_exp = exp;
 	return S_OK;
 }
 
@@ -23,57 +23,61 @@ void questBase::release()
 void questBase::setMonsterNum(string monsterNum)
 {
 	string numArray = monsterNum;
-	char* str = (char*)numArray.c_str();
-	string num = strtok(str, ",");
+	char str[100]; 
+	strcpy(str, (char*)numArray.c_str());
+	char* num = strtok(str, ",");
 	int index = 0;
-	while (!num.empty())
+	do
 	{
+		_monsterNum[index] = atoi(num);
 		num = strtok(NULL, ",");
-		_monsterNum[index] = atoi(num.c_str());
 		index++;
-	}
+	} while (num!=NULL);
 }
 
 void questBase::setMonsterName(string monsterName)
 {
 	string mName = monsterName;
-	char* str = (char*)mName.c_str();
-	string name = strtok(str, ",");
+	char str[100];
+	strcpy(str, (char*)mName.c_str());
+	char* name = strtok(str, ",");
 	int index = 0;
-	while (!name.empty())
+	do
 	{
-		name = strtok(NULL, ",");
 		_monsterName[index] = name;
+		name = strtok(NULL, ",");
 		index++;
-	}
+	} while (name != NULL);
 }
 
 void questBase::setGatItemNum(string itemNum)
 {
 	string numArray = itemNum;
-	char* str = (char*)numArray.c_str();
-	string num = strtok(str, ",");
+	char str[100];
+	strcpy(str, (char*)numArray.c_str());
+	char* num = strtok(str, ",");
 	int index = 0;
-	while (!num.empty())
+	do
 	{
+		_toGatItemNum[index] = atoi(num);
 		num = strtok(NULL, ",");
-		_toGatItemNum[index] = atoi(num.c_str());
 		index++;
-	}
+	} while (num!=NULL);
 }
 
 void questBase::setGatItemName(string itemName)
 {
 	string mName = itemName;
-	char* str = (char*)mName.c_str();
-	string name = strtok(str, ",");
+	char str[100];
+	strcpy(str, (char*)mName.c_str());
+	char* name = strtok(str, ",");
 	int index = 0;
-	while (!name.empty())
+	do
 	{
 		name = strtok(NULL, ",");
 		_toGatItemName[index] = name;
 		index++;
-	}
+	} while (name != NULL);
 }
 
 
@@ -88,13 +92,13 @@ questBase::~questBase()
 }
 
 HRESULT compensation_MoneyQuest::init(
-	string name, string explain, QUEST_TYPE type,
+	string name, string explain, NUM_REAL exp,QUEST_TYPE type,
 	int money
 	, string monsterName, string monsterNum, int monsterKindNum,
 	string gatItemName, string gatItemNum, int itemKindNum
 )
 {
-	questBase::init(name, explain, type);
+	questBase::init(name, explain,exp, type);
 
 	_toGatItemNum = NULL;
 	_toGatItemName = NULL;
@@ -148,13 +152,13 @@ void compensation_MoneyQuest::release()
 }
 
 HRESULT compensation_ItemQuest::init(
-	string name, string explain, QUEST_TYPE type,
+	string name, string explain, NUM_REAL exp, QUEST_TYPE type,
 	string itemNum, string itemName
 	, string monsterName, string monsterNum, int monsterKindNum,
 	string gatItemName, string gatItemNum, int itemKindNum
 )
 {
-	questBase::init(name, explain, type);
+	questBase::init(name, explain, exp,type);
 	
 	_toGatItemNum = NULL;
 	_toGatItemName = NULL;

@@ -454,5 +454,8 @@
     <None Include="quest.Json">
       <Filter>API Framework\매니져\Json</Filter>
     </None>
+    <None Include="questList.Json">
+      <Filter>메인게임\Game Framework\Manager\quest</Filter>
+    </None>
   </ItemGroup>
 </Project>
