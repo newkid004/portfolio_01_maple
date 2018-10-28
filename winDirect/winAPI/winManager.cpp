@@ -39,9 +39,14 @@ void winManager::render(void)
 		winBase->render();
 }
 
-void winManager::add(string winName, windowBase * winAdd)
+windowBase * winManager::add(string winName, windowBase * winAdd)
 {
+	// 목록에 담겨있는지 판별
+	auto iter = _mWindow.find(winName);
+	if (iter != _mWindow.end()) return iter->second;
+
 	_mWindow.insert(make_pair(winName, winAdd));
+	return winAdd;
 }
 
 windowBase * winManager::find(string winName)

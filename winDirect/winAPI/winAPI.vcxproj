@@ -162,6 +162,7 @@
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="characterBase.cpp" />
+    <ClCompile Include="charaterSelectScene.cpp" />
     <ClCompile Include="enemyBase.cpp" />
     <ClCompile Include="fieldBase.cpp" />
     <ClCompile Include="fieldManager.cpp" />
@@ -174,12 +175,15 @@
     <ClCompile Include="JsonSaveLoader.cpp" />
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loading.cpp" />
+    <ClCompile Include="loadingScene.cpp" />
     <ClCompile Include="mainGame.cpp" />
     <ClCompile Include="npcBase.cpp" />
     <ClCompile Include="npcManager.cpp" />
     <ClCompile Include="passiveSkill.cpp" />
     <ClCompile Include="patternBase.cpp" />
     <ClCompile Include="patternManager.cpp" />
+    <ClCompile Include="questBase.cpp" />
+    <ClCompile Include="questManager.cpp" />
     <ClCompile Include="renderManager.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
@@ -208,6 +212,7 @@
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraManager.h" />
     <ClInclude Include="characterBase.h" />
+    <ClInclude Include="charaterSelectScene.h" />
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="enemyBase.h" />
@@ -223,6 +228,7 @@
     <ClInclude Include="JsonSaveLoader.h" />
     <ClInclude Include="keyManager.h" />
     <ClInclude Include="loading.h" />
+    <ClInclude Include="loadingScene.h" />
     <ClInclude Include="mainGame.h" />
     <ClInclude Include="npcBase.h" />
     <ClInclude Include="npcManager.h" />
@@ -230,6 +236,8 @@
     <ClInclude Include="passiveSkill.h" />
     <ClInclude Include="patternBase.h" />
     <ClInclude Include="patternManager.h" />
+    <ClInclude Include="questBase.h" />
+    <ClInclude Include="questManager.h" />
     <ClInclude Include="randomFunction.h" />
     <ClInclude Include="renderManager.h" />
     <ClInclude Include="sceneManager.h" />
