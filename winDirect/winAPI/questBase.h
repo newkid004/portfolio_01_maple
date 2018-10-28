@@ -30,7 +30,7 @@ protected:
 	int _monsterKindNum;
 	NUM_REAL	_exp;
 public:
-	virtual HRESULT init(string name, string explain, QUEST_TYPE type);
+	virtual HRESULT init(string name, string explain, NUM_REAL exp,QUEST_TYPE type);
 	virtual void release();
 	virtual void setMonsterNum(string monsterNum);
 	virtual void setMonsterName(string monsterName);
@@ -49,7 +49,7 @@ protected:
 
 public:
 	virtual HRESULT init(
-		string name,string explain,QUEST_TYPE type,
+		string name,string explain, NUM_REAL exp, QUEST_TYPE type,
 		int money,string monsterName,string monsterNum,int monsterKindNum,
 		string gatItemName,string gatItemNum,int itemKindNum
 	);
@@ -63,7 +63,7 @@ protected:
 	string*				_itemName;
 public:
 	virtual HRESULT init(
-		string name, string explain, QUEST_TYPE type,
+		string name, string explain, NUM_REAL exp, QUEST_TYPE type,
 		string itemNum, string itemName,
 		string monsterName, string monsterNum, int monsterKindNum,
 		string gatItemName, string gatItemNum, int itemKindNum

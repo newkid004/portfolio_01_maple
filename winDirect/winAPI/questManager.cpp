@@ -49,7 +49,7 @@ void questManager::setQuest()
 					gatItemName += (*It).asString();
 					gatItemName += ",";
 				}
-				gatItemName[gatItemName.size() - 1] = NULL;
+				gatItemName[gatItemName.size() - 1] = '\0';
 
 				subRoot = (*it)["gatItemNum"];
 				for (auto It = subRoot.begin(); It != subRoot.end(); It++)
@@ -57,7 +57,7 @@ void questManager::setQuest()
 					gatItemNum += (*It).asString();
 					gatItemNum += ",";
 				}
-				gatItemNum[gatItemNum.size() - 1] = NULL;
+				gatItemNum[gatItemNum.size() - 1] = '\0';
 			}
 			else if ((*it)["type"].asString() == "annihilation")
 			{
@@ -77,7 +77,7 @@ void questManager::setQuest()
 					monsterNum += (*It).asString();
 					monsterNum += ",";
 				}
-				monsterNum[monsterNum.size() - 1] = NULL;
+				monsterNum[monsterNum.size() - 1] = '\0';
 			}
 			else
 			{
@@ -89,7 +89,8 @@ void questManager::setQuest()
 				MoneyQuest* quest = new MoneyQuest;
 				quest->init(
 					(*it)["name"].asString(),
-					(*it)["exp"].asString(),
+					(*it)["explain"].asString(),
+					(*it)["exp"].asInt(),
 					questType,
 					(*it)["money"].asInt(),
 					monsterName,monsterNum,(*it)["monsterKindNum"].asInt(),
@@ -112,7 +113,8 @@ void questManager::setQuest()
 
 				quest->init(
 					(*it)["name"].asString(),
-					(*it)["exp"].asString(),
+					(*it)["explain"].asString(),
+					(*it)["exp"].asInt(),
 					questType,
 					(*it)["itemNum"].asString(),
 					itemName, monsterName, monsterNum, (*it)["monsterKindNum"].asInt(),

@@ -475,5 +475,8 @@
     <None Include="quest.Json">
       <Filter>메인게임\Game Framework\Manager\quest\questObject</Filter>
     </None>
+    <None Include="questList.Json">
+      <Filter>메인게임\Game Framework\Manager\quest</Filter>
+    </None>
   </ItemGroup>
 </Project>
