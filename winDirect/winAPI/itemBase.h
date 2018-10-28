@@ -3,12 +3,18 @@
 #include "itemDef.h"
 #include "state.h"
 
+#define INTERVAL_ITEM_IN_INVENTORY		50.0f
+#define INTERVAL_INVENTORY_TASK_BAR		fPOINT(5.0f, 10.0f)
+
 struct itemContentBase
 {
 	int type;
 
 	image* imgIcon = NULL;
 	image* imgShadow = NULL;
+
+	fPOINT imgFramePos;
+	static const fPOINT imgFrameSize;
 
 	string name;
 	string memo;
@@ -18,10 +24,13 @@ struct itemContentBase
 	itemContentBase() :
 		type(0),
 		imgIcon(NULL),
+		imgShadow(NULL),
+		imgFramePos(0.f),
 		cost(0)
 	{}
 	virtual ~itemContentBase() {};
 };
+const fPOINT itemContentBase::imgFrameSize = 40.f;
 
 struct tagItemEquipmentInfo
 {
@@ -59,7 +68,8 @@ public :
 	virtual void render(void) {};
 
 public :
-	virtual void render2Field(void);
+	virtual void render2Field(float alphaRatio = 1.f);
+	virtual void render2Inventory(fPOINT winPos, fPOINT placement, int scrollOffset = 0);
 
 public :
 	itemContentBase* getContent(void) { return _content; };
