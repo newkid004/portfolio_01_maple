@@ -276,6 +276,8 @@
     <ClCompile Include="charaterSelectScene.cpp">
       <Filter>메인게임\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="shopBase.cpp" />
+    <ClCompile Include="shopManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -431,5 +433,7 @@
     <ClInclude Include="itemBase.h">
       <Filter>메인게임\Game Framework\item\_base</Filter>
     </ClInclude>
+    <ClInclude Include="shopBase.h" />
+    <ClInclude Include="shopManager.h" />
   </ItemGroup>
 </Project>

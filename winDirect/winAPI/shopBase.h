@@ -6,6 +6,7 @@ class shopBase
 {
 private :
 	vector<itemBase*> _vItem;
+	int _typeInventoryView;
 
 public :
 	virtual HRESULT init(void);
@@ -13,7 +14,9 @@ public :
 	virtual void update(void);
 	virtual void render(void);
 
-
+public :
+	void add(itemBase* addition) { _vItem.push_back(addition); };
+	itemBase * find(int index) { return _vItem.size() <= index ? NULL : _vItem[index]; };
 
 public:
 	shopBase()  {};
