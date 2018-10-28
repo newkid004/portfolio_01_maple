@@ -76,6 +76,14 @@ HRESULT gameNode::init(bool managerInit)
 		// 게임 시스템 싱글톤 초기화
 		GAMESYSTEM->init();
 
+
+		PATTERNMANAGER->init();
+		BUFFMANAGER->init();
+		NPCMANAGER->init();
+		ANIGROUPMANAGER->init();
+		SKILLMANAGER->init();
+		QUESTMANAGER->init();
+
 		return S_OK;
 	}
 	return S_OK;
@@ -145,6 +153,19 @@ void gameNode::release(void)
 		// 게임 시스템 해제
 		GAMESYSTEM->release();
 		GAMESYSTEM->releaseSingleton();
+
+		PATTERNMANAGER->release();
+		PATTERNMANAGER->releaseSingleton();
+		BUFFMANAGER->release();
+		BUFFMANAGER->releaseSingleton();
+		NPCMANAGER->release();
+		NPCMANAGER->releaseSingleton();
+		ANIGROUPMANAGER->release();
+		ANIGROUPMANAGER->releaseSingleton();
+		SKILLMANAGER->release();
+		SKILLMANAGER->releaseSingleton();
+		QUESTMANAGER->release();
+		QUESTMANAGER->releaseSingleton();
 	}
 
 #ifdef PROCESS_D3D

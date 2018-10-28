@@ -2,6 +2,7 @@
  #include "singletonBase.h"
  
  #define DATA_FILE_NAME "SaveData.json"
+
  
  class JsonSaveLoader : public singletonBase <JsonSaveLoader>
  {

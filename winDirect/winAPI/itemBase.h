@@ -90,6 +90,7 @@ public:
 	itemBase() {};
 	~itemBase() {};
 };
+
 class itemEquip : public itemBase{};
 
 class itemWeapon : public itemEquip
@@ -116,3 +117,17 @@ public:
 	~itemArmor() {};
 };
 
+class itemConsume :public itemBase
+{
+
+};
+
+class itemOthers :public itemBase
+{
+
+};
+
+class itemCash :public itemBase
+{
+
+};
