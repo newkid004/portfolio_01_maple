@@ -1,0 +1,19 @@
+{
+  "quest": [
+    {
+      "name": "스테이지1 - 몬스터 퇴치",
+      "subName": "주황버섯 잡기",
+      "type": "annihilation",
+      "explain": "몬스터 10명 퇴치",
+      "monsterName": [ "주황버섯" ],
+      "monsterNum": [ "10" ],
+      "monsterKindNum": 1,
+      "gatItemKindNum": 0,
+      "gatItemName": "",
+      "gatItemNum": "0",
+      "compensation": "money",
+      "money": 5000,
+      "exp": 10000
+    }
+  ]
+}
