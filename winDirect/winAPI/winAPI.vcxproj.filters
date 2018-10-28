@@ -416,8 +416,13 @@
     <ClInclude Include="fieldManager.h">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClInclude>
-    <ClInclude Include="itemBase.h">
-      <Filter>메인게임\Game Framework\item\_base</Filter>
+    <ClInclude Include="interactBase.h">
+      <Filter>메인게임\Game Framework\interactBase</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="quest.Json">
+      <Filter>API Framework\매니져\Json</Filter>
+    </None>
   </ItemGroup>
 </Project>
