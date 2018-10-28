@@ -69,6 +69,13 @@ using namespace MY_UTIL;
 #include "sceneManager.h"
 #include "soundManager.h"
 #include "cameraManager.h"
+#include "patternManager.h"
+#include "skillManager.h"
+#include "animationGroupManager.h"
+#include "buffManager.h"
+#include "npcManager.h"
+#include "questManager.h"
+
 
 #include "jsoncpp\include\json\json.h"
 #include "JsonSaveLoader.h"
@@ -95,8 +102,15 @@ using namespace MY_UTIL;
 #define RENDERMANAGER	renderManager::getSingleton()
 #define WINMANAGER		winManager::getSingleton()
 #define FIELDMANAGER	fieldManager::getSingleton()
-
+#define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
 #define GAMESYSTEM		gameSystem::getSingleton()
+#define PATTERNMANAGER	patternManager::getSingleton()
+#define BUFFMANAGER		buffManager::getSingleton()
+#define NPCMANAGER		npcManager::getSingleton()
+#define ANIGROUPMANAGER animationGroupManager::getSingleton()
+#define SKILLMANAGER	skillManager::getSingleton()
+#define QUESTMANAGER	questManager::getSingleton()
+
 
 //============================
 // # 매크로 # (윈도우창 초기화)
