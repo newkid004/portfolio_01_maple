@@ -9,7 +9,7 @@ image::image() : _imageInfo(NULL)
 {
 }
 
-HRESULT image::_putImage(void)
+HRESULT image::_putImage(bool isUsePixel)
 {
 	HRESULT hr = S_OK;
 
@@ -31,11 +31,14 @@ HRESULT image::_putImage(void)
 
 	// D2D용 비트맵 생성
 	if (S_OK != (hr = _renderTarget->CreateBitmapFromWicBitmap(converter, NULL, &_imageInfo->bitmap))) return hr;
+
 	// pixel용 비트맵 생성
-	if (S_OK != (hr = IMAGEMANAGER->getFactory()->CreateBitmap(_imageInfo->bitmap->GetSize().width, _imageInfo->bitmap->GetSize().height,
-		GUID_WICPixelFormat32bppRGBA1010102, WICBitmapNoCache, &_imageInfo->wBitmap)))return hr;
+	if (isUsePixel)
+	{
+		if (S_OK != (hr = IMAGEMANAGER->getFactory()->CreateBitmap(_imageInfo->bitmap->GetSize().width, _imageInfo->bitmap->GetSize().height,
+			GUID_WICPixelFormat32bppRGBA1010102, WICBitmapNoCache, &_imageInfo->wBitmap)))return hr;
+	}
 		
-	WICRect rc;
 	converter->Release();
 	fDecoder->Release();
 	decoder->Release();
@@ -51,12 +54,12 @@ void image::_putImageInfo(void)
 	_imageInfo->frameSize.y = _imageInfo->size.y / _imageInfo->maxFrame.y;
 }
 
-HRESULT image::init(const wchar_t * fileName)
+HRESULT image::init(const wchar_t * fileName, bool isUsePixel)
 {
-	return init(fileName, 1, 1);
+	return init(fileName, 1, 1, isUsePixel);
 }
 
-HRESULT image::init(const wchar_t * fileName, int maxFrameX, int maxFrameY)
+HRESULT image::init(const wchar_t * fileName, int maxFrameX, int maxFrameY, bool isUsePixel)
 {
 	//재초기화 방지용, 이미지 정보에 값이 들어 있다면 릴리즈를 먼저 해줄것
 	if (_imageInfo != NULL) this->release();
@@ -70,7 +73,7 @@ HRESULT image::init(const wchar_t * fileName, int maxFrameX, int maxFrameY)
 	_fileName = fileName;
 
 	//리소스 입력
-	if (S_OK != _putImage())
+	if (S_OK != _putImage(isUsePixel))
 	{
 		release();
 		return E_FAIL;
@@ -91,8 +94,12 @@ void image::release(void)
 	//이미지 정보가 남아 있다면 해제
 	if (_imageInfo)
 	{
-		//이미지 삭제
+		// 이미지 삭제
 		_imageInfo->bitmap->Release();
+
+		// 픽셀 이미지 삭제
+		if (_imageInfo->wBitmap) 
+			_imageInfo->wBitmap->Release();
 
 		//포인터 삭제
 		SAFE_DELETE(_imageInfo);
@@ -153,10 +160,22 @@ void image::render(float clipX, float clipY, float clipW, float clipH, float alp
 
 void image::frameRender(int frameX, int frameY, float alpha)
 {
-	float clipX = frameX * _imageInfo->frameSize.x;
-	float clipY = frameY * _imageInfo->frameSize.y;
+	this->render(
+		(float)frameX * _imageInfo->frameSize.x,
+		(float)frameY * _imageInfo->frameSize.y , 
+		_imageInfo->frameSize.x,
+		_imageInfo->frameSize.y,
+		alpha);
+}
 
-	this->render(clipX, clipY, _imageInfo->frameSize.x, _imageInfo->frameSize.y, alpha);
+void image::frameRender(fPOINT frame, float alpha)
+{
+	this->render(
+		frame.x * _imageInfo->frameSize.x,
+		frame.y * _imageInfo->frameSize.y,
+		_imageInfo->frameSize.x,
+		_imageInfo->frameSize.y,
+		alpha);
 }
 
 void image::aniRender(animation * ani, float alpha)
