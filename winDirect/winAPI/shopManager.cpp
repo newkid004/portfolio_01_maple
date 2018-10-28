@@ -1,11 +1,14 @@
 #include "stdafx.h"
 #include "shopManager.h"
 
+#include "windowBase.h"
 #include "shopBase.h"
 
 HRESULT shopManager::init(void)
 {
-	return E_NOTIMPL;
+	_bindWindow = NULL;
+
+	return S_OK;
 }
 
 void shopManager::release(void)

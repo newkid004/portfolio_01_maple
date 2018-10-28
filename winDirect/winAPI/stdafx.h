@@ -77,6 +77,7 @@ using namespace MY_UTIL;
 #include "renderManager.h"
 #include "winManager.h"
 #include "fieldManager.h"
+#include "shopManager.h"
 
 #include "gameSystem.h"
 
@@ -95,6 +96,7 @@ using namespace MY_UTIL;
 #define RENDERMANAGER	renderManager::getSingleton()
 #define WINMANAGER		winManager::getSingleton()
 #define FIELDMANAGER	fieldManager::getSingleton()
+#define SHOPMANAGER		shopManager::getSingleton()
 
 #define GAMESYSTEM		gameSystem::getSingleton()
 

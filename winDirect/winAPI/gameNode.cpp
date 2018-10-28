@@ -70,6 +70,9 @@ HRESULT gameNode::init(bool managerInit)
 		// 필드 매니저 초기화
 		FIELDMANAGER->init();
 
+		// 상점 매니저 초기화
+		SHOPMANAGER->init();
+
 		// 게임 시스템 싱글톤 초기화
 		GAMESYSTEM->init();
 
@@ -134,6 +137,10 @@ void gameNode::release(void)
 		// 필드 매니저 해제
 		FIELDMANAGER->release();
 		FIELDMANAGER->releaseSingleton();
+
+		// 상점 매니저 해제
+		SHOPMANAGER->release();
+		SHOPMANAGER->releaseSingleton();
 
 		// 게임 시스템 해제
 		GAMESYSTEM->release();

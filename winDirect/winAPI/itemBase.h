@@ -73,7 +73,7 @@ protected :
 	itemContentBase * _content = NULL;
 
 public :
-	virtual HRESULT init(void) {};
+	virtual HRESULT init(void) { return S_OK; };
 	virtual void release(void) { SAFE_DELETE(_content); };
 	virtual void update(void) {};
 	virtual void render(void) {};

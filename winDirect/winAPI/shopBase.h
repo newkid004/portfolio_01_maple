@@ -17,6 +17,7 @@ public :
 public :
 	void add(itemBase* addition) { _vItem.push_back(addition); };
 	itemBase * find(int index) { return _vItem.size() <= index ? NULL : _vItem[index]; };
+	int size(void) { return _vItem.size(); };
 
 public:
 	shopBase()  {};
