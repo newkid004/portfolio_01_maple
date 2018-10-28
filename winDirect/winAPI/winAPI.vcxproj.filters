@@ -145,6 +145,12 @@
     <Filter Include="메인게임\Game Framework\item\_base">
       <UniqueIdentifier>{490aaf0f-9788-4917-869a-97c4f231c466}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\quest">
+      <UniqueIdentifier>{dc0708ee-9e85-4d38-8c0b-995b52bdadda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\quest\_base">
+      <UniqueIdentifier>{bc989663-3c58-4749-9238-4dc05d107130}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -270,13 +276,17 @@
     <ClCompile Include="itemBase.cpp">
       <Filter>메인게임\Game Framework\item\_base</Filter>
     </ClCompile>
-    <ClCompile Include="questBase.cpp" />
-    <ClCompile Include="questManager.cpp" />
     <ClCompile Include="charaterSelectScene.cpp">
       <Filter>메인게임\Scene</Filter>
     </ClCompile>
     <ClCompile Include="loadingScene.cpp">
       <Filter>메인게임\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="questManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="questBase.cpp">
+      <Filter>메인게임\Game Framework\Manager\quest\_base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -424,8 +434,6 @@
     <ClInclude Include="fieldManager.h">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClInclude>
-    <ClInclude Include="questBase.h" />
-    <ClInclude Include="questManager.h" />
     <ClInclude Include="itemBase.h">
       <Filter>메인게임\Game Framework\item\_base</Filter>
     </ClInclude>
@@ -434,6 +442,12 @@
     </ClInclude>
     <ClInclude Include="charaterSelectScene.h">
       <Filter>메인게임\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="questManager.h">
+      <Filter>메인게임\Game Framework\Manager\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="questBase.h">
+      <Filter>메인게임\Game Framework\Manager\quest\_base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
