@@ -146,13 +146,10 @@
       <UniqueIdentifier>{490aaf0f-9788-4917-869a-97c4f231c466}</UniqueIdentifier>
     </Filter>
     <Filter Include="메인게임\Game Framework\Manager\quest">
-      <UniqueIdentifier>{f838f851-b3d6-443e-8bd5-2f6cd0081a07}</UniqueIdentifier>
+      <UniqueIdentifier>{dc0708ee-9e85-4d38-8c0b-995b52bdadda}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\quest\base">
-      <UniqueIdentifier>{f8b88701-2e8f-4247-bb86-a4f4b6784e19}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\quest\questObject">
-      <UniqueIdentifier>{29f3672f-92a4-4619-a973-23733df4bac4}</UniqueIdentifier>
+    <Filter Include="메인게임\Game Framework\Manager\quest\_base">
+      <UniqueIdentifier>{bc989663-3c58-4749-9238-4dc05d107130}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -279,17 +276,17 @@
     <ClCompile Include="itemBase.cpp">
       <Filter>메인게임\Game Framework\item\_base</Filter>
     </ClCompile>
-    <ClCompile Include="loadingScene.cpp">
+    <ClCompile Include="charaterSelectScene.cpp">
       <Filter>메인게임\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="charaterSelectScene.cpp">
+    <ClCompile Include="loadingScene.cpp">
       <Filter>메인게임\Scene</Filter>
     </ClCompile>
     <ClCompile Include="questManager.cpp">
       <Filter>메인게임\Game Framework\Manager\quest</Filter>
     </ClCompile>
     <ClCompile Include="questBase.cpp">
-      <Filter>메인게임\Game Framework\Manager\quest\base</Filter>
+      <Filter>메인게임\Game Framework\Manager\quest\_base</Filter>
     </ClCompile>
     <ClCompile Include="shopBase.cpp" />
     <ClCompile Include="shopManager.cpp" />
@@ -439,25 +436,25 @@
     <ClInclude Include="fieldManager.h">
       <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClInclude>
+    <ClInclude Include="itemBase.h">
+      <Filter>메인게임\Game Framework\item\_base</Filter>
+    </ClInclude>
     <ClInclude Include="loadingScene.h">
       <Filter>메인게임\Scene</Filter>
     </ClInclude>
     <ClInclude Include="charaterSelectScene.h">
       <Filter>메인게임\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="itemBase.h">
-      <Filter>메인게임\Game Framework\item\_base</Filter>
-    </ClInclude>
     <ClInclude Include="questManager.h">
       <Filter>메인게임\Game Framework\Manager\quest</Filter>
     </ClInclude>
     <ClInclude Include="questBase.h">
-      <Filter>메인게임\Game Framework\Manager\quest\base</Filter>
+      <Filter>메인게임\Game Framework\Manager\quest\_base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="quest.Json">
-      <Filter>메인게임\Game Framework\Manager\quest\questObject</Filter>
+      <Filter>API Framework\매니져\Json</Filter>
     </None>
     <ClInclude Include="shopBase.h" />
     <ClInclude Include="shopManager.h" />
