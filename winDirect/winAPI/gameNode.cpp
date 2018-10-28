@@ -70,19 +70,18 @@ HRESULT gameNode::init(bool managerInit)
 		// 필드 매니저 초기화
 		FIELDMANAGER->init();
 
+		PATTERNMANAGER->init();
+		SKILLMANAGER->init();
+		ANIGROUPMANAGER->init();
+		BUFFMANAGER->init();
+		NPCMANAGER->init();
+		QUESTMANAGER->init();
+
 		// 상점 매니저 초기화
 		SHOPMANAGER->init();
 
 		// 게임 시스템 싱글톤 초기화
 		GAMESYSTEM->init();
-
-
-		PATTERNMANAGER->init();
-		BUFFMANAGER->init();
-		NPCMANAGER->init();
-		ANIGROUPMANAGER->init();
-		SKILLMANAGER->init();
-		QUESTMANAGER->init();
 
 		return S_OK;
 	}
@@ -150,22 +149,22 @@ void gameNode::release(void)
 		SHOPMANAGER->release();
 		SHOPMANAGER->releaseSingleton();
 
-		// 게임 시스템 해제
-		GAMESYSTEM->release();
-		GAMESYSTEM->releaseSingleton();
-
 		PATTERNMANAGER->release();
 		PATTERNMANAGER->releaseSingleton();
+		SKILLMANAGER->release();
+		SKILLMANAGER->releaseSingleton();
+		ANIGROUPMANAGER->release();
+		ANIGROUPMANAGER->releaseSingleton();
 		BUFFMANAGER->release();
 		BUFFMANAGER->releaseSingleton();
 		NPCMANAGER->release();
 		NPCMANAGER->releaseSingleton();
-		ANIGROUPMANAGER->release();
-		ANIGROUPMANAGER->releaseSingleton();
-		SKILLMANAGER->release();
-		SKILLMANAGER->releaseSingleton();
 		QUESTMANAGER->release();
 		QUESTMANAGER->releaseSingleton();
+
+		// 게임 시스템 해제
+		GAMESYSTEM->release();
+		GAMESYSTEM->releaseSingleton();
 	}
 
 #ifdef PROCESS_D3D

@@ -1,4 +1,5 @@
 #pragma once
+#define INTERVAL_ITEM_IN_SHOP 50.f
 
 class itemBase;
 

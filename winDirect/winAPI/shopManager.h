@@ -1,13 +1,13 @@
 #pragma once
 #include "singletonBase.h"
 
-class windowBase;
+class windowShop;
 class shopBase;
 
 class shopManager : public singletonBase<shopManager>
 {
 private :
-	windowBase * _bindWindow;
+	windowShop * _bindWindow;
 	map<string, shopBase*> _mShop;
 
 public :
@@ -18,7 +18,7 @@ public :
 	shopBase * add(string name, shopBase * addition);
 	shopBase * find(string name);
 
-	windowBase *& getWindow(void) { return _bindWindow; };
+	windowShop *& getWindow(void) { return _bindWindow; };
 
 public:
 	shopManager() {};

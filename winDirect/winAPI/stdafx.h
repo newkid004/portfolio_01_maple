@@ -69,13 +69,6 @@ using namespace MY_UTIL;
 #include "sceneManager.h"
 #include "soundManager.h"
 #include "cameraManager.h"
-#include "patternManager.h"
-#include "skillManager.h"
-#include "animationGroupManager.h"
-#include "buffManager.h"
-#include "npcManager.h"
-#include "questManager.h"
-
 
 #include "jsoncpp\include\json\json.h"
 #include "JsonSaveLoader.h"
@@ -84,6 +77,12 @@ using namespace MY_UTIL;
 #include "renderManager.h"
 #include "winManager.h"
 #include "fieldManager.h"
+#include "patternManager.h"
+#include "skillManager.h"
+#include "animationGroupManager.h"
+#include "buffManager.h"
+#include "npcManager.h"
+#include "questManager.h"
 #include "shopManager.h"
 
 #include "gameSystem.h"
@@ -100,17 +99,19 @@ using namespace MY_UTIL;
 #define SCENEMANAGER	sceneManager::getSingleton()
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
+#define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
 #define RENDERMANAGER	renderManager::getSingleton()
 #define WINMANAGER		winManager::getSingleton()
 #define FIELDMANAGER	fieldManager::getSingleton()
-#define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
-#define GAMESYSTEM		gameSystem::getSingleton()
 #define PATTERNMANAGER	patternManager::getSingleton()
+#define SKILLMANAGER	skillManager::getSingleton()
+#define ANIGROUPMANAGER animationGroupManager::getSingleton()
 #define BUFFMANAGER		buffManager::getSingleton()
 #define NPCMANAGER		npcManager::getSingleton()
-#define ANIGROUPMANAGER animationGroupManager::getSingleton()
-#define SKILLMANAGER	skillManager::getSingleton()
 #define QUESTMANAGER	questManager::getSingleton()
+#define SHOPMANAGER		shopManager::getSingleton()
+
+#define GAMESYSTEM		gameSystem::getSingleton()
 
 
 //============================
