@@ -11,6 +11,10 @@ c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\wi
   soundManager.cpp
   skillManager.cpp
   skillBase.cpp
+  shopManager.cpp
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\shopbase.h(19): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+  shopBase.cpp
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\shopbase.h(19): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
   sceneTest.cpp
   sceneManager.cpp
   renderManager.cpp
@@ -20,6 +24,12 @@ c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\wi
   npcManager.cpp
   npcBase.cpp
   mainGame.cpp
+  코드를 생성하고 있습니다...
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\txtdatamanager.cpp(46): warning C4172: 지역 변수 또는 임시: str의 주소를 반환하고 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\winmanager.cpp(111): warning C4172: 지역 변수 또는 임시의 주소를 반환하고 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\winmanager.cpp(126): warning C4172: 지역 변수 또는 임시의 주소를 반환하고 있습니다.
+  컴파일하고 있습니다...
+  loadingScene.cpp
   loading.cpp
 c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.h(181): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(27): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
@@ -34,11 +44,7 @@ c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\wi
 c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(288): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\loading.cpp(341): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
   keyManager.cpp
-  코드를 생성하고 있습니다...
-c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\txtdatamanager.cpp(46): warning C4172: 지역 변수 또는 임시: str의 주소를 반환하고 있습니다.
-c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\winmanager.cpp(121): warning C4172: 지역 변수 또는 임시의 주소를 반환하고 있습니다.
-c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\winmanager.cpp(106): warning C4172: 지역 변수 또는 임시의 주소를 반환하고 있습니다.
-  컴파일하고 있습니다...
+  itemBase.cpp
   iniData.cpp
   imageManager.cpp
   image.cpp
@@ -54,6 +60,10 @@ c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\wi
   fieldManager.cpp
   fieldBase.cpp
   enemyBase.cpp
+  charaterSelectScene.cpp
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\charaterselectscene.cpp(7): warning C4244: '초기화 중': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\charaterselectscene.cpp(8): warning C4244: '초기화 중': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\charaterselectscene.cpp(59): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   characterBase.cpp
   cameraManager.cpp
   camera.cpp
@@ -61,14 +71,15 @@ c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\wi
   buffBase.cpp
   baseObject.cpp
   animationGroupManager.cpp
+  코드를 생성하고 있습니다...
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\inidata.cpp(86): warning C4172: 지역 변수 또는 임시: data의 주소를 반환하고 있습니다.
+  컴파일하고 있습니다...
   animationGroup.cpp
   animation.cpp
 c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\animation.cpp(25): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   activeSkill.cpp
   JsonSaveLoader.cpp
   코드를 생성하고 있습니다...
-c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\inidata.cpp(86): warning C4172: 지역 변수 또는 임시: data의 주소를 반환하고 있습니다.
-  LINK : C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\winDirect.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
 json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_reader.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
 json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_value.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
 json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_writer.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
