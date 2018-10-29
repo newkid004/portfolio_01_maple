@@ -26,9 +26,7 @@ void cSound::play(float volume, float pitch)
 	FMOD_RESULT r;
 	r = _system->playSound(FMOD_CHANNEL_FREE, _sound, false, &_channel);
 	if (0 <= volume)
-	{
 		_channel->setVolume(volume);
-	}
 	if (pitch != 0.0f)
 		_channel->setFrequency(44100 * pitch);
 
@@ -192,6 +190,7 @@ cSound* soundManager::addSound(const char* soundName, const char * fileName, boo
 	{
 		// 한 번 플레이
 		snd->_system->createSound(fileName, FMOD_DEFAULT, 0, &snd->_sound);
+		snd->_cGroup = _cgSE;
 	}
 	snd->_channel->setVolume(1.0f);
 

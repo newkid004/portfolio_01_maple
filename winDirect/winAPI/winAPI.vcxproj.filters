@@ -103,6 +103,7 @@
     <Filter Include="메인게임\Game Framework\Manager\animation">
       <UniqueIdentifier>{6db02a40-0502-4033-9a33-e7ad6822df16}</UniqueIdentifier>
     </Filter>
+<<<<<<< HEAD
     <Filter Include="메인게임\Game Framework\Manager\render">
       <UniqueIdentifier>{4da0e541-57bb-498c-b5eb-2d7ab9726e9e}</UniqueIdentifier>
     </Filter>
@@ -178,6 +179,8 @@
     <Filter Include="메인게임\Game Framework\Manager\effect">
       <UniqueIdentifier>{0672f841-e81f-429e-9ad1-37edc9b0426d}</UniqueIdentifier>
     </Filter>
+=======
+>>>>>>> parent of bf82ed1... 오류커밋
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -276,6 +279,7 @@
     <ClCompile Include="animationGroupManager.cpp">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="renderManager.cpp">
       <Filter>메인게임\Game Framework\Manager\render</Filter>
     </ClCompile>
@@ -330,6 +334,8 @@
     <ClCompile Include="effectBase.cpp">
       <Filter>메인게임\Game Framework\Manager\effect</Filter>
     </ClCompile>
+=======
+>>>>>>> parent of bf82ed1... 오류커밋
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -452,6 +458,7 @@
     <ClInclude Include="animationGroupManager.h">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="renderManager.h">
       <Filter>메인게임\Game Framework\Manager\render</Filter>
     </ClInclude>
@@ -514,5 +521,7 @@
     <None Include="questList.Json">
       <Filter>메인게임\Game Framework\Manager\quest</Filter>
     </None>
+=======
+>>>>>>> parent of bf82ed1... 오류커밋
   </ItemGroup>
 </Project>

@@ -74,6 +74,7 @@ using namespace MY_UTIL;
 #include "JsonSaveLoader.h"
 
 // ∏≈¥œ¿˙ : ¿”¿« √ﬂ∞°
+<<<<<<< HEAD
 #include "renderManager.h"
 #include "winManager.h"
 #include "fieldManager.h"
@@ -87,6 +88,8 @@ using namespace MY_UTIL;
 #include "effectManager.h"
 
 #include "gameSystem.h"
+=======
+>>>>>>> parent of bf82ed1... Ïò§Î•òÏª§Î∞ã
 
 //========================
 // # ΩÃ±€≈Ê¿ª ¿Ã∞˜ø° √ﬂ∞° #
@@ -100,6 +103,7 @@ using namespace MY_UTIL;
 #define SCENEMANAGER	sceneManager::getSingleton()
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
+<<<<<<< HEAD
 #define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
 #define RENDERMANAGER	renderManager::getSingleton()
 #define WINMANAGER		winManager::getSingleton()
@@ -114,14 +118,16 @@ using namespace MY_UTIL;
 #define EFFECTMANAGER	effectManager::getSingleton()
 
 #define GAMESYSTEM		gameSystem::getSingleton()
+=======
+>>>>>>> parent of bf82ed1... Ïò§Î•òÏª§Î∞ã
 
 
 //============================
 // # ∏≈≈©∑Œ # (¿©µµøÏ√¢ √ ±‚»≠)
 //============================
-#define WINNAME		(LPTSTR)(TEXT("MapleStory"))
+#define WINNAME		(LPTSTR)(TEXT("winDirect"))
 
-//#define FULLSCREEN
+// #define FULLSCREEN
 #define PROCESS_D3D
 
 #ifdef FULLSCREEN

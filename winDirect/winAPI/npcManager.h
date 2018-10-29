@@ -1,8 +1,7 @@
 #pragma once
 #include "npcBase.h"
-#include "singletonBase.h"
 
-class npcManager:public singletonBase<npcManager>
+class npcManager
 {
 private:
 	typedef map<string, npcBase*> mNpc;

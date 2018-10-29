@@ -59,6 +59,7 @@ HRESULT gameNode::init(bool managerInit)
 		SCENEMANAGER->init();
 
 		// »ç¿îµå¸Å´ÏÀú ÃÊ±âÈ­
+<<<<<<< HEAD
 		SOUNDMANAGER->init();
 
 		// ·»´õ ¸Å´ÏÀú ÃÊ±âÈ­
@@ -85,6 +86,9 @@ HRESULT gameNode::init(bool managerInit)
 
 		// °ÔÀÓ ½Ã½ºÅÛ ½Ì±ÛÅæ ÃÊ±âÈ­
 		GAMESYSTEM->init();
+=======
+		// SOUNDMANAGER->init();
+>>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
 
 		return S_OK;
 	}
@@ -133,6 +137,7 @@ void gameNode::release(void)
 		SCENEMANAGER->releaseSingleton();
 
 		// »ç¿îµå ¸Å´ÏÀú ÇØÁ¦
+<<<<<<< HEAD
 		SOUNDMANAGER->release();
 		SOUNDMANAGER->releaseSingleton();
 
@@ -172,6 +177,10 @@ void gameNode::release(void)
 		// °ÔÀÓ ½Ã½ºÅÛ ÇØÁ¦
 		GAMESYSTEM->release();
 		GAMESYSTEM->releaseSingleton();
+=======
+		// SOUNDMANAGER->release();
+		// SOUNDMANAGER->releaseSingleton();
+>>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
 	}
 
 #ifdef PROCESS_D3D

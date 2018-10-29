@@ -15,15 +15,6 @@ enum e_IMAGE_FLIP
 	IMAGE_FLIP_HORIZON	= 0b01
 };
 
-enum e_RESET_TRANSFORM
-{
-	RTF_NONE		= 0,
-	RTF_POSITION	= 0b001,
-	RTF_ROTATION	= 0b010,
-	RTF_FLIP		= 0b100,
-	RTF_ALL			= 0b111
-};
-
 class imageManager : public singletonBase<imageManager>
 {
 private:
@@ -77,12 +68,10 @@ public :
 	float &		stateRotate(float input){ return _imgRotate = input; };
 
 	void resetTransform(void);
-	void resetTransform(e_RESET_TRANSFORM resetValue);
 	void setTransform(D2D1_POINT_2F * pos);
 
 	void setRenderState(e_IMG_RENDER_STATE state, int value);
 	const int getRenderState(void) { return _renderState; };
-	const int getRenderState(e_IMG_RENDER_STATE state) { return _renderState & state; }
 
 private:
 	void	_flip2fpos(int flip, D2D1_SIZE_F & output);
