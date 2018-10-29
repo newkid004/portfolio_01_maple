@@ -22,7 +22,7 @@
     <ProjectGuid>{7C0A3AA2-9BB1-47A6-81A6-D29200A61266}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>winAPI</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <ProjectName>winDirect</ProjectName>
     <SccProjectName>SAK</SccProjectName>
     <SccAuxPath>SAK</SccAuxPath>
@@ -34,7 +34,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -159,25 +159,39 @@
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="buffBase.cpp" />
     <ClCompile Include="buffManager.cpp" />
+    <ClCompile Include="bulletBase.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="characterBase.cpp" />
+    <ClCompile Include="charaterSelectScene.cpp" />
+    <ClCompile Include="effectBase.cpp" />
+    <ClCompile Include="effectManager.cpp" />
     <ClCompile Include="enemyBase.cpp" />
+    <ClCompile Include="fieldBase.cpp" />
+    <ClCompile Include="fieldManager.cpp" />
     <ClCompile Include="gameNode.cpp" />
+    <ClCompile Include="gameSystem.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
     <ClCompile Include="iniData.cpp" />
+    <ClCompile Include="itemBase.cpp" />
     <ClCompile Include="JsonSaveLoader.cpp" />
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loading.cpp" />
+    <ClCompile Include="loadingScene.cpp" />
     <ClCompile Include="mainGame.cpp" />
     <ClCompile Include="npcBase.cpp" />
     <ClCompile Include="npcManager.cpp" />
     <ClCompile Include="passiveSkill.cpp" />
     <ClCompile Include="patternBase.cpp" />
     <ClCompile Include="patternManager.cpp" />
+    <ClCompile Include="questBase.cpp" />
+    <ClCompile Include="questManager.cpp" />
+    <ClCompile Include="renderManager.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="sceneTest.cpp" />
+    <ClCompile Include="shopBase.cpp" />
+    <ClCompile Include="shopManager.cpp" />
     <ClCompile Include="skillBase.cpp" />
     <ClCompile Include="skillManager.cpp" />
     <ClCompile Include="soundManager.cpp" />
@@ -188,7 +202,9 @@
     <ClCompile Include="timeManager.cpp" />
     <ClCompile Include="timer.cpp" />
     <ClCompile Include="txtDataManager.cpp" />
+    <ClCompile Include="windowBase.cpp" />
     <ClCompile Include="winMain.cpp" />
+    <ClCompile Include="winManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activeSkill.h" />
@@ -198,20 +214,29 @@
     <ClInclude Include="baseObject.h" />
     <ClInclude Include="buffBase.h" />
     <ClInclude Include="buffManager.h" />
+    <ClInclude Include="bulletBase.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraManager.h" />
     <ClInclude Include="characterBase.h" />
+    <ClInclude Include="charaterSelectScene.h" />
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
+    <ClInclude Include="effectBase.h" />
+    <ClInclude Include="effectManager.h" />
     <ClInclude Include="enemyBase.h" />
+    <ClInclude Include="fieldBase.h" />
+    <ClInclude Include="fieldManager.h" />
     <ClInclude Include="gameNode.h" />
+    <ClInclude Include="gameSystem.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />
     <ClInclude Include="iniData.h" />
+    <ClInclude Include="itemBase.h" />
     <ClInclude Include="itemDef.h" />
     <ClInclude Include="JsonSaveLoader.h" />
     <ClInclude Include="keyManager.h" />
     <ClInclude Include="loading.h" />
+    <ClInclude Include="loadingScene.h" />
     <ClInclude Include="mainGame.h" />
     <ClInclude Include="npcBase.h" />
     <ClInclude Include="npcManager.h" />
@@ -219,9 +244,14 @@
     <ClInclude Include="passiveSkill.h" />
     <ClInclude Include="patternBase.h" />
     <ClInclude Include="patternManager.h" />
+    <ClInclude Include="questBase.h" />
+    <ClInclude Include="questManager.h" />
     <ClInclude Include="randomFunction.h" />
+    <ClInclude Include="renderManager.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="sceneTest.h" />
+    <ClInclude Include="shopBase.h" />
+    <ClInclude Include="shopManager.h" />
     <ClInclude Include="singletonBase.h" />
     <ClInclude Include="skillBase.h" />
     <ClInclude Include="skillManager.h" />
@@ -233,6 +263,12 @@
     <ClInclude Include="triFunction.h" />
     <ClInclude Include="txtDataManager.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="windowBase.h" />
+    <ClInclude Include="winManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="quest.Json" />
+    <None Include="questList.Json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

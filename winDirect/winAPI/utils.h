@@ -32,7 +32,8 @@ struct fPOINT
 	NUM_REAL y;
 
 	fPOINT()						{ this->x = 0; this->y = 0; }
-	fPOINT(NUM_REAL x, NUM_REAL y)	{ this->x = x; this->y = y; };
+	fPOINT(NUM_REAL xy)				{ this->x = xy; this->y = xy; };
+	fPOINT(NUM_REAL x, NUM_REAL y) { this->x = x; this->y = y; };
 
 	fPOINT operator+(fPOINT input) { return fPOINT(this->x + input.x, this->y + input.y); }
 	fPOINT operator-(fPOINT input) { return fPOINT(this->x - input.x, this->y - input.y); }
@@ -48,6 +49,11 @@ struct fPOINT
 	void operator-=(fPOINT input) { this->x -= input.x; this->y -= input.y; };
 	void operator*=(fPOINT input) { this->x *= input.x; this->y *= input.y; };
 	void operator/=(fPOINT input) { this->x /= input.x; this->y /= input.y; };
+
+	void operator+=(NUM_REAL input) { this->x += input; this->y += input; }
+	void operator-=(NUM_REAL input) { this->x -= input; this->y -= input; }
+	void operator*=(NUM_REAL input) { this->x *= input; this->y *= input; }
+	void operator/=(NUM_REAL input) { this->x /= input; this->y /= input; }
 };
 
 struct fRECT
@@ -165,10 +171,10 @@ namespace MY_UTIL
 	inline fRECT  pos2fRect(fPOINT startPoint, fPOINT endPoint) { return fRECT{ startPoint,endPoint }; }
 	inline fRECT  point2fRect(POINT startPoint, POINT endPoint) { return fRECT{ point2fpos(startPoint),point2fpos(endPoint) }; }
 	
-
 	// ----- bit ----- //
 	inline int bit_put(int b1, int b2) { return b1 | b2; };
 	inline int bit_reverse(int b) { return 0x7FFFFFF - b; };
 	inline int bit_pick(int b1, int b2) { return b1 & bit_reverse(b2); };
+	inline int bit_flip(int b1, int b2) { return b1 ^ b2; };
 }
 
