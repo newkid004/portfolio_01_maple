@@ -6,5 +6,3 @@
 *.opendb
 /winDirect/.vs/winDirect/v15/Browse.VC.db
 *.ipch
-*.obj
-/winDirect/winAPI/Debug/winDirect.tlog

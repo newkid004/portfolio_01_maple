@@ -46,7 +46,7 @@ HRESULT animation::init(int totalW, int totalH, int frameW, int frameH)
 	{
 		for (int x = 0; x < _frameNumWidth; x++)
 		{
-			fPOINT framePos;
+			POINT framePos;
 			framePos.x = x * _frameWidth;
 			framePos.y = y * _frameHeight;
 			_frameList.push_back(framePos);
@@ -65,12 +65,6 @@ void animation::release(void)
 		_frameList.clear();
 		_playList.clear();
 	}
-}
-
-animation * animation::update(float ratio)
-{
-	frameUpdate(TIMEMANAGER->getElapsedTime() * ratio);
-	return this;
 }
 
 // 기본 프레임 셋팅
@@ -207,6 +201,11 @@ void animation::setPlayFrame(POINT start, POINT end, BOOL reverse, BOOL loop)
 	}
 }
 
+// 초 당 프레임 갱신 횟수
+void animation::setFPS(int framePerSec)
+{
+	_frameUpdateSec = 1 / (float)framePerSec;
+}
 // 프레임 업데이트
 void animation::frameUpdate(float elpasedTime)
 {

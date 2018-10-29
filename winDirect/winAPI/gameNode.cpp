@@ -59,32 +59,7 @@ HRESULT gameNode::init(bool managerInit)
 		SCENEMANAGER->init();
 
 		// 사운드매니저 초기화
-		SOUNDMANAGER->init();
-
-		// 렌더 매니저 초기화
-		RENDERMANAGER->init();
-
-		// 윈도우 매니저 초기화
-		WINMANAGER->init();
-
-		// 필드 매니저 초기화
-		FIELDMANAGER->init();
-
-		PATTERNMANAGER->init();
-		SKILLMANAGER->init();
-		ANIGROUPMANAGER->init();
-		BUFFMANAGER->init();
-		NPCMANAGER->init();
-		QUESTMANAGER->init();
-
-		// 상점 매니저 초기화
-		SHOPMANAGER->init();
-
-		// 이펙트 매니저 초기화
-		EFFECTMANAGER->init();
-
-		// 게임 시스템 싱글톤 초기화
-		GAMESYSTEM->init();
+		// SOUNDMANAGER->init();
 
 		return S_OK;
 	}
@@ -133,45 +108,8 @@ void gameNode::release(void)
 		SCENEMANAGER->releaseSingleton();
 
 		// 사운드 매니저 해제
-		SOUNDMANAGER->release();
-		SOUNDMANAGER->releaseSingleton();
-
-		// 렌더 매니저 해제
-		RENDERMANAGER->release();
-		RENDERMANAGER->releaseSingleton();
-
-		// 윈도우 매니저 해제
-		WINMANAGER->release();
-		WINMANAGER->releaseSingleton();
-
-		// 필드 매니저 해제
-		FIELDMANAGER->release();
-		FIELDMANAGER->releaseSingleton();
-
-		// 상점 매니저 해제
-		SHOPMANAGER->release();
-		SHOPMANAGER->releaseSingleton();
-
-		// 이펙트 매니저 해제
-		EFFECTMANAGER->release();
-		EFFECTMANAGER->releaseSingleton();
-
-		PATTERNMANAGER->release();
-		PATTERNMANAGER->releaseSingleton();
-		SKILLMANAGER->release();
-		SKILLMANAGER->releaseSingleton();
-		ANIGROUPMANAGER->release();
-		ANIGROUPMANAGER->releaseSingleton();
-		BUFFMANAGER->release();
-		BUFFMANAGER->releaseSingleton();
-		NPCMANAGER->release();
-		NPCMANAGER->releaseSingleton();
-		QUESTMANAGER->release();
-		QUESTMANAGER->releaseSingleton();
-
-		// 게임 시스템 해제
-		GAMESYSTEM->release();
-		GAMESYSTEM->releaseSingleton();
+		// SOUNDMANAGER->release();
+		// SOUNDMANAGER->releaseSingleton();
 	}
 
 #ifdef PROCESS_D3D
