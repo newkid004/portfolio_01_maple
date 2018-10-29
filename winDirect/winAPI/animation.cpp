@@ -46,7 +46,7 @@ HRESULT animation::init(int totalW, int totalH, int frameW, int frameH)
 	{
 		for (int x = 0; x < _frameNumWidth; x++)
 		{
-			POINT framePos;
+			fPOINT framePos;
 			framePos.x = x * _frameWidth;
 			framePos.y = y * _frameHeight;
 			_frameList.push_back(framePos);

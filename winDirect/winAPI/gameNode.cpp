@@ -80,6 +80,9 @@ HRESULT gameNode::init(bool managerInit)
 		// 상점 매니저 초기화
 		SHOPMANAGER->init();
 
+		// 이펙트 매니저 초기화
+		EFFECTMANAGER->init();
+
 		// 게임 시스템 싱글톤 초기화
 		GAMESYSTEM->init();
 
@@ -148,6 +151,10 @@ void gameNode::release(void)
 		// 상점 매니저 해제
 		SHOPMANAGER->release();
 		SHOPMANAGER->releaseSingleton();
+
+		// 이펙트 매니저 해제
+		EFFECTMANAGER->release();
+		EFFECTMANAGER->releaseSingleton();
 
 		PATTERNMANAGER->release();
 		PATTERNMANAGER->releaseSingleton();
