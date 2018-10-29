@@ -56,6 +56,8 @@ void renderManager::renderList(int order)
 
 void renderManager::add(e_RENDER_ORDER order, image * img, fPOINT pos, fPOINT clip, fPOINT size, float alpha, float rotate, int flip)
 {
+	if (img == NULL) return;
+
 	tagRender addable = tagRender(img, pos, clip, size, alpha, rotate, flip);
 
 	if (_renderState & RMS_CLIP_INTO_CAMERA)
