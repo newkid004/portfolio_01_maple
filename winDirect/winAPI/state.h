@@ -11,27 +11,27 @@ enum MOVEMENT
 	M_JUMP				= 0x0004,
 	M_ATTACK			= 0x0008,
 	M_INV				= 0x0010,
-	M_FLY				= 0x0011,
-	M_DEAD			    = 0x0012,
-	M_SPWAN				= 0x0014,
+	M_FLY				= 0x0020,
+	M_DEAD			    = 0x0040,
+	M_SPWAN				= 0x0080,
 };
 
 struct stateBasic
 {
-	unsigned int		_hp;								//현재	hp
-	unsigned int		_maxHp;								//현재 최대 hp
+	unsigned int		hp;								//현재	hp
+	unsigned int		maxHp;							//현재 최대 hp
 
-	unsigned int		_mp;								//현재	mp
-	unsigned int		_maxMp;								//현재 최대 mp
+	unsigned int		mp;								//현재	mp
+	unsigned int		maxMp;							//현재 최대 mp
 
-	NUM_REAL			_atkMelee;							//현재 물리공격력
-	NUM_REAL			_atkSpell;							//현재 마법공격력
+	NUM_REAL			atkMelee;						//현재 물리공격력
+	NUM_REAL			atkSpell;						//현재 마법공격력
 
-	NUM_REAL			_defMelee;							//현재 물리방어력
-	NUM_REAL			_defSpell;							//현재 마법방어력
+	NUM_REAL			defMelee;						//현재 물리방어력
+	NUM_REAL			defSpell;						//현재 마법방어력
 
-	NUM_REAL			_moveSpeed;							//현재 이동속도
-	NUM_REAL			_jumpSpeed;							//현재 점프속도
+	NUM_REAL			moveSpeed;						//현재 이동속도
+	NUM_REAL			jumpSpeed;						//현재 점프속도
 
 	stateBasic()
 	{
@@ -41,9 +41,8 @@ struct stateBasic
 
 struct stateLimit
 {
-	classesDef::CLASSES	_classes;							//분류(직업)
-	int					_Lv;								//레벨
-	NUM_REAL			_stateAtk;							//스텟공격력
+	classesDef::CLASSES	classes;						//분류(직업)
+	int					Lv;								//레벨
 
 	stateLimit()
 	{
@@ -53,10 +52,10 @@ struct stateLimit
 
 struct statePoint
 {
-	unsigned int		_str;								//주스텟 힘(전사)
-	unsigned int		_dex;								//주스텟	민첩(궁수)
-	unsigned int		_int;								//주스텟 지력(마법사)
-	unsigned int		_luk;								//주스텟 운(도적)
+	unsigned int		STR;							//주스텟 힘(전사)
+	unsigned int		DEX;							//주스텟 민첩(궁수)
+	unsigned int		INT;							//주스텟 지력(마법사)
+	unsigned int		LUK;							//주스텟 운(도적)
 
 	statePoint()
 	{
@@ -66,26 +65,26 @@ struct statePoint
 
 struct statePersent
 {
-	NUM_REAL		_perDamage;								//데미지 퍼센트
-	NUM_REAL		_perMeleeAtk;							//공격력 퍼센트
-	NUM_REAL		_perSpellAtk;							//마력	퍼센트
-	NUM_REAL		_perBossDamage;							//보스 공격력 퍼센트
+	NUM_REAL		damage;								//데미지 퍼센트
+	NUM_REAL		meleeAtk;							//공격력 퍼센트
+	NUM_REAL		spellAtk;							//마력	퍼센트
+	NUM_REAL		bossDamage;							//보스 공격력 퍼센트
 
-	NUM_REAL		_perMeleeDef;							//물리 방어력 퍼센트
-	NUM_REAL		_perSpellDef;							//마법 방어력 퍼센트
+	NUM_REAL		meleeDef;							//물리 방어력 퍼센트
+	NUM_REAL		spellDef;							//마법 방어력 퍼센트
 
-	NUM_REAL		_perAllStatePoint;						//주스텟(모든) 퍼센트
+	NUM_REAL		allStatePoint;						//주스텟(모든) 퍼센트
 	
-	NUM_REAL		_perStr;								//주스텟(힘) 퍼센트
-	NUM_REAL		_perDex;								//주스텟(민첩) 퍼센트
-	NUM_REAL		_perInt;								//주스텟(지력) 퍼센트
-	NUM_REAL		_perLuk;								//주스텟(운)  퍼센트
+	NUM_REAL		STR;								//주스텟(힘) 퍼센트
+	NUM_REAL		DEX;								//주스텟(민첩) 퍼센트
+	NUM_REAL		INT;								//주스텟(지력) 퍼센트
+	NUM_REAL		LUK;								//주스텟(운)  퍼센트
 
-	NUM_REAL		_perCritical;							//크리티컬확률 퍼센트
-	NUM_REAL		_perCriticalDamage;						//크리티컬데미지 퍼센트
+	NUM_REAL		critical;							//크리티컬확률 퍼센트
+	NUM_REAL		criticalDamage;						//크리티컬데미지 퍼센트
 
-	NUM_REAL		_perMaxHp;								//최대 Hp 퍼센트
-	NUM_REAL		_perMaxMp;								//최대 mp 퍼센트
+	NUM_REAL		maxHp;								//최대 Hp 퍼센트
+	NUM_REAL		maxMp;								//최대 mp 퍼센트
 
 	statePersent()
 	{
@@ -95,19 +94,19 @@ struct statePersent
 
 struct state
 {
-	MOVEMENT			_movement;
+	MOVEMENT			movement;
 
-	stateLimit			_stateLimit;
+	stateLimit			stateLimit;
 
-	stateBasic			_permanentBasic;
-	stateBasic			_adjStateBasic;
-	stateBasic			_totalStateBasic;
+	stateBasic			permanentBasic;
+	stateBasic			adjStateBasic;
+	stateBasic			totalStateBasic;
 
-	statePoint			_permanentPoint;
-	statePoint			_itemStatePoint;
-	statePoint			_totalStatePoint;
+	statePoint			permanentPoint;
+	statePoint			itemStatePoint;
+	statePoint			totalStatePoint;
 
-	statePersent		_permanentPersent;
-	statePersent		_itemStatePersent;
-	statePersent		_totalStatePersent;
+	statePersent		permanentPersent;
+	statePersent		itemStatePersent;
+	statePersent		totalStatePersent;
 };

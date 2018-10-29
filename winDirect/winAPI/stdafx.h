@@ -74,6 +74,18 @@ using namespace MY_UTIL;
 #include "JsonSaveLoader.h"
 
 // 매니저 : 임의 추가
+#include "renderManager.h"
+#include "winManager.h"
+#include "fieldManager.h"
+#include "patternManager.h"
+#include "skillManager.h"
+#include "animationGroupManager.h"
+#include "buffManager.h"
+#include "npcManager.h"
+#include "questManager.h"
+#include "shopManager.h"
+
+#include "gameSystem.h"
 
 //========================
 // # 싱글톤을 이곳에 추가 #
@@ -87,14 +99,27 @@ using namespace MY_UTIL;
 #define SCENEMANAGER	sceneManager::getSingleton()
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
+#define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
+#define RENDERMANAGER	renderManager::getSingleton()
+#define WINMANAGER		winManager::getSingleton()
+#define FIELDMANAGER	fieldManager::getSingleton()
+#define PATTERNMANAGER	patternManager::getSingleton()
+#define SKILLMANAGER	skillManager::getSingleton()
+#define ANIGROUPMANAGER animationGroupManager::getSingleton()
+#define BUFFMANAGER		buffManager::getSingleton()
+#define NPCMANAGER		npcManager::getSingleton()
+#define QUESTMANAGER	questManager::getSingleton()
+#define SHOPMANAGER		shopManager::getSingleton()
+
+#define GAMESYSTEM		gameSystem::getSingleton()
 
 
 //============================
 // # 매크로 # (윈도우창 초기화)
 //============================
-#define WINNAME		(LPTSTR)(TEXT("winDirect"))
+#define WINNAME		(LPTSTR)(TEXT("MapleStory"))
 
-// #define FULLSCREEN
+//#define FULLSCREEN
 #define PROCESS_D3D
 
 #ifdef FULLSCREEN

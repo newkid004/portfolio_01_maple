@@ -13,14 +13,14 @@ void camera::init(void)
 	ZeroMemory(&_shake, sizeof(_shake));
 }
 
-void camera::init(POINT offset)
+void camera::init(PNT offset)
 {
 	init();
 
 	_offset = offset;
 }
 
-void camera::init(POINT offset, POINT size)
+void camera::init(PNT offset, PNT size)
 {
 	init();
 
@@ -28,7 +28,7 @@ void camera::init(POINT offset, POINT size)
 	_size = size;
 }
 
-void camera::init(POINT offset, POINT size, POINT minPos, POINT maxPos)
+void camera::init(PNT offset, PNT size, PNT minPos, PNT maxPos)
 {
 	_offset = offset;
 	_size = size;
@@ -40,7 +40,7 @@ void camera::init(POINT offset, POINT size, POINT minPos, POINT maxPos)
 	_minPos.y = _minPos.y < 0 ? 0 : _minPos.y;
 }
 
-void camera::init(POINT position, POINT offset, POINT size, POINT minPos, POINT maxPos)
+void camera::init(PNT position, PNT offset, PNT size, PNT minPos, PNT maxPos)
 {
 	init(offset, size, minPos, maxPos);
 
@@ -62,7 +62,7 @@ void camera::updateShake(float elipsedTime)
 	_shake.time -= elipsedTime;
 	_shake.interval -= _shake.decValue * elipsedTime;
 
-	POINT & shakedOffset = _shake.offset;
+	PNT & shakedOffset = _shake.offset;
 	shakedOffset.x += RND->getFromFloatTo(-_shake.interval, _shake.interval);
 	shakedOffset.y += RND->getFromFloatTo(-_shake.interval, _shake.interval);
 	// shakedOffset.x += RND->getInt(2) ? -_shake.interval : _shake.interval;
@@ -84,7 +84,7 @@ void camera::putShake(float time, float interval, float decValue)
 	_shake.decValue = decValue;
 }
 
-void camera::setOffset(POINT pos)
+void camera::setOffset(PNT pos)
 {
 	// 화면 밖으로 안나가게
 	if (_minPos.x <= pos.x && pos.x + _size.x <= _maxPos.x) _offset.x = pos.x;
@@ -107,7 +107,7 @@ void camera::moveOffset(int posX, int posY)
 	else if (_offset.y + posY <= _minPos.y)											_offset.y = _minPos.y;
 	else if (_maxPos.y <= _offset.y + posY + _size.y)								_offset.y = _maxPos.y - _size.y;
 }
-void camera::moveOffset(POINT move)
+void camera::moveOffset(PNT move)
 {
 	// 화면 밖으로 안나가게
 	if (_minPos.x <= _offset.x + move.x && _offset.x + _size.x + move.x <= _maxPos.x)	_offset.x += move.x;
@@ -119,7 +119,7 @@ void camera::moveOffset(POINT move)
 	else if (_maxPos.y <= move.y + _offset.y + _size.y)									_offset.y = _maxPos.y - _size.y;
 }
 
-void camera::setSize(POINT size)
+void camera::setSize(PNT size)
 {
 	// if (0 < size.x && size.x < WINSIZEX) _size.x = size.x;
 	// if (0 < size.y && size.y < WINSIZEY) _size.y = size.y;
@@ -127,19 +127,19 @@ void camera::setSize(POINT size)
 	_size.y = size.y;
 }
 
-void camera::setMinPos(POINT pos)
+void camera::setMinPos(PNT pos)
 {
 	_minPos = pos;
 }
 
-void camera::setMaxPos(POINT pos)
+void camera::setMaxPos(PNT pos)
 {
 	_maxPos = pos;
 }
 
-POINT camera::getCameraInnerPos(float posX, float posY)
+PNT camera::getCameraInnerPos(float posX, float posY)
 {
-	return POINT{
+	return PNT{
 		_offset.x + (int)(_size.x * posX),
 		_offset.y + (int)(_size.y * posY) };
 }
