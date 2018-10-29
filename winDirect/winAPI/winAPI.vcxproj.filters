@@ -103,13 +103,10 @@
     <Filter Include="메인게임\Game Framework\Manager\animation">
       <UniqueIdentifier>{6db02a40-0502-4033-9a33-e7ad6822df16}</UniqueIdentifier>
     </Filter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
     <Filter Include="메인게임\Game Framework\Manager\render">
       <UniqueIdentifier>{4da0e541-57bb-498c-b5eb-2d7ab9726e9e}</UniqueIdentifier>
     </Filter>
@@ -131,18 +128,16 @@
     <Filter Include="메인게임\Game Framework\Manager\field\_base">
       <UniqueIdentifier>{7e78e380-657f-46e8-a948-ca4bbd2bf11b}</UniqueIdentifier>
     </Filter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+    =======
     <Filter Include="메인게임\Game Framework\item">
       <UniqueIdentifier>{ed91bf44-6322-4183-aba2-c8638c8cf7e5}</UniqueIdentifier>
     </Filter>
     <Filter Include="메인게임\Game Framework\item\_base">
       <UniqueIdentifier>{490aaf0f-9788-4917-869a-97c4f231c466}</UniqueIdentifier>
     </Filter>
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
     <Filter Include="메인게임\Game Framework\Manager\quest">
       <UniqueIdentifier>{f838f851-b3d6-443e-8bd5-2f6cd0081a07}</UniqueIdentifier>
     </Filter>
@@ -158,10 +153,8 @@
     <Filter Include="메인게임\Game Framework\Manager\shop\_base">
       <UniqueIdentifier>{f7f38b34-ff72-4ef8-8170-81f2a3d3225a}</UniqueIdentifier>
     </Filter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
     <Filter Include="메인게임\Game Framework\object">
       <UniqueIdentifier>{843f9ec6-fa55-4519-a4d7-97b3bf1c869a}</UniqueIdentifier>
     </Filter>
@@ -201,13 +194,12 @@
     <Filter Include="메인게임\Game Framework\Manager\effect">
       <UniqueIdentifier>{0672f841-e81f-429e-9ad1-37edc9b0426d}</UniqueIdentifier>
     </Filter>
-<<<<<<< HEAD
-=======
->>>>>>> parent of bf82ed1... 오류커밋
-=======
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of bf82ed1... 오류커밋
+    =======
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -306,13 +298,10 @@
     <ClCompile Include="animationGroupManager.cpp">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClCompile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
     <ClCompile Include="renderManager.cpp">
       <Filter>메인게임\Game Framework\Manager\render</Filter>
     </ClCompile>
@@ -332,15 +321,13 @@
       <Filter>메인게임\Game Framework\Manager\field</Filter>
     </ClCompile>
     <ClCompile Include="itemBase.cpp">
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Filter>메인게임\Game Framework\object\item\_base</Filter>
-=======
+      =======
       <Filter>메인게임\Game Framework\item\_base</Filter>
->>>>>>> parent of 8f5701d... 오류커밋
-=======
+      >>>>>>> parent of 8f5701d... 오류커밋
+      =======
       <Filter>메인게임\Game Framework\object\item\_base</Filter>
->>>>>>> parent of d0a58f6... 오류 커밋
+      >>>>>>> parent of d0a58f6... 오류 커밋
     </ClCompile>
     <ClCompile Include="loadingScene.cpp">
       <Filter>메인게임\Scene</Filter>
@@ -360,10 +347,8 @@
     <ClCompile Include="shopBase.cpp">
       <Filter>메인게임\Game Framework\Manager\shop\_base</Filter>
     </ClCompile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
     <ClCompile Include="characterBase.cpp">
       <Filter>메인게임\Game Framework\object\character\_base</Filter>
     </ClCompile>
@@ -379,13 +364,12 @@
     <ClCompile Include="effectBase.cpp">
       <Filter>메인게임\Game Framework\Manager\effect</Filter>
     </ClCompile>
-<<<<<<< HEAD
-=======
->>>>>>> parent of bf82ed1... 오류커밋
-=======
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of bf82ed1... 오류커밋
+    =======
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -508,13 +492,10 @@
     <ClInclude Include="animationGroupManager.h">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClInclude>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
     <ClInclude Include="renderManager.h">
       <Filter>메인게임\Game Framework\Manager\render</Filter>
     </ClInclude>
@@ -540,15 +521,13 @@
       <Filter>메인게임\Scene</Filter>
     </ClInclude>
     <ClInclude Include="itemBase.h">
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Filter>메인게임\Game Framework\object\item\_base</Filter>
-=======
+      =======
       <Filter>메인게임\Game Framework\item\_base</Filter>
->>>>>>> parent of 8f5701d... 오류커밋
-=======
+      >>>>>>> parent of 8f5701d... 오류커밋
+      =======
       <Filter>메인게임\Game Framework\object\item\_base</Filter>
->>>>>>> parent of d0a58f6... 오류 커밋
+      >>>>>>> parent of d0a58f6... 오류 커밋
     </ClInclude>
     <ClInclude Include="questManager.h">
       <Filter>메인게임\Game Framework\Manager\quest</Filter>
@@ -562,10 +541,8 @@
     <ClInclude Include="shopBase.h">
       <Filter>메인게임\Game Framework\Manager\shop\_base</Filter>
     </ClInclude>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
     <ClInclude Include="characterBase.h">
       <Filter>메인게임\Game Framework\object\character\_base</Filter>
     </ClInclude>
@@ -581,11 +558,10 @@
     <ClInclude Include="effectBase.h">
       <Filter>메인게임\Game Framework\Manager\effect</Filter>
     </ClInclude>
-<<<<<<< HEAD
-=======
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
   </ItemGroup>
   <ItemGroup>
     <None Include="quest.Json">
@@ -594,13 +570,11 @@
     <None Include="questList.Json">
       <Filter>메인게임\Game Framework\Manager\quest</Filter>
     </None>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of bf82ed1... 오류커밋
-=======
->>>>>>> parent of 8f5701d... 오류커밋
-=======
->>>>>>> parent of d0a58f6... 오류 커밋
+    =======
+    >>>>>>> parent of bf82ed1... 오류커밋
+    =======
+    >>>>>>> parent of 8f5701d... 오류커밋
+    =======
+    >>>>>>> parent of d0a58f6... 오류 커밋
   </ItemGroup>
 </Project>
