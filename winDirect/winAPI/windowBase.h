@@ -50,6 +50,7 @@ public :
 public :	// ----- window ----- //
 	virtual void show(void) { WINMANAGER->show(this); };
 	virtual list<windowBase*>::iterator* close(void) {return WINMANAGER->close(this); };
+	virtual bool isShow(void) { return _managedIter ? true : false; };
 
 public :	// ----- button ----- //
 	buttonBase* addButton(buttonBase* addition) { _lButton.push_back(addition); };
@@ -76,7 +77,7 @@ public :
 	int & getScroll(void) { return _scroll; };
 	shopBase*& getShop(void) { return _shop; };
 
-	list<windowBase*>::iterator* close(void) override { _scroll = 0; return WINMANAGER->close(this); };
+	list<windowBase*>::iterator* close(void) override { _scroll = 0; return windowBase::close(); };
 
 public:
 	windowShop() {};

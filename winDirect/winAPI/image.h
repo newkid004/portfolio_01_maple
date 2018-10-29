@@ -56,6 +56,7 @@ public:
 public :
 	// 비트맵 픽셀
 	ColorF getBitmapPixel(POINT pos);
+	HRESULT getBitmapPixels(POINT posSour, POINT posDest, ColorF * out);
 
 	// 행렬 지정
 	// static void initRenderState(void);

@@ -191,15 +191,35 @@ ColorF image::getBitmapPixel(POINT pos)
 {
 	IWICBitmapLock * bLock;
 	BYTE* buffer;
-	UINT size =16;
+	UINT size;
 	WICRect rc;
 	rc.X = pos.x; rc.Width = 1;
 	rc.Y = pos.y; rc.Height = 1;
 	
-	HRESULT hr = _imageInfo->wBitmap->Lock(&rc, WICBitmapLockRead, &bLock);
+	_imageInfo->wBitmap->Lock(&rc, WICBitmapLockRead, &bLock);
 	bLock->GetDataPointer(&size,&buffer);
 	
 	ColorF color = ColorF(buffer[2], buffer[1], buffer[0], buffer[3]);
 	bLock->Release();
 	return color;
+}
+
+HRESULT image::getBitmapPixels(POINT posSour, POINT posDest, ColorF * out)
+{
+	IWICBitmapLock * bLock;
+	BYTE* buffer;
+	UINT size;
+	WICRect rc;
+	rc.X = posSour.x; rc.Width = posDest.x - posSour.x;
+	rc.Y = posSour.y; rc.Height = posDest.y - posSour.y;
+
+	_imageInfo->wBitmap->Lock(&rc, WICBitmapLockRead, &bLock);
+	HRESULT hr = bLock->GetDataPointer(&size, &buffer);
+
+	for (int i = 0; i < size / sizeof(UINT); ++i)
+		out[i] = ColorF(buffer[2], buffer[1], buffer[0], buffer[3]);
+
+	bLock->Release();
+
+	return hr;
 }
