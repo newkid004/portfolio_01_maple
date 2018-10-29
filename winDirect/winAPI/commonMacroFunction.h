@@ -180,19 +180,6 @@ inline bool IsClickRect(RECT &rc, POINT &cursor)
 		rc.left	< cursor.x && cursor.x < rc.right;
 }
 
-inline bool IsInRectF(fRECT* rc, fPOINT* cursor)
-{
-	return
-		rc->LT.y	< cursor->y && cursor->y < rc->RB.y &&
-		rc->LT.x	< cursor->x && cursor->x < rc->RB.x;
-}
-inline bool IsInRectF(fRECT* rc, POINT* cursor)
-{
-	return
-		rc->LT.y	< cursor->y && cursor->y < rc->RB.y &&
-		rc->LT.x	< cursor->x && cursor->x < rc->RB.x;
-}
-
 // * RECT 클릭 판정
 inline bool IsClickRect(int x, int y, int w, int h, POINT &cursor)
 {

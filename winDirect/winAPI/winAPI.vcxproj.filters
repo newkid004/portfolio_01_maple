@@ -118,48 +118,6 @@
     <Filter Include="메인게임\Game Framework\Manager\animation">
       <UniqueIdentifier>{6db02a40-0502-4033-9a33-e7ad6822df16}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\render">
-      <UniqueIdentifier>{4da0e541-57bb-498c-b5eb-2d7ab9726e9e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\window">
-      <UniqueIdentifier>{c49c4b58-3553-4bc0-9826-77fd070537c5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\window\_base">
-      <UniqueIdentifier>{6845af8c-0ff3-49c3-8be6-b64defcb4d3c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\_sington">
-      <UniqueIdentifier>{ae1fa0af-176f-49bc-a592-e2a70a11b864}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\_sington\gameSystem">
-      <UniqueIdentifier>{d82b3dce-ec1f-4fac-a02b-b77c58e7cb84}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\field">
-      <UniqueIdentifier>{2fc60543-7556-4d07-bf2e-3ea8dc591fc2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\field\_base">
-      <UniqueIdentifier>{7e78e380-657f-46e8-a948-ca4bbd2bf11b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\item">
-      <UniqueIdentifier>{ed91bf44-6322-4183-aba2-c8638c8cf7e5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\item\_base">
-      <UniqueIdentifier>{490aaf0f-9788-4917-869a-97c4f231c466}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\quest">
-      <UniqueIdentifier>{f838f851-b3d6-443e-8bd5-2f6cd0081a07}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\quest\base">
-      <UniqueIdentifier>{f8b88701-2e8f-4247-bb86-a4f4b6784e19}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\quest\questObject">
-      <UniqueIdentifier>{29f3672f-92a4-4619-a973-23733df4bac4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\shop">
-      <UniqueIdentifier>{5ea4a07a-8af8-46e2-ad43-c6dd3aea9efe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메인게임\Game Framework\Manager\shop\_base">
-      <UniqueIdentifier>{f7f38b34-ff72-4ef8-8170-81f2a3d3225a}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -263,45 +221,6 @@
     </ClCompile>
     <ClCompile Include="animationGroupManager.cpp">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
-    </ClCompile>
-    <ClCompile Include="renderManager.cpp">
-      <Filter>메인게임\Game Framework\Manager\render</Filter>
-    </ClCompile>
-    <ClCompile Include="winManager.cpp">
-      <Filter>메인게임\Game Framework\Manager\window</Filter>
-    </ClCompile>
-    <ClCompile Include="windowBase.cpp">
-      <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
-    </ClCompile>
-    <ClCompile Include="gameSystem.cpp">
-      <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="fieldBase.cpp">
-      <Filter>메인게임\Game Framework\Manager\field\_base</Filter>
-    </ClCompile>
-    <ClCompile Include="fieldManager.cpp">
-      <Filter>메인게임\Game Framework\Manager\field</Filter>
-    </ClCompile>
-    <ClCompile Include="itemBase.cpp">
-      <Filter>메인게임\Game Framework\item\_base</Filter>
-    </ClCompile>
-    <ClCompile Include="loadingScene.cpp">
-      <Filter>메인게임\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="charaterSelectScene.cpp">
-      <Filter>메인게임\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="questManager.cpp">
-      <Filter>메인게임\Game Framework\Manager\quest</Filter>
-    </ClCompile>
-    <ClCompile Include="questBase.cpp">
-      <Filter>메인게임\Game Framework\Manager\quest\base</Filter>
-    </ClCompile>
-    <ClCompile Include="shopManager.cpp">
-      <Filter>메인게임\Game Framework\Manager\shop</Filter>
-    </ClCompile>
-    <ClCompile Include="shopBase.cpp">
-      <Filter>메인게임\Game Framework\Manager\shop\_base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -431,52 +350,5 @@
     <ClInclude Include="animationGroupManager.h">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
     </ClInclude>
-    <ClInclude Include="renderManager.h">
-      <Filter>메인게임\Game Framework\Manager\render</Filter>
-    </ClInclude>
-    <ClInclude Include="winManager.h">
-      <Filter>메인게임\Game Framework\Manager\window</Filter>
-    </ClInclude>
-    <ClInclude Include="windowBase.h">
-      <Filter>메인게임\Game Framework\Manager\window\_base</Filter>
-    </ClInclude>
-    <ClInclude Include="gameSystem.h">
-      <Filter>메인게임\Game Framework\Manager\_sington\gameSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="fieldBase.h">
-      <Filter>메인게임\Game Framework\Manager\field\_base</Filter>
-    </ClInclude>
-    <ClInclude Include="fieldManager.h">
-      <Filter>메인게임\Game Framework\Manager\field</Filter>
-    </ClInclude>
-    <ClInclude Include="loadingScene.h">
-      <Filter>메인게임\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="charaterSelectScene.h">
-      <Filter>메인게임\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="itemBase.h">
-      <Filter>메인게임\Game Framework\item\_base</Filter>
-    </ClInclude>
-    <ClInclude Include="questManager.h">
-      <Filter>메인게임\Game Framework\Manager\quest</Filter>
-    </ClInclude>
-    <ClInclude Include="questBase.h">
-      <Filter>메인게임\Game Framework\Manager\quest\base</Filter>
-    </ClInclude>
-    <ClInclude Include="shopManager.h">
-      <Filter>메인게임\Game Framework\Manager\shop</Filter>
-    </ClInclude>
-    <ClInclude Include="shopBase.h">
-      <Filter>메인게임\Game Framework\Manager\shop\_base</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="quest.Json">
-      <Filter>메인게임\Game Framework\Manager\quest\questObject</Filter>
-    </None>
-    <None Include="questList.Json">
-      <Filter>메인게임\Game Framework\Manager\quest</Filter>
-    </None>
   </ItemGroup>
 </Project>
