@@ -17,12 +17,12 @@ private :
 
 	NUM_REAL _frameWidth;			// 프레임 가로크기
 	NUM_REAL _frameHeight;			// 프레임 세로크기
-	NUM_REAL _frameNumWidth;		// 가로 프레임 총 개수
-	NUM_REAL _frameNumHeight;		// 세로 프레임 총 개수
+	int _frameNumWidth;			// 가로 프레임 총 개수
+	int _frameNumHeight;		// 세로 프레임 총 개수
 
 	BOOL _isLoop;				// 루프 여부
-	float _frameUpdateSec;		// 초당 프레임 업데이트 수
-	float _elapsedSec;			// 프레임 사이 시간
+	NUM_REAL _frameUpdateSec;		// 초당 프레임 업데이트 수
+	NUM_REAL _elapsedSec;			// 프레임 사이 시간
 
 	DWORD _nowPlayIndex;		// 현재 플레이 인덱스
 	BOOL _isPlay;				// 플레이 여부
