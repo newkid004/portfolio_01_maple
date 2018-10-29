@@ -61,6 +61,9 @@ HRESULT gameNode::init(bool managerInit)
 		// 사운드매니저 초기화
 		// SOUNDMANAGER->init();
 
+		// event 매니저 초기화
+		EVENTMANAGER->init();
+
 		return S_OK;
 	}
 	return S_OK;
@@ -110,6 +113,10 @@ void gameNode::release(void)
 		// 사운드 매니저 해제
 		// SOUNDMANAGER->release();
 		// SOUNDMANAGER->releaseSingleton();
+
+		// Event 매니저 해제
+		EVENTMANAGER->release();
+		EVENTMANAGER->releaseSingleton();
 	}
 
 #ifdef PROCESS_D3D

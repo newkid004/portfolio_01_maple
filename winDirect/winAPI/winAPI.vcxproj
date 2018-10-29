@@ -161,8 +161,13 @@
     <ClCompile Include="buffManager.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="characterBase.cpp" />
     <ClCompile Include="enemyBase.cpp" />
+=======
+    <ClCompile Include="eventBase.cpp" />
+    <ClCompile Include="eventManager.cpp" />
+>>>>>>> origin/event
     <ClCompile Include="gameNode.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
@@ -203,7 +208,12 @@
     <ClInclude Include="characterBase.h" />
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
+<<<<<<< HEAD
     <ClInclude Include="enemyBase.h" />
+=======
+    <ClInclude Include="eventBase.h" />
+    <ClInclude Include="eventManager.h" />
+>>>>>>> origin/event
     <ClInclude Include="gameNode.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />

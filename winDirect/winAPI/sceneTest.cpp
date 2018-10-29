@@ -77,4 +77,5 @@ void sceneTest::renderEllipse(void)
 	_renderTarget->SetTransform(Matrix3x2F::Rotation(50.0f, Point2F(500.0f, 500.0f)));
 
 	_renderTarget->FillEllipse(region, _brush);
+	int a;
 }

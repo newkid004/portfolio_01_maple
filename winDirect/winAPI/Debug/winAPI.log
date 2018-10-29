@@ -1,20 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 ﻿  stdafx.cpp
+<<<<<<< HEAD
 c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\commonmacrofunction.h(207): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   activeSkill.cpp
+=======
+d:\프로그래밍\maple\mapleproject\windirect\winapi\commonmacrofunction.h(207): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+>>>>>>> origin/event
   animation.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\animation.cpp(23): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\animation.cpp(22): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\animation.cpp(23): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\animation.cpp(22): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   animationGroup.cpp
   animationGroupManager.cpp
   baseObject.cpp
   buffBase.cpp
   buffManager.cpp
   camera.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\camera.cpp(66): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\camera.cpp(67): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\camera.cpp(66): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\camera.cpp(67): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   cameraManager.cpp
+<<<<<<< HEAD
   characterBase.cpp
   enemyBase.cpp
   gameNode.cpp
@@ -24,17 +29,28 @@ c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\image.cpp
 c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\image.cpp(152): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\image.cpp(153): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\image.cpp(155): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+=======
+  eventBase.cpp
+  eventManager.cpp
+  gameNode.cpp
+  image.cpp
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(46): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(47): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(152): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(153): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\image.cpp(155): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+>>>>>>> origin/event
   imageManager.cpp
   iniData.cpp
   JsonSaveLoader.cpp
   keyManager.cpp
   loading.cpp
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.h(181): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(77): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(78): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(190): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(288): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\loading.cpp(341): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.h(181): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(77): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(78): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(190): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(288): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+d:\프로그래밍\maple\mapleproject\windirect\winapi\loading.cpp(341): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
   mainGame.cpp
   npcBase.cpp
   코드를 생성하고 있습니다...
@@ -46,14 +62,22 @@ c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\inidata.c
   patternManager.cpp
   sceneManager.cpp
   sceneTest.cpp
+<<<<<<< HEAD
   skillBase.cpp
   skillManager.cpp
+=======
+d:\프로그래밍\maple\mapleproject\windirect\winapi\scenetest.cpp(80): warning C4101: 'a' :참조되지 않은 지역 변수입니다.
+>>>>>>> origin/event
   soundManager.cpp
   timeManager.cpp
   timer.cpp
+  코드를 생성하고 있습니다...
+d:\프로그래밍\maple\mapleproject\windirect\winapi\inidata.cpp(86): warning C4172: 지역 변수 또는 임시: data의 주소를 반환하고 있습니다.
+  컴파일하고 있습니다...
   txtDataManager.cpp
   winMain.cpp
   코드를 생성하고 있습니다...
+<<<<<<< HEAD
 c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\txtdatamanager.cpp(46): warning C4172: 지역 변수 또는 임시: str의 주소를 반환하고 있습니다.
   LINK : C:\Users\kcl53\Desktop\cooding\Game_Module\MapleStory\winDirect\Debug\winDirect.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
 json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_reader.obj)' 또는 'C:\Users\kcl53\Desktop\cooding\Game_Module\MapleStory\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
@@ -114,3 +138,11 @@ json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'j
 json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_writer.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
   winAPI.vcxproj -> C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\winDirect.exe
 >>>>>>> origin/shop
+=======
+d:\프로그래밍\maple\mapleproject\windirect\winapi\txtdatamanager.cpp(46): warning C4172: 지역 변수 또는 임시: str의 주소를 반환하고 있습니다.
+  LINK : D:\프로그래밍\Maple\MapleProject\winDirect\Debug\winDirect.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
+json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_reader.obj)' 또는 'D:\프로그래밍\Maple\MapleProject\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_value.obj)' 또는 'D:\프로그래밍\Maple\MapleProject\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_writer.obj)' 또는 'D:\프로그래밍\Maple\MapleProject\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  winAPI.vcxproj -> D:\프로그래밍\Maple\MapleProject\winDirect\Debug\winDirect.exe
+>>>>>>> origin/event

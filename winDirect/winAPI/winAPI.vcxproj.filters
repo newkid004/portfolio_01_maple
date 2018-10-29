@@ -76,6 +76,7 @@
     <Filter Include="메인게임\Game Framework\baseObject">
       <UniqueIdentifier>{c2a378ba-29a4-4c8c-b9e4-d90b14370acf}</UniqueIdentifier>
     </Filter>
+<<<<<<< HEAD
     <Filter Include="메인게임\NPC">
       <UniqueIdentifier>{1991bdfa-711d-4915-a350-df9106fb0189}</UniqueIdentifier>
     </Filter>
@@ -117,6 +118,13 @@
     </Filter>
     <Filter Include="메인게임\Game Framework\Manager\animation">
       <UniqueIdentifier>{6db02a40-0502-4033-9a33-e7ad6822df16}</UniqueIdentifier>
+=======
+    <Filter Include="API Framework\매니져\이벤트">
+      <UniqueIdentifier>{12b15054-f848-42d8-a3e9-8672bbe87441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\매니져\이벤트\base">
+      <UniqueIdentifier>{d8de195b-58a6-4ff2-8cbb-57e565814316}</UniqueIdentifier>
+>>>>>>> origin/event
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +229,12 @@
     </ClCompile>
     <ClCompile Include="animationGroupManager.cpp">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="eventManager.cpp">
+      <Filter>API Framework\매니져\이벤트</Filter>
+    </ClCompile>
+    <ClCompile Include="eventBase.cpp">
+      <Filter>API Framework\매니져\이벤트\base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -349,6 +363,12 @@
     </ClInclude>
     <ClInclude Include="animationGroupManager.h">
       <Filter>메인게임\Game Framework\Manager\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="eventManager.h">
+      <Filter>API Framework\매니져\이벤트</Filter>
+    </ClInclude>
+    <ClInclude Include="eventBase.h">
+      <Filter>API Framework\매니져\이벤트\base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
