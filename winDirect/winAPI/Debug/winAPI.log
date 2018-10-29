@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿  stdafx.cpp
 c:\users\kcl53\desktop\cooding\game_module\maplestory\windirect\winapi\commonmacrofunction.h(207): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   activeSkill.cpp
@@ -62,3 +63,54 @@ json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 '
 =======
 ﻿
 >>>>>>> framework
+=======
+﻿  windowBase.cpp
+c:\users\newki\onedrive\문서\github\devproject\portfolio_01_maple\windirect\winapi\shopbase.h(20): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+  코드를 생성하고 있습니다...
+  건너뛰고 있습니다... (관련된 변경 내용 없음)
+  winMain.cpp
+  txtDataManager.cpp
+  timer.cpp
+  timeManager.cpp
+  soundManager.cpp
+  skillManager.cpp
+  skillBase.cpp
+  sceneTest.cpp
+  sceneManager.cpp
+  renderManager.cpp
+  questManager.cpp
+  questBase.cpp
+  patternManager.cpp
+  patternBase.cpp
+  passiveSkill.cpp
+  npcManager.cpp
+  npcBase.cpp
+  mainGame.cpp
+  loadingScene.cpp
+  loading.cpp
+  keyManager.cpp
+  iniData.cpp
+  imageManager.cpp
+  image.cpp
+  gameSystem.cpp
+  gameNode.cpp
+  fieldManager.cpp
+  fieldBase.cpp
+  enemyBase.cpp
+  charaterSelectScene.cpp
+  characterBase.cpp
+  cameraManager.cpp
+  camera.cpp
+  buffManager.cpp
+  buffBase.cpp
+  baseObject.cpp
+  animationGroupManager.cpp
+  animationGroup.cpp
+  animation.cpp
+  activeSkill.cpp
+  JsonSaveLoader.cpp
+json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_reader.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_value.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 'lib_json.pdb' PDB를 'json_vc71_libmtd.lib(json_writer.obj)' 또는 'C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\lib_json.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  winAPI.vcxproj -> C:\Users\newki\OneDrive\문서\GitHub\devProject\portfolio_01_maple\winDirect\Debug\winDirect.exe
+>>>>>>> origin/shop
