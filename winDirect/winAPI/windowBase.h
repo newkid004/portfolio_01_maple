@@ -5,12 +5,16 @@ class windowBase;
 class buttonBase
 {
 protected :
+	windowBase* _bindWindow;
+
 	fPOINT _pos;	// relative
 	fPOINT _size;
 
 	function<void(void)> _active;
 
 public :
+	virtual void init(windowBase* bind) { _bindWindow = bind; };
+	virtual void release(void) {};
 	virtual list<windowBase*>::iterator* update(void) { return NULL; };
 	virtual void render(fPOINT & offset) {};
 
@@ -19,8 +23,10 @@ public :
 	fPOINT & getSize(void) { return _size; };
 	function<void(void)> & getActivate(void) { return _active; };
 
+	bool isMouseHover(void) { return IsInRectF(&fRECT(_pos, _pos + _size), &_ptMouse); };
+
 public :
-	buttonBase() {};
+	buttonBase() : _bindWindow(NULL), _pos(0.f), _size(0.f) {};
 	~buttonBase() {};
 };
 

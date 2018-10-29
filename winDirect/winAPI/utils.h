@@ -14,8 +14,7 @@
 
 #define FLOAT_EQUAL(f1, f2) (fabs(f1 - f2) <= FLOAT_EPSILON)
 
-#define FLOAT_USE	
-
+#define FLOAT_USE
 #ifdef  FLOAT_USE
 #define NUM_REAL	float
 #else
