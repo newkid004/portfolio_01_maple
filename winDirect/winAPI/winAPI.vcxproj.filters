@@ -160,6 +160,9 @@
     <Filter Include="메인게임\Game Framework\Manager\shop\_base">
       <UniqueIdentifier>{f7f38b34-ff72-4ef8-8170-81f2a3d3225a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인게임\Game Framework\Manager\effect">
+      <UniqueIdentifier>{0672f841-e81f-429e-9ad1-37edc9b0426d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -302,6 +305,12 @@
     </ClCompile>
     <ClCompile Include="shopBase.cpp">
       <Filter>메인게임\Game Framework\Manager\shop\_base</Filter>
+    </ClCompile>
+    <ClCompile Include="effectManager.cpp">
+      <Filter>메인게임\Game Framework\Manager\effect</Filter>
+    </ClCompile>
+    <ClCompile Include="effectBase.cpp">
+      <Filter>메인게임\Game Framework\Manager\effect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -469,6 +478,12 @@
     </ClInclude>
     <ClInclude Include="shopBase.h">
       <Filter>메인게임\Game Framework\Manager\shop\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="effectManager.h">
+      <Filter>메인게임\Game Framework\Manager\effect</Filter>
+    </ClInclude>
+    <ClInclude Include="effectBase.h">
+      <Filter>메인게임\Game Framework\Manager\effect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

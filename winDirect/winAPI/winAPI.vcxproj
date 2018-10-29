@@ -163,6 +163,8 @@
     <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="characterBase.cpp" />
     <ClCompile Include="charaterSelectScene.cpp" />
+    <ClCompile Include="effectBase.cpp" />
+    <ClCompile Include="effectManager.cpp" />
     <ClCompile Include="enemyBase.cpp" />
     <ClCompile Include="fieldBase.cpp" />
     <ClCompile Include="fieldManager.cpp" />
@@ -217,6 +219,8 @@
     <ClInclude Include="charaterSelectScene.h" />
     <ClInclude Include="classesDef.h" />
     <ClInclude Include="commonMacroFunction.h" />
+    <ClInclude Include="effectBase.h" />
+    <ClInclude Include="effectManager.h" />
     <ClInclude Include="enemyBase.h" />
     <ClInclude Include="fieldBase.h" />
     <ClInclude Include="fieldManager.h" />

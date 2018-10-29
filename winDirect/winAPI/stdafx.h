@@ -84,6 +84,7 @@ using namespace MY_UTIL;
 #include "npcManager.h"
 #include "questManager.h"
 #include "shopManager.h"
+#include "effectManager.h"
 
 #include "gameSystem.h"
 
@@ -110,6 +111,7 @@ using namespace MY_UTIL;
 #define NPCMANAGER		npcManager::getSingleton()
 #define QUESTMANAGER	questManager::getSingleton()
 #define SHOPMANAGER		shopManager::getSingleton()
+#define EFFECTMANAGER	effectManager::getSingleton()
 
 #define GAMESYSTEM		gameSystem::getSingleton()
 
