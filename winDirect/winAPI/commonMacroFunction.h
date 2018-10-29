@@ -221,7 +221,7 @@ inline POINT PointRectCenter(RECT & rc) { return POINT{ rc.right - (rc.right - r
 
 inline int getDirection2Speed(POINT speed)  { int direction = 0; direction |= (0 < speed.x) ? DIR_RIGHT : ((speed.x < 0) ? DIR_LEFT : 0); direction |= (0 < speed.y) ? DIR_DOWN : ((speed.y < 0) ? DIR_UP : 0); return direction; }
 inline int getDirection2Speed(fPOINT speed) { int direction = 0; direction |= (0 < speed.x) ? DIR_RIGHT : ((speed.x < 0) ? DIR_LEFT : 0); direction |= (0 < speed.y) ? DIR_DOWN : ((speed.y < 0) ? DIR_UP : 0); return direction; }
-inline int getDirection2Speed(dPOINT speed) { int direction = 0; direction |= (0 < speed.x) ? DIR_RIGHT : ((speed.x < 0) ? DIR_LEFT : 0); direction |= (0 < speed.y) ? DIR_DOWN : ((speed.y < 0) ? DIR_UP : 0); return direction; }
+//inline int getDirection2Speed(dPOINT speed) { int direction = 0; direction |= (0 < speed.x) ? DIR_RIGHT : ((speed.x < 0) ? DIR_LEFT : 0); direction |= (0 < speed.y) ? DIR_DOWN : ((speed.y < 0) ? DIR_UP : 0); return direction; }
 
 inline int getDirection2Radian(float rad)
 {

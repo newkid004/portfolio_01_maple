@@ -3,8 +3,8 @@
 //표준 시스템 포함 파일 또는 프로젝트 관련 포함 파일이
 //들어 있는 포함 파일
 #pragma once
-#pragma comment(lib, "gdiplus")
 #pragma comment(lib, "D2D1.lib")
+#pragma comment(lib, "windowscodecs.lib")
 
 #include <SDKDDKver.h>
 
@@ -15,6 +15,7 @@
 
 //Windows 헤더 파일
 #include <Windows.h>
+#include <wincodec.h>
 
 //C 런타임 헤더 파일
 #include <stdlib.h>
@@ -26,7 +27,6 @@
 #include <math.h>
 #include <mmsystem.h>
 #include <ole2.h>
-#include <Gdiplus.h>
 #include <assert.h>
 
 //C++ 런타임 헤더 파일
@@ -53,6 +53,9 @@ using namespace D2D1;
 // #include "triFunction.h"
 #include "utils.h"
 
+
+
+
 using namespace MY_UTIL;
 
 // 매니저
@@ -71,6 +74,18 @@ using namespace MY_UTIL;
 #include "JsonSaveLoader.h"
 
 // 매니저 : 임의 추가
+#include "renderManager.h"
+#include "winManager.h"
+#include "fieldManager.h"
+#include "patternManager.h"
+#include "skillManager.h"
+#include "animationGroupManager.h"
+#include "buffManager.h"
+#include "npcManager.h"
+#include "questManager.h"
+#include "shopManager.h"
+
+#include "gameSystem.h"
 
 //========================
 // # 싱글톤을 이곳에 추가 #
@@ -84,14 +99,27 @@ using namespace MY_UTIL;
 #define SCENEMANAGER	sceneManager::getSingleton()
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
+#define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
+#define RENDERMANAGER	renderManager::getSingleton()
+#define WINMANAGER		winManager::getSingleton()
+#define FIELDMANAGER	fieldManager::getSingleton()
+#define PATTERNMANAGER	patternManager::getSingleton()
+#define SKILLMANAGER	skillManager::getSingleton()
+#define ANIGROUPMANAGER animationGroupManager::getSingleton()
+#define BUFFMANAGER		buffManager::getSingleton()
+#define NPCMANAGER		npcManager::getSingleton()
+#define QUESTMANAGER	questManager::getSingleton()
+#define SHOPMANAGER		shopManager::getSingleton()
+
+#define GAMESYSTEM		gameSystem::getSingleton()
 
 
 //============================
 // # 매크로 # (윈도우창 초기화)
 //============================
-#define WINNAME		(LPTSTR)(TEXT("winDirect"))
+#define WINNAME		(LPTSTR)(TEXT("MapleStory"))
 
-// #define FULLSCREEN
+//#define FULLSCREEN
 #define PROCESS_D3D
 
 #ifdef FULLSCREEN

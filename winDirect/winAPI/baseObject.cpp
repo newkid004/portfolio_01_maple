@@ -1,12 +1,7 @@
 #include "stdafx.h"
 #include "baseObject.h"
+#include "utils.h"
 
-
-baseObject::baseObject()
-{
-}
-
-
-baseObject::~baseObject()
-{
-}
+struct ray;
+struct fRECT;
+struct rayStruct;

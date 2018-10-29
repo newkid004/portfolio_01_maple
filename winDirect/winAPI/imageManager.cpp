@@ -3,122 +3,49 @@
 
 HRESULT imageManager::init(void)
 {
+	// 이미지 팩토리 생성
+	CoCreateInstance(CLSID_WICImagingFactory, NULL, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&_imgFactory));
+
+	// 이미지 클리핑으로 사용될 레이어 생성
+	_renderTarget->CreateLayer(NULL, &_layer);
+
+	// state 초기화
+	_imgPos = { 0, 0 };
+	_imgFlip = 0;
+	_imgRotate = 0.0f;
+
+	_renderState = 0;
+
 	return S_OK;
 }
 
 void imageManager::release(void)
 {
 	this->deleteAll();
+
+	_imgFactory->Release();
+	_layer->Release();
 }
 
-image * imageManager::addImage(string strKey, int width, int height)
+image * imageManager::add(string strKey, wchar_t * fileName, int maxFrameX, int maxFrameY)
 {
 	// 추가하려는 이미지가 존재하는지 키값으로 확인
-	image* img = findImage(strKey);
+	image* img = find(strKey);
 
 	// 이미 있다면 리턴
 	if (img) return img;
 
+	// 없으면 생성
 	img = new image;
-	if (FAILED(img->init(width, height)))
-	{
-		SAFE_DELETE(img);
-		return NULL;
-	}
+	img->init(fileName, maxFrameX, maxFrameY);
 
-	// 맵에 추가
-	// _mImageList.insert(pair<string, image*>(strKey, img));
-	_mImageList.insert(make_pair(strKey, img));
-
-	return img;
-}
-
-image * imageManager::addImage(string strKey, const char * fileName, int width, int height, BOOL isTrans, COLORREF transColor)
-{
-	// 추가하려는 이미지가 존재하는지 키값으로 확인
-	image* img = findImage(strKey);
-
-	// 이미 있다면 리턴
-	if (img) return img;
-
-	img = new image;
-	if (FAILED(img->init(fileName, width, height, isTrans, transColor)))
-	{
-		SAFE_DELETE(img);
-		return NULL;
-	}
-
-	// 맵에 추가
-	_mImageList.insert(make_pair(strKey, img));
-
-	return img;
-}
-
-image * imageManager::addImage(string strKey, const char * fileName, float x, float y, int width, int height, BOOL isTrans, COLORREF transColor)
-{
-	// 추가하려는 이미지가 존재하는지 키값으로 확인
-	image* img = findImage(strKey);
-
-	// 이미 있다면 리턴
-	if (img) return img;
-
-	img = new image;
-	if (FAILED(img->init(fileName, x, y, width, height, isTrans, transColor)))
-	{
-		SAFE_DELETE(img);
-		return NULL;
-	}
-
-	// 맵에 추가
-	_mImageList.insert(make_pair(strKey, img));
-
-	return img;
-}
-
-image * imageManager::addFrameImage(string strKey, const char * fileName, int width, int height, int maxFrameX, int maxFrameY, BOOL isTrans, COLORREF transColor)
-{
-	// 추가하려는 이미지가 존재하는지 키값으로 확인
-	image* img = findImage(strKey);
-
-	// 이미 있다면 리턴
-	if (img) return img;
-
-	img = new image;
-	if (FAILED(img->init(fileName, width, height, maxFrameX, maxFrameY, isTrans, transColor)))
-	{
-		SAFE_DELETE(img);
-		return NULL;
-	}
-
-	// 맵에 추가
-	_mImageList.insert(make_pair(strKey, img));
-
-	return img;
-}
-
-image * imageManager::addFrameImage(string strKey, const char * fileName, float x, float y, int width, int height, int maxFrameX, int maxFrameY, BOOL isTrans, COLORREF transColor)
-{
-	// 추가하려는 이미지가 존재하는지 키값으로 확인
-	image* img = findImage(strKey);
-
-	// 이미 있다면 리턴
-	if (img) return img;
-
-	img = new image;
-	if (FAILED(img->init(fileName, x, y, width, height, maxFrameX, maxFrameY, isTrans, transColor)))
-	{
-		SAFE_DELETE(img);
-		return NULL;
-	}
-
-	// 맵에 추가
 	_mImageList.insert(make_pair(strKey, img));
 
 	return img;
 }
 
 // imageManager 핵심 함수
-image * imageManager::findImage(string strKey)
+image * imageManager::find(string strKey)
 {
 	// 해당 키 검색
 	mapImageIter key = _mImageList.find(strKey);
@@ -177,140 +104,60 @@ BOOL imageManager::deleteAll()
 	return TRUE;
 }
 
-void imageManager::render(string strKey, HDC hdc)
+void imageManager::pushLayer(fRECT * clippedArea)
 {
-	image* img = findImage(strKey);
-	if (img) img->render(hdc);
+	_renderTarget->PushLayer(
+		LayerParameters(RectF(
+			clippedArea->LT.x,
+			clippedArea->LT.y,
+			clippedArea->RB.x,
+			clippedArea->RB.y)),
+		_layer);
 }
 
-void imageManager::render(string strKey, HDC hdc, int destX, int destY)
+void imageManager::popLayer(void)
 {
-	image* img = findImage(strKey);
-	if (img) img->render(hdc, destX, destY);
+	_renderTarget->PopLayer();
 }
 
-void imageManager::render(string strKey, HDC hdc, int destX, int destY, int sourX, int sourY, int sourW, int sourH)
+void imageManager::resetTransform(void)
 {
-	image* img = findImage(strKey);
-	if (img) img->render(hdc, destX, destY, sourX, sourY, sourW, sourH);
+	_imgPos = { 0 ,0 };
+	_imgFlip = 0; 
+	_imgRotate = 0.0f;
 }
 
-void imageManager::render(string strKey, HDC hdc, int destX, int destY, float ratio)
+void imageManager::resetTransform(e_RESET_TRANSFORM resetValue)
 {
-	image* img = findImage(strKey);
-	if (img) img->render(hdc, destX, destY, ratio);
+	if (resetValue & RTF_POSITION)	_imgPos = { 0 ,0 };
+	if (resetValue & RTF_ROTATION)	_imgRotate = 0.0f;
+	if (resetValue & RTF_FLIP)		_imgFlip = 0;
 }
 
-void imageManager::render(string strKey, HDC hdc, int destX, int destY, float ratioX, float ratioY)
+void imageManager::setTransform(D2D1_POINT_2F * pos)
 {
-	image* img = findImage(strKey);
-	if (img) img->render(hdc, destX, destY, ratioX, ratioY);
+	D2D1_SIZE_F flipPos; _flip2fpos(_imgFlip, flipPos);
+
+	_renderTarget->SetTransform(
+		Matrix3x2F::Scale(flipPos, *pos) *				// 반전
+		Matrix3x2F::Rotation(_imgRotate, *pos) *		// 회전
+		Matrix3x2F::Translation(_imgPos.x, _imgPos.y)	// 위치
+		);
 }
 
-void imageManager::render(string strKey, HDC hdc, int destX, int destY, int sourX, int sourY, int sourW, int sourH, float ratio)
+void imageManager::setRenderState(e_IMG_RENDER_STATE state, int value)
 {
-	image* img = findImage(strKey);
-	if (img) img->render(hdc, destX, destY, sourX, sourY, sourW, sourH, ratio);
+	switch (state)
+	{
+	case IRS_ALWAYS_RESET_TRANSFORM: {		// 항상 초기화 하는지
+		if (value)	_renderState = bit_put(_renderState, state);
+		else		_renderState = bit_pick(_renderState, state);
+	} break;
+	}
 }
 
-void imageManager::alphaRender(string strKey, HDC hdc, BYTE alpha)
+void imageManager::_flip2fpos(int flip, D2D1_SIZE_F & output)
 {
-	image* img = findImage(strKey);
-	if (img) img->alphaRender(hdc, alpha);
-}
-
-void imageManager::alphaRender(string strKey, HDC hdc, int destX, int destY, BYTE alpha)
-{
-	image* img = findImage(strKey);
-	if (img) img->alphaRender(hdc, destX, destY, alpha);
-}
-
-void imageManager::alphaRender(string strKey, HDC hdc, int destX, int destY, int sourX, int sourY, int sourW, int sourH, BYTE alpha)
-{
-	image* img = findImage(strKey);
-	if (img) img->alphaRender(hdc, destX, destY, sourX, sourY, sourW, sourH, alpha);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, curruntFrameX, curruntFrameY);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, COLORREF changeColor, COLORREF renderColor)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, curruntFrameX, curruntFrameY, changeColor, renderColor);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, int flip)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, flip);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, int flip)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, curruntFrameX, curruntFrameY, flip);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, float ratio)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, ratio);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, float ratioX, float ratioY)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, ratioX, ratioY);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, float ratio)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, curruntFrameX, curruntFrameY, ratio);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, float ratioX, float ratioY)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, curruntFrameX, curruntFrameY, ratioX, ratioY);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, float ratio, int flip)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, ratio, flip);
-}
-
-void imageManager::frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, float ratio, int flip)
-{
-	image* img = findImage(strKey);
-	if (img) img->frameRender(hdc, destX, destY, curruntFrameX, curruntFrameY, ratio, flip);
-}
-
-void imageManager::loopRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY)
-{
-	image* img = findImage(strKey);
-	if (img) img->loopRender(hdc, drawArea, offsetX, offsetY);
-}
-
-void imageManager::loopRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY, float ratio)
-{
-	image* img = findImage(strKey);
-	if (img) img->loopRender(hdc, drawArea, offsetX, offsetY, ratio);
-}
-
-void imageManager::loopAlphaRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY, BYTE alpha)
-{
-	image* img = findImage(strKey);
-	if (img) img->loopAlphaRender(hdc, drawArea, offsetX, offsetY, alpha);
+	output.width = 0 < (flip & e_IMAGE_FLIP::IMAGE_FLIP_VERTICAL) ? -1.0f : 1.0f;
+	output.height = 0 < (flip & e_IMAGE_FLIP::IMAGE_FLIP_HORIZON) ? -1.0f : 1.0f;
 }

@@ -2,6 +2,28 @@
 #include "singletonBase.h"
 #include "image.h"
 
+enum e_IMG_RENDER_STATE
+{
+	IRS_ALWAYS_RESET_TRANSFORM	= 0x0001,
+	IRS_NONE					= 0
+};
+
+enum e_IMAGE_FLIP
+{
+	IMAGE_FLIP_NONE		= 0b00,
+	IMAGE_FLIP_VERTICAL	= 0b10,
+	IMAGE_FLIP_HORIZON	= 0b01
+};
+
+enum e_RESET_TRANSFORM
+{
+	RTF_NONE		= 0,
+	RTF_POSITION	= 0b001,
+	RTF_ROTATION	= 0b010,
+	RTF_FLIP		= 0b100,
+	RTF_ALL			= 0b111
+};
+
 class imageManager : public singletonBase<imageManager>
 {
 private:
@@ -11,18 +33,23 @@ private:
 private:
 	mapImageList _mImageList;
 
+	IWICImagingFactory*	_imgFactory = NULL;
+	ID2D1Layer *		_layer = NULL;
+
+private:
+	fPOINT	_imgPos;
+	int		_imgFlip;
+	float	_imgRotate;
+
+	int		_renderState;
+
 public:
 	HRESULT init(void);
 	void release(void);
 
-	image* addImage(string strKey, int width, int height);
-	image* addImage(string strKey, const char* fileName, int width, int height, BOOL isTrans = FALSE, COLORREF transColor = RGB(0, 0, 0));
-	image* addImage(string strKey, const char* fileName, float x, float y, int width, int height, BOOL isTrans = FALSE, COLORREF transColor = RGB(0, 0, 0));
-	image* addFrameImage(string strKey, const char* fileName, int width, int height, int maxFrameX, int maxFrameY, BOOL isTrans = FALSE, COLORREF transColor = RGB(0, 0, 0));
-	image* addFrameImage(string strKey, const char* fileName, float x, float y, int width, int height, int maxFrameX, int maxFrameY, BOOL isTrans = FALSE, COLORREF transColor = RGB(0, 0, 0));
-
+public :
 	// 키값으로 이미지 탐색
-	image* findImage(string strKey);
+	image* find(string strKey);
 
 	// 키값으로 이미지 삭제
 	BOOL deleteImage(string strKey);
@@ -30,38 +57,37 @@ public:
 	// 전체 이미지 삭제
 	BOOL deleteAll();
 
-	void render(string strKey, HDC hdc);
-	void render(string strKey, HDC hdc, int destX, int destY);
-	void render(string strKey, HDC hdc, int destX, int destY, int sourX, int sourY, int sourW, int sourH);
+	IWICImagingFactory * getFactory(void) { return _imgFactory; };
 
-	void render(string strKey, HDC hdc, int destX, int destY, float ratio);
-	void render(string strKey, HDC hdc, int destX, int destY, float ratioX, float ratioY);
-	void render(string strKey, HDC hdc, int destX, int destY, int sourX, int sourY, int sourW, int sourH, float ratio);
+	// ----- image ----- //
+	image* add(string strKey, wchar_t * fileName, int maxFrameX = 1, int maxFrameY = 1);
 
-	void alphaRender(string strKey, HDC hdc, BYTE alpha);
-	void alphaRender(string strKey, HDC hdc, int destX, int destY, BYTE alpha);
-	void alphaRender(string strKey, HDC hdc, int destX, int destY, int sourX, int sourY, int sourW, int sourH, BYTE alpha);
+	// ----- layer ----- //
+	void pushLayer(fRECT * clippedArea);
+	void popLayer(void);
 
-	void frameRender(string strKey, HDC hdc, int destX, int destY);
-	void frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY);
-	void frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, COLORREF changeColor, COLORREF renderColor);
+	// ----- state ----- //
+	fPOINT &	statePos(void)		{ return _imgPos; };
+	int &		stateFlip(void)		{ return _imgFlip; };
+	float &		stateRotate(void)	{ return _imgRotate; };
 
-	void frameRender(string strKey, HDC hdc, int destX, int destY, int flip);
-	void frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, int flip);
+	fPOINT &	statePos(float x, float y) { return _imgPos = fPOINT(x, y); };
+	fPOINT &	statePos(fPOINT input)	{ return _imgPos = input; };
+	int &		stateFlip(int input)	{ return _imgFlip = input; };
+	float &		stateRotate(float input){ return _imgRotate = input; };
 
-	void frameRender(string strKey, HDC hdc, int destX, int destY, float ratio);
-	void frameRender(string strKey, HDC hdc, int destX, int destY, float ratioX, float ratioY);
-	void frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, float ratio);
-	void frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, float ratioX, float ratioY);
+	void resetTransform(void);
+	void resetTransform(e_RESET_TRANSFORM resetValue);
+	void setTransform(D2D1_POINT_2F * pos);
 
-	void frameRender(string strKey, HDC hdc, int destX, int destY, float ratio, int flip);
-	void frameRender(string strKey, HDC hdc, int destX, int destY, int curruntFrameX, int curruntFrameY, float ratio, int flip);
+	void setRenderState(e_IMG_RENDER_STATE state, int value);
+	const int getRenderState(void) { return _renderState; };
+	const int getRenderState(e_IMG_RENDER_STATE state) { return _renderState & state; }
 
-	void loopRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY);
-	void loopRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY, float ratio);
-	void loopAlphaRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY, BYTE alpha);
+private:
+	void	_flip2fpos(int flip, D2D1_SIZE_F & output);
 
+public :
 	imageManager() {};
 	~imageManager() {};
 };
-

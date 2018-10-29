@@ -198,13 +198,13 @@ void loading::update(void)
 }
 
 void loading::render(void)
-{
+{/*
 	_frameCount++;
 	if (_frameCount % 10 == 0)
 	{
 		_loadingBarRun->setFrameX(_loadingBarRun->getFrameX() + 1);
 		if (_loadingBarRun->getFrameX() >= _loadingBarRun->getMaxFrameX()) _loadingBarRun->setFrameX(0);
-	}
+	}*/
 
 	if (_frameCount == 100) _frameCount = 0;
 }
@@ -291,7 +291,7 @@ BOOL loading::loadingDone(void)
 	}
 
 	loadItem* item = _vLoadItem[_currentGauge];
-
+/*
 	switch (item->getLoadingKind())
 	{
 	case LOAD_KIND_IMAGE_0: {
@@ -326,6 +326,7 @@ BOOL loading::loadingDone(void)
 	// }  break;
 
 	}
+	*/
 
 	_currentGauge++;
 

@@ -2,7 +2,7 @@
 
 #ifdef PROCESS_D3D
 
-static ColorF		_backColor = C_COLOR_GRAY;
+static ColorF		_backColor = C_COLOR_MAGENTA;
 static D2D1_SIZE_F	_renderRate;
 class gameNode
 {

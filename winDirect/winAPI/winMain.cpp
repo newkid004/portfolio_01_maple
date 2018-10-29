@@ -51,7 +51,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 	wndClass.lpfnWndProc = (WNDPROC)WndProc;					   //윈도우 프로시져
 	wndClass.lpszClassName = WINNAME;							   //클래스 이름
 	wndClass.lpszMenuName = NULL;								   //메뉴이름
-	wndClass.style = CS_HREDRAW | CS_VREDRAW;					   //윈도우 스타일
+	wndClass.style = CS_HREDRAW | CS_VREDRAW|CS_DBLCLKS;		   //윈도우 스타일
 
 	//윈도우 클래스 등록
 	RegisterClass(&wndClass);
@@ -128,7 +128,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 		return 0;
 	
 	// antialias 설정
-	_renderTarget->SetAntialiasMode(D2D1_ANTIALIAS_MODE_ALIASED);	// 사용
+	_renderTarget->SetAntialiasMode(D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);	// 사용
 
 	//화면에 윈도우창 보여주기
 	ShowWindow(_hWnd, nCmdShow);
