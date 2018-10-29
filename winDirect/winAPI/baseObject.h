@@ -40,9 +40,16 @@ protected:
 	fPOINT			_position;
 	fRECT			_collision;
 public:
-	baseObject() {};
+	baseObject() : _img(NULL), _objectKind(objDef::OBJECT_NONE) {};
 	~baseObject() {};
+
+public:
+	virtual HRESULT init(void) {};
+	virtual void release(void) {};
+	virtual void update(void) {};
+	virtual void render(void) {};
 	
+public :
 	void setObjectKind(objDef::OBJECT objectID)			{ _objectKind = objectID; }
 
 
