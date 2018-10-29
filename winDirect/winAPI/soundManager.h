@@ -22,7 +22,6 @@ public :
 	System* _system;
 	Sound* _sound;
 	Channel* _channel;
-
 	ChannelGroup* _cGroup = NULL;
 
 public :

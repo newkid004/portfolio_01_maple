@@ -35,7 +35,7 @@ camera * cameraManager::addCamera(string keyName)
 	return c;
 }
 
-camera * cameraManager::addCamera(string keyName, fPOINT offset)
+camera * cameraManager::addCamera(string keyName, POINT offset)
 {
 	camera* c = find(keyName);
 	if (c != NULL) return c;
@@ -47,7 +47,7 @@ camera * cameraManager::addCamera(string keyName, fPOINT offset)
 	return c;
 }
 
-camera * cameraManager::addCamera(string keyName, fPOINT offset, fPOINT size)
+camera * cameraManager::addCamera(string keyName, POINT offset, POINT size)
 {
 	camera* c = find(keyName);
 	if (c != NULL) return c;
@@ -59,7 +59,7 @@ camera * cameraManager::addCamera(string keyName, fPOINT offset, fPOINT size)
 	return c;
 }
 
-camera * cameraManager::addCamera(string keyName, fPOINT offset, fPOINT size, fPOINT minPos, fPOINT maxPos)
+camera * cameraManager::addCamera(string keyName, POINT offset, POINT size, POINT minPos, POINT maxPos)
 {
 	camera* c = find(keyName);
 	if (c != NULL) return c;
