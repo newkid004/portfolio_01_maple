@@ -75,6 +75,9 @@ using namespace MY_UTIL;
 
 // ¸Å´ÏÀú : ÀÓÀÇ Ãß°¡
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 #include "renderManager.h"
 #include "winManager.h"
 #include "fieldManager.h"
@@ -85,11 +88,16 @@ using namespace MY_UTIL;
 #include "npcManager.h"
 #include "questManager.h"
 #include "shopManager.h"
+<<<<<<< HEAD
 #include "effectManager.h"
 
 #include "gameSystem.h"
 =======
 >>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
+=======
+
+#include "gameSystem.h"
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 
 //========================
 // # ½Ì±ÛÅæÀ» ÀÌ°÷¿¡ Ãß°¡ #
@@ -104,6 +112,9 @@ using namespace MY_UTIL;
 #define SOUNDMANAGER	soundManager::getSingleton()
 #define CAMERAMANAGER	cameraManager::getSingleton()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 #define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
 #define RENDERMANAGER	renderManager::getSingleton()
 #define WINMANAGER		winManager::getSingleton()
@@ -115,19 +126,24 @@ using namespace MY_UTIL;
 #define NPCMANAGER		npcManager::getSingleton()
 #define QUESTMANAGER	questManager::getSingleton()
 #define SHOPMANAGER		shopManager::getSingleton()
+<<<<<<< HEAD
 #define EFFECTMANAGER	effectManager::getSingleton()
 
 #define GAMESYSTEM		gameSystem::getSingleton()
 =======
 >>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
+=======
+
+#define GAMESYSTEM		gameSystem::getSingleton()
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 
 
 //============================
 // # ¸ÅÅ©·Î # (À©µµ¿ìÃ¢ ÃÊ±âÈ­)
 //============================
-#define WINNAME		(LPTSTR)(TEXT("winDirect"))
+#define WINNAME		(LPTSTR)(TEXT("MapleStory"))
 
-// #define FULLSCREEN
+//#define FULLSCREEN
 #define PROCESS_D3D
 
 #ifdef FULLSCREEN

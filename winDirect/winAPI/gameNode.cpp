@@ -60,6 +60,9 @@ HRESULT gameNode::init(bool managerInit)
 
 		// »ç¿îµå¸Å´ÏÀú ÃÊ±âÈ­
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 		SOUNDMANAGER->init();
 
 		// ·»´õ ¸Å´ÏÀú ÃÊ±âÈ­
@@ -81,6 +84,7 @@ HRESULT gameNode::init(bool managerInit)
 		// »óÁ¡ ¸Å´ÏÀú ÃÊ±âÈ­
 		SHOPMANAGER->init();
 
+<<<<<<< HEAD
 		// ÀÌÆåÆ® ¸Å´ÏÀú ÃÊ±âÈ­
 		EFFECTMANAGER->init();
 
@@ -89,6 +93,10 @@ HRESULT gameNode::init(bool managerInit)
 =======
 		// SOUNDMANAGER->init();
 >>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
+=======
+		// °ÔÀÓ ½Ã½ºÅÛ ½Ì±ÛÅæ ÃÊ±âÈ­
+		GAMESYSTEM->init();
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 
 		return S_OK;
 	}
@@ -138,6 +146,9 @@ void gameNode::release(void)
 
 		// »ç¿îµå ¸Å´ÏÀú ÇØÁ¦
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 		SOUNDMANAGER->release();
 		SOUNDMANAGER->releaseSingleton();
 
@@ -157,10 +168,13 @@ void gameNode::release(void)
 		SHOPMANAGER->release();
 		SHOPMANAGER->releaseSingleton();
 
+<<<<<<< HEAD
 		// ÀÌÆåÆ® ¸Å´ÏÀú ÇØÁ¦
 		EFFECTMANAGER->release();
 		EFFECTMANAGER->releaseSingleton();
 
+=======
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 		PATTERNMANAGER->release();
 		PATTERNMANAGER->releaseSingleton();
 		SKILLMANAGER->release();
@@ -177,10 +191,13 @@ void gameNode::release(void)
 		// °ÔÀÓ ½Ã½ºÅÛ ÇØÁ¦
 		GAMESYSTEM->release();
 		GAMESYSTEM->releaseSingleton();
+<<<<<<< HEAD
 =======
 		// SOUNDMANAGER->release();
 		// SOUNDMANAGER->releaseSingleton();
 >>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
 	}
 
 #ifdef PROCESS_D3D

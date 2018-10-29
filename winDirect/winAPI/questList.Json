@@ -14,6 +14,7 @@
       "compensation": "money",
       "money": 5000,
       "exp": 10000
+<<<<<<< HEAD
     },
     {
       "name": "½ºÅ×ÀÌÁö1 - ¸ó½ºÅÍ ÅðÄ¡",
@@ -29,6 +30,8 @@
       "compensation": "money",
       "money": 5000,
       "exp": 10000
+=======
+>>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
     }
   ]
 }

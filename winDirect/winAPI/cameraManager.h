@@ -18,9 +18,9 @@ public:
 	camera* find(string keyName);
 
 	camera* addCamera(string keyName);
-	camera* addCamera(string keyName, POINT offset);
-	camera* addCamera(string keyName, POINT offset, POINT size);
-	camera* addCamera(string keyName, POINT offset, POINT size, POINT minPos, POINT maxPos);
+	camera* addCamera(string keyName, fPOINT offset);
+	camera* addCamera(string keyName, fPOINT offset, fPOINT size);
+	camera* addCamera(string keyName, fPOINT offset, fPOINT size, fPOINT minPos, fPOINT maxPos);
 
 	cameraManager() {};
 	~cameraManager() {};

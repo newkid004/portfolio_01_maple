@@ -29,6 +29,7 @@ struct itemContentBase
 	{}
 	virtual ~itemContentBase() {};
 
+<<<<<<< HEAD
 	virtual void operator=(itemContentBase i) { this->operator=(&i); }
 	virtual void operator=(itemContentBase* i) 
 	{
@@ -39,6 +40,18 @@ struct itemContentBase
 		this->memo		= i->memo;
 		this->cost		= i->cost;
 	};
+=======
+	virtual void operator=(itemContentBase i)
+	{
+		this->type		= i.type;
+		this->imgIcon	= i.imgIcon;
+		this->imgShadow	= i.imgShadow;
+		this->name		= i.name;
+		this->memo		= i.memo;
+		this->cost		= i.cost;
+	}
+	virtual void operator=(itemContentBase* i) { this->operator=(*i); };
+>>>>>>> parent of 8f5701d... 오류커밋
 };
 
 struct tagItemEquipmentInfo
@@ -57,6 +70,7 @@ struct itemContentEquip : public itemContentBase
 	statePoint point;
 	itemContentEquip() : itemContentBase() { type |= itemDef::ITEM_TYPE_EQUIP | itemDef::ITEM_TYPE_USEABLE; }
 
+<<<<<<< HEAD
 	virtual void operator=(itemContentEquip i) { itemContentBase::operator=(&i); }
 	virtual void operator=(itemContentEquip *i) 
 	{
@@ -65,6 +79,16 @@ struct itemContentEquip : public itemContentBase
 		this->basic = i->basic;
 		this->point = i->point;
 	};
+=======
+	virtual void operator=(itemContentEquip i)
+	{
+		itemContentBase::operator=(i);
+		this->limit = i.limit;
+		this->basic = i.basic;
+		this->point = i.point;
+	}
+	virtual void operator=(itemContentEquip *i) { this->operator=(*i); };
+>>>>>>> parent of 8f5701d... 오류커밋
 };
 
 struct itemContentWeapon : public itemContentEquip {

@@ -5,12 +5,22 @@ class windowBase;
 class buttonBase
 {
 protected :
+<<<<<<< HEAD
+=======
+	windowBase* _bindWindow;
+
+>>>>>>> parent of 8f5701d... 오류커밋
 	fPOINT _pos;	// relative
 	fPOINT _size;
 
 	function<void(void)> _active;
 
 public :
+<<<<<<< HEAD
+=======
+	virtual void init(windowBase* bind) { _bindWindow = bind; };
+	virtual void release(void) {};
+>>>>>>> parent of 8f5701d... 오류커밋
 	virtual list<windowBase*>::iterator* update(void) { return NULL; };
 	virtual void render(fPOINT & offset) {};
 
@@ -19,8 +29,15 @@ public :
 	fPOINT & getSize(void) { return _size; };
 	function<void(void)> & getActivate(void) { return _active; };
 
+<<<<<<< HEAD
 public :
 	buttonBase() {};
+=======
+	bool isMouseHover(void) { return IsInRectF(&fRECT(_pos, _pos + _size), &_ptMouse); };
+
+public :
+	buttonBase() : _bindWindow(NULL), _pos(0.f), _size(0.f) {};
+>>>>>>> parent of 8f5701d... 오류커밋
 	~buttonBase() {};
 };
 
