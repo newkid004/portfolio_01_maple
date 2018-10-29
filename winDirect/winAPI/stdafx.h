@@ -76,8 +76,11 @@ using namespace MY_UTIL;
 // ¸Å´ÏÀú : ÀÓÀÇ Ãß°¡
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 #include "renderManager.h"
 #include "winManager.h"
 #include "fieldManager.h"
@@ -89,6 +92,7 @@ using namespace MY_UTIL;
 #include "questManager.h"
 #include "shopManager.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "effectManager.h"
 
 #include "gameSystem.h"
@@ -98,6 +102,11 @@ using namespace MY_UTIL;
 
 #include "gameSystem.h"
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+#include "effectManager.h"
+
+#include "gameSystem.h"
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 
 //========================
 // # ½Ì±ÛÅæÀ» ÀÌ°÷¿¡ Ãß°¡ #
@@ -113,8 +122,11 @@ using namespace MY_UTIL;
 #define CAMERAMANAGER	cameraManager::getSingleton()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 #define JSONDATAMANAGER	JsonSaveLoader::getSingleton()
 #define RENDERMANAGER	renderManager::getSingleton()
 #define WINMANAGER		winManager::getSingleton()
@@ -127,6 +139,7 @@ using namespace MY_UTIL;
 #define QUESTMANAGER	questManager::getSingleton()
 #define SHOPMANAGER		shopManager::getSingleton()
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define EFFECTMANAGER	effectManager::getSingleton()
 
 #define GAMESYSTEM		gameSystem::getSingleton()
@@ -136,6 +149,11 @@ using namespace MY_UTIL;
 
 #define GAMESYSTEM		gameSystem::getSingleton()
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+#define EFFECTMANAGER	effectManager::getSingleton()
+
+#define GAMESYSTEM		gameSystem::getSingleton()
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 
 
 //============================

@@ -61,8 +61,11 @@ HRESULT gameNode::init(bool managerInit)
 		// »ç¿îµå¸Å´ÏÀú ÃÊ±âÈ­
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 		SOUNDMANAGER->init();
 
 		// ·»´õ ¸Å´ÏÀú ÃÊ±âÈ­
@@ -85,11 +88,15 @@ HRESULT gameNode::init(bool managerInit)
 		SHOPMANAGER->init();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 		// ÀÌÆåÆ® ¸Å´ÏÀú ÃÊ±âÈ­
 		EFFECTMANAGER->init();
 
 		// °ÔÀÓ ½Ã½ºÅÛ ½Ì±ÛÅæ ÃÊ±âÈ­
 		GAMESYSTEM->init();
+<<<<<<< HEAD
 =======
 		// SOUNDMANAGER->init();
 >>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
@@ -97,6 +104,8 @@ HRESULT gameNode::init(bool managerInit)
 		// °ÔÀÓ ½Ã½ºÅÛ ½Ì±ÛÅæ ÃÊ±âÈ­
 		GAMESYSTEM->init();
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 
 		return S_OK;
 	}
@@ -147,8 +156,11 @@ void gameNode::release(void)
 		// »ç¿îµå ¸Å´ÏÀú ÇØÁ¦
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 		SOUNDMANAGER->release();
 		SOUNDMANAGER->releaseSingleton();
 
@@ -169,12 +181,18 @@ void gameNode::release(void)
 		SHOPMANAGER->releaseSingleton();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 		// ÀÌÆåÆ® ¸Å´ÏÀú ÇØÁ¦
 		EFFECTMANAGER->release();
 		EFFECTMANAGER->releaseSingleton();
 
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 		PATTERNMANAGER->release();
 		PATTERNMANAGER->releaseSingleton();
 		SKILLMANAGER->release();
@@ -192,12 +210,15 @@ void gameNode::release(void)
 		GAMESYSTEM->release();
 		GAMESYSTEM->releaseSingleton();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		// SOUNDMANAGER->release();
 		// SOUNDMANAGER->releaseSingleton();
 >>>>>>> parent of bf82ed1... ì˜¤ë¥˜ì»¤ë°‹
 =======
 >>>>>>> parent of 8f5701d... ì˜¤ë¥˜ì»¤ë°‹
+=======
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
 	}
 
 #ifdef PROCESS_D3D

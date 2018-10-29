@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "stdafx.h"
 #include "shopBase.h"
 
@@ -37,3 +38,44 @@ void shopBase::render(void)
 			break;
 	}
 }
+=======
+#include "stdafx.h"
+#include "shopBase.h"
+
+#include "itemBase.h"
+#include "windowBase.h"
+
+HRESULT shopBase::init(void)
+{
+	return S_OK;
+}
+
+void shopBase::release(void)
+{
+	for (auto i : _vItem)
+	{
+		i->release();
+		SAFE_DELETE(i);
+	}
+}
+
+void shopBase::update(void)
+{
+}
+
+void shopBase::render(void)
+{
+	static windowShop *& winShop = SHOPMANAGER->getWindow();
+	fPOINT posOffset = winShop->getPos();	// À©µµ¿ì <-> »óÁ¡ °£°Ý¸¸Å­ ´õÇÏ±â ÇÊ¿ä
+
+	for (int i = 0; i < CNT_SHOP_ITEM_LIST; ++i)
+	{
+		itemBase* viewItem = find(i + winShop->getScroll());
+
+		if (viewItem)
+			viewItem->render2Inventory(posOffset, i);
+		else
+			break;
+	}
+}
+>>>>>>> parent of d0a58f6... ì˜¤ë¥˜ ì»¤ë°‹
