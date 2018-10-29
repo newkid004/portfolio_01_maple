@@ -159,6 +159,7 @@
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="buffBase.cpp" />
     <ClCompile Include="buffManager.cpp" />
+    <ClCompile Include="bulletBase.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="characterBase.cpp" />
@@ -213,6 +214,7 @@
     <ClInclude Include="baseObject.h" />
     <ClInclude Include="buffBase.h" />
     <ClInclude Include="buffManager.h" />
+    <ClInclude Include="bulletBase.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraManager.h" />
     <ClInclude Include="characterBase.h" />

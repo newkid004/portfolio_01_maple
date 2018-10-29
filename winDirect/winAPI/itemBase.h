@@ -29,16 +29,16 @@ struct itemContentBase
 	{}
 	virtual ~itemContentBase() {};
 
-	virtual void operator=(itemContentBase i)
+	virtual void operator=(itemContentBase i) { this->operator=(&i); }
+	virtual void operator=(itemContentBase* i) 
 	{
-		this->type		= i.type;
-		this->imgIcon	= i.imgIcon;
-		this->imgShadow	= i.imgShadow;
-		this->name		= i.name;
-		this->memo		= i.memo;
-		this->cost		= i.cost;
-	}
-	virtual void operator=(itemContentBase* i) { this->operator=(*i); };
+		this->type		= i->type;
+		this->imgIcon	= i->imgIcon;
+		this->imgShadow	= i->imgShadow;
+		this->name		= i->name;
+		this->memo		= i->memo;
+		this->cost		= i->cost;
+	};
 };
 
 struct tagItemEquipmentInfo
@@ -57,14 +57,14 @@ struct itemContentEquip : public itemContentBase
 	statePoint point;
 	itemContentEquip() : itemContentBase() { type |= itemDef::ITEM_TYPE_EQUIP | itemDef::ITEM_TYPE_USEABLE; }
 
-	virtual void operator=(itemContentEquip i)
+	virtual void operator=(itemContentEquip i) { itemContentBase::operator=(&i); }
+	virtual void operator=(itemContentEquip *i) 
 	{
 		itemContentBase::operator=(i);
-		this->limit = i.limit;
-		this->basic = i.basic;
-		this->point = i.point;
-	}
-	virtual void operator=(itemContentEquip *i) { this->operator=(*i); };
+		this->limit = i->limit;
+		this->basic = i->basic;
+		this->point = i->point;
+	};
 };
 
 struct itemContentWeapon : public itemContentEquip {
